@@ -1,0 +1,9665 @@
+{
+  "schema_version": "semantic_prior_map_v2",
+  "map_meta": {
+    "floor_id": "G1F",
+    "frame_id": "map",
+    "image_size": {
+      "width": 4000,
+      "height": 1171
+    },
+    "resolution_m_per_px": 0.047028008,
+    "origin_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pixel_frame": {
+      "origin": "top_left",
+      "x_axis": "right",
+      "y_axis": "down"
+    },
+    "map_frame": {
+      "origin": "bottom_left",
+      "x_axis": "right",
+      "y_axis": "up"
+    },
+    "ortho_corrected": true,
+    "scale_uniform": true,
+    "scale_handshake": {
+      "corridor_width_m": 3.3,
+      "corridor_width_px": 70.17,
+      "scale_uniform_assumption": true
+    },
+    "navigation_map": "G1F_map.png",
+    "ros_map_yaml": "G1F_map.yaml",
+    "default_navigation_variant": "observed_structure",
+    "estimated_closed_door_variant": "G1F_map_doors_closed.png"
+  },
+  "layers": {
+    "major_wall": {
+      "mask": "05_major_wall_mask.png",
+      "confidence": 1.0
+    },
+    "room": {
+      "mask": "01_fused_room_mask.png"
+    },
+    "corridor": {
+      "mask": "02_fused_corridor_mask.png"
+    },
+    "facility": {
+      "mask": "03_fused_facility_mask.png"
+    },
+    "restroom": {
+      "mask": "03a_restroom_mask.png"
+    },
+    "elevator": {
+      "mask": "03b_elevator_mask.png"
+    },
+    "stair": {
+      "mask": "03c_stair_mask.png"
+    },
+    "unknown": {
+      "mask": "06_unknown_mask.png"
+    },
+    "labels": {
+      "raster": "04_fused_labels_uint16.png"
+    }
+  },
+  "spaces": [
+    {
+      "id": "room_001",
+      "type": "room",
+      "room_number": "131",
+      "room_number_aliases": [],
+      "name": "안전전라림 창고",
+      "text_entity_id": "text_001",
+      "area_px": 14257,
+      "bbox_px": [
+        681,
+        139,
+        154,
+        101
+      ],
+      "polygon_px": [
+        [
+          681,
+          160
+        ],
+        [
+          681,
+          212
+        ],
+        [
+          684,
+          234
+        ],
+        [
+          793,
+          232
+        ],
+        [
+          795,
+          235
+        ],
+        [
+          818,
+          235
+        ],
+        [
+          820,
+          239
+        ],
+        [
+          834,
+          237
+        ],
+        [
+          831,
+          141
+        ],
+        [
+          700,
+          140
+        ]
+      ],
+      "center_px": [
+        758,
+        187
+      ],
+      "navigation_seed_px": [
+        760,
+        186
+      ],
+      "ocr_anchor_px": [
+        754,
+        169
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.7,
+      "center_map_m": [
+        22.74,
+        29.52
+      ],
+      "navigation_seed_map_m": [
+        22.8,
+        29.55
+      ],
+      "polygon_map_m": [
+        [
+          20.43,
+          30.33
+        ],
+        [
+          20.43,
+          28.77
+        ],
+        [
+          20.52,
+          28.11
+        ],
+        [
+          23.79,
+          28.17
+        ],
+        [
+          23.85,
+          28.08
+        ],
+        [
+          24.54,
+          28.08
+        ],
+        [
+          24.6,
+          27.96
+        ],
+        [
+          25.02,
+          28.02
+        ],
+        [
+          24.93,
+          30.9
+        ],
+        [
+          21.0,
+          30.93
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        22.62,
+        30.06
+      ],
+      "label_id": 1,
+      "semantic_class": "room",
+      "mask": "spaces/001_room_001.png",
+      "mask_pixel_count": 14257,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_002",
+      "type": "room",
+      "room_number": "121",
+      "room_number_aliases": [],
+      "name": "토모공학과 공 강의실",
+      "text_entity_id": "text_006",
+      "area_px": 45266,
+      "bbox_px": [
+        964,
+        140,
+        198,
+        242
+      ],
+      "polygon_px": [
+        [
+          968,
+          140
+        ],
+        [
+          964,
+          371
+        ],
+        [
+          974,
+          381
+        ],
+        [
+          986,
+          381
+        ],
+        [
+          986,
+          371
+        ],
+        [
+          1036,
+          370
+        ],
+        [
+          1131,
+          371
+        ],
+        [
+          1133,
+          381
+        ],
+        [
+          1154,
+          381
+        ],
+        [
+          1160,
+          371
+        ],
+        [
+          1161,
+          143
+        ],
+        [
+          991,
+          141
+        ],
+        [
+          986,
+          149
+        ],
+        [
+          980,
+          141
+        ]
+      ],
+      "center_px": [
+        1063,
+        257
+      ],
+      "navigation_seed_px": [
+        1064,
+        239
+      ],
+      "ocr_anchor_px": [
+        1063,
+        219
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.9,
+      "center_map_m": [
+        31.89,
+        27.42
+      ],
+      "navigation_seed_map_m": [
+        31.92,
+        27.96
+      ],
+      "polygon_map_m": [
+        [
+          29.04,
+          30.93
+        ],
+        [
+          28.92,
+          24.0
+        ],
+        [
+          29.22,
+          23.7
+        ],
+        [
+          29.58,
+          23.7
+        ],
+        [
+          29.58,
+          24.0
+        ],
+        [
+          31.08,
+          24.03
+        ],
+        [
+          33.93,
+          24.0
+        ],
+        [
+          33.99,
+          23.7
+        ],
+        [
+          34.62,
+          23.7
+        ],
+        [
+          34.8,
+          24.0
+        ],
+        [
+          34.83,
+          30.84
+        ],
+        [
+          29.73,
+          30.9
+        ],
+        [
+          29.58,
+          30.66
+        ],
+        [
+          29.4,
+          30.9
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        31.89,
+        28.56
+      ],
+      "label_id": 2,
+      "semantic_class": "room",
+      "mask": "spaces/002_room_002.png",
+      "mask_pixel_count": 45266,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_003",
+      "type": "room",
+      "room_number": "120",
+      "room_number_aliases": [],
+      "name": "토목공학과 종역과 멀티미디어강의실",
+      "text_entity_id": "text_004",
+      "area_px": 46922,
+      "bbox_px": [
+        1174,
+        141,
+        204,
+        241
+      ],
+      "polygon_px": [
+        [
+          1176,
+          142
+        ],
+        [
+          1174,
+          371
+        ],
+        [
+          1178,
+          380
+        ],
+        [
+          1196,
+          381
+        ],
+        [
+          1205,
+          371
+        ],
+        [
+          1344,
+          371
+        ],
+        [
+          1350,
+          380
+        ],
+        [
+          1369,
+          380
+        ],
+        [
+          1375,
+          372
+        ],
+        [
+          1377,
+          167
+        ],
+        [
+          1372,
+          160
+        ],
+        [
+          1373,
+          143
+        ]
+      ],
+      "center_px": [
+        1274,
+        257
+      ],
+      "navigation_seed_px": [
+        1275,
+        263
+      ],
+      "ocr_anchor_px": [
+        1276,
+        218
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.9,
+      "center_map_m": [
+        38.22,
+        27.42
+      ],
+      "navigation_seed_map_m": [
+        38.25,
+        27.24
+      ],
+      "polygon_map_m": [
+        [
+          35.28,
+          30.87
+        ],
+        [
+          35.22,
+          24.0
+        ],
+        [
+          35.34,
+          23.73
+        ],
+        [
+          35.88,
+          23.7
+        ],
+        [
+          36.15,
+          24.0
+        ],
+        [
+          40.32,
+          24.0
+        ],
+        [
+          40.5,
+          23.73
+        ],
+        [
+          41.07,
+          23.73
+        ],
+        [
+          41.25,
+          23.97
+        ],
+        [
+          41.31,
+          30.12
+        ],
+        [
+          41.16,
+          30.33
+        ],
+        [
+          41.19,
+          30.84
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        38.28,
+        28.59
+      ],
+      "label_id": 3,
+      "semantic_class": "room",
+      "mask": "spaces/003_room_003.png",
+      "mask_pixel_count": 46922,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_004",
+      "type": "room",
+      "room_number": "112",
+      "room_number_aliases": [],
+      "name": "기계공학과 멀티미디어강의실",
+      "text_entity_id": "text_013",
+      "area_px": 54939,
+      "bbox_px": [
+        3369,
+        155,
+        237,
+        246
+      ],
+      "polygon_px": [
+        [
+          3376,
+          155
+        ],
+        [
+          3378,
+          170
+        ],
+        [
+          3369,
+          187
+        ],
+        [
+          3371,
+          385
+        ],
+        [
+          3377,
+          396
+        ],
+        [
+          3394,
+          398
+        ],
+        [
+          3399,
+          389
+        ],
+        [
+          3576,
+          389
+        ],
+        [
+          3582,
+          399
+        ],
+        [
+          3598,
+          400
+        ],
+        [
+          3603,
+          391
+        ],
+        [
+          3605,
+          157
+        ]
+      ],
+      "center_px": [
+        3487,
+        273
+      ],
+      "navigation_seed_px": [
+        3487,
+        271
+      ],
+      "ocr_anchor_px": [
+        3489,
+        232
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.8,
+      "center_map_m": [
+        104.61,
+        26.94
+      ],
+      "navigation_seed_map_m": [
+        104.61,
+        27.0
+      ],
+      "polygon_map_m": [
+        [
+          101.28,
+          30.48
+        ],
+        [
+          101.34,
+          30.03
+        ],
+        [
+          101.07,
+          29.52
+        ],
+        [
+          101.13,
+          23.58
+        ],
+        [
+          101.31,
+          23.25
+        ],
+        [
+          101.82,
+          23.19
+        ],
+        [
+          101.97,
+          23.46
+        ],
+        [
+          107.28,
+          23.46
+        ],
+        [
+          107.46,
+          23.16
+        ],
+        [
+          107.94,
+          23.13
+        ],
+        [
+          108.09,
+          23.4
+        ],
+        [
+          108.15,
+          30.42
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        104.67,
+        28.17
+      ],
+      "label_id": 4,
+      "semantic_class": "room",
+      "mask": "spaces/004_room_004.png",
+      "mask_pixel_count": 54939,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_005",
+      "type": "room",
+      "room_number": "111",
+      "room_number_aliases": [],
+      "name": "기공학과 손인수",
+      "text_entity_id": "text_002",
+      "area_px": 16000,
+      "bbox_px": [
+        3748,
+        155,
+        153,
+        114
+      ],
+      "polygon_px": [
+        [
+          3749,
+          156
+        ],
+        [
+          3749,
+          268
+        ],
+        [
+          3763,
+          268
+        ],
+        [
+          3765,
+          260
+        ],
+        [
+          3899,
+          259
+        ],
+        [
+          3900,
+          177
+        ],
+        [
+          3879,
+          155
+        ]
+      ],
+      "center_px": [
+        3822,
+        208
+      ],
+      "navigation_seed_px": [
+        3801,
+        207
+      ],
+      "ocr_anchor_px": [
+        3824,
+        181
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.8,
+      "center_map_m": [
+        114.66,
+        28.89
+      ],
+      "navigation_seed_map_m": [
+        114.03,
+        28.92
+      ],
+      "polygon_map_m": [
+        [
+          112.47,
+          30.45
+        ],
+        [
+          112.47,
+          27.09
+        ],
+        [
+          112.89,
+          27.09
+        ],
+        [
+          112.95,
+          27.33
+        ],
+        [
+          116.97,
+          27.36
+        ],
+        [
+          117.0,
+          29.82
+        ],
+        [
+          116.37,
+          30.48
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        114.72,
+        29.7
+      ],
+      "label_id": 5,
+      "semantic_class": "room",
+      "mask": "spaces/005_room_005.png",
+      "mask_pixel_count": 16000,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_006",
+      "type": "room",
+      "room_number": "119",
+      "room_number_aliases": [],
+      "name": "학과 기계공학과 만 '익과 기계공학의 의실 어강의실 멀티미미어강의실",
+      "text_entity_id": "text_005",
+      "area_px": 46328,
+      "bbox_px": [
+        1389,
+        166,
+        224,
+        217
+      ],
+      "polygon_px": [
+        [
+          1390,
+          167
+        ],
+        [
+          1389,
+          372
+        ],
+        [
+          1396,
+          382
+        ],
+        [
+          1412,
+          381
+        ],
+        [
+          1413,
+          372
+        ],
+        [
+          1429,
+          371
+        ],
+        [
+          1583,
+          372
+        ],
+        [
+          1588,
+          381
+        ],
+        [
+          1601,
+          381
+        ],
+        [
+          1611,
+          373
+        ],
+        [
+          1611,
+          166
+        ]
+      ],
+      "center_px": [
+        1500,
+        269
+      ],
+      "navigation_seed_px": [
+        1492,
+        268
+      ],
+      "ocr_anchor_px": [
+        1501,
+        218
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.95,
+      "center_map_m": [
+        45.0,
+        27.06
+      ],
+      "navigation_seed_map_m": [
+        44.76,
+        27.09
+      ],
+      "polygon_map_m": [
+        [
+          41.7,
+          30.12
+        ],
+        [
+          41.67,
+          23.97
+        ],
+        [
+          41.88,
+          23.67
+        ],
+        [
+          42.36,
+          23.7
+        ],
+        [
+          42.39,
+          23.97
+        ],
+        [
+          42.87,
+          24.0
+        ],
+        [
+          47.49,
+          23.97
+        ],
+        [
+          47.64,
+          23.7
+        ],
+        [
+          48.03,
+          23.7
+        ],
+        [
+          48.33,
+          23.94
+        ],
+        [
+          48.33,
+          30.15
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        45.03,
+        28.59
+      ],
+      "label_id": 6,
+      "semantic_class": "room",
+      "mask": "spaces/006_room_006.png",
+      "mask_pixel_count": 46328,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_007",
+      "type": "room",
+      "room_number": "117",
+      "room_number_aliases": [],
+      "name": "공과대학 PRME 학습실",
+      "text_entity_id": "text_007",
+      "area_px": 99378,
+      "bbox_px": [
+        1623,
+        165,
+        471,
+        223
+      ],
+      "polygon_px": [
+        [
+          1624,
+          166
+        ],
+        [
+          1624,
+          374
+        ],
+        [
+          1816,
+          375
+        ],
+        [
+          1818,
+          385
+        ],
+        [
+          1841,
+          385
+        ],
+        [
+          1843,
+          375
+        ],
+        [
+          2051,
+          376
+        ],
+        [
+          2055,
+          387
+        ],
+        [
+          2077,
+          387
+        ],
+        [
+          2079,
+          378
+        ],
+        [
+          2093,
+          376
+        ],
+        [
+          2092,
+          166
+        ]
+      ],
+      "center_px": [
+        1859,
+        271
+      ],
+      "navigation_seed_px": [
+        1829,
+        272
+      ],
+      "ocr_anchor_px": [
+        1851,
+        220
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.8,
+      "center_map_m": [
+        55.77,
+        27.0
+      ],
+      "navigation_seed_map_m": [
+        54.87,
+        26.97
+      ],
+      "polygon_map_m": [
+        [
+          48.72,
+          30.15
+        ],
+        [
+          48.72,
+          23.91
+        ],
+        [
+          54.48,
+          23.88
+        ],
+        [
+          54.54,
+          23.58
+        ],
+        [
+          55.23,
+          23.58
+        ],
+        [
+          55.29,
+          23.88
+        ],
+        [
+          61.53,
+          23.85
+        ],
+        [
+          61.65,
+          23.52
+        ],
+        [
+          62.31,
+          23.52
+        ],
+        [
+          62.37,
+          23.79
+        ],
+        [
+          62.79,
+          23.85
+        ],
+        [
+          62.76,
+          30.15
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        55.53,
+        28.53
+      ],
+      "label_id": 7,
+      "semantic_class": "room",
+      "mask": "spaces/007_room_007.png",
+      "mask_pixel_count": 99378,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_008",
+      "type": "room",
+      "room_number": "115-A",
+      "room_number_aliases": [],
+      "name": "115-A 정밀측정 실습실 ___",
+      "text_entity_id": null,
+      "area_px": 26660,
+      "bbox_px": [
+        2644,
+        171,
+        126,
+        222
+      ],
+      "polygon_px": [
+        [
+          2645,
+          171
+        ],
+        [
+          2645,
+          381
+        ],
+        [
+          2650,
+          391
+        ],
+        [
+          2667,
+          392
+        ],
+        [
+          2669,
+          384
+        ],
+        [
+          2768,
+          383
+        ],
+        [
+          2768,
+          174
+        ]
+      ],
+      "center_px": [
+        2706,
+        278
+      ],
+      "navigation_seed_px": [
+        2706,
+        232
+      ],
+      "ocr_anchor_px": [
+        2705,
+        225
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.95,
+      "center_map_m": [
+        81.18,
+        26.79
+      ],
+      "navigation_seed_map_m": [
+        81.18,
+        28.17
+      ],
+      "polygon_map_m": [
+        [
+          79.35,
+          30.0
+        ],
+        [
+          79.35,
+          23.7
+        ],
+        [
+          79.5,
+          23.4
+        ],
+        [
+          80.01,
+          23.37
+        ],
+        [
+          80.07,
+          23.61
+        ],
+        [
+          83.04,
+          23.64
+        ],
+        [
+          83.04,
+          29.91
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        81.15,
+        28.38
+      ],
+      "label_id": 8,
+      "semantic_class": "room",
+      "mask": "spaces/008_room_008.png",
+      "mask_pixel_count": 26660,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_009",
+      "type": "room",
+      "room_number": "115-B",
+      "room_number_aliases": [],
+      "name": "기계공학과 세미나실",
+      "text_entity_id": "text_009",
+      "area_px": 43550,
+      "bbox_px": [
+        2780,
+        174,
+        211,
+        220
+      ],
+      "polygon_px": [
+        [
+          2782,
+          174
+        ],
+        [
+          2781,
+          381
+        ],
+        [
+          2965,
+          383
+        ],
+        [
+          2969,
+          393
+        ],
+        [
+          2982,
+          393
+        ],
+        [
+          2989,
+          381
+        ],
+        [
+          2990,
+          178
+        ]
+      ],
+      "center_px": [
+        2885,
+        278
+      ],
+      "navigation_seed_px": [
+        2885,
+        278
+      ],
+      "ocr_anchor_px": [
+        2885,
+        227
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.8,
+      "center_map_m": [
+        86.55,
+        26.79
+      ],
+      "navigation_seed_map_m": [
+        86.55,
+        26.79
+      ],
+      "polygon_map_m": [
+        [
+          83.46,
+          29.91
+        ],
+        [
+          83.43,
+          23.7
+        ],
+        [
+          88.95,
+          23.64
+        ],
+        [
+          89.07,
+          23.34
+        ],
+        [
+          89.46,
+          23.34
+        ],
+        [
+          89.67,
+          23.7
+        ],
+        [
+          89.7,
+          29.79
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        86.55,
+        28.32
+      ],
+      "label_id": 9,
+      "semantic_class": "room",
+      "mask": "spaces/009_room_009.png",
+      "mask_pixel_count": 43550,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_010",
+      "type": "room",
+      "room_number": "113",
+      "room_number_aliases": [],
+      "name": "기계공학과",
+      "text_entity_id": "text_011",
+      "area_px": 14304,
+      "bbox_px": [
+        3188,
+        175,
+        171,
+        127
+      ],
+      "polygon_px": [
+        [
+          3193,
+          289
+        ],
+        [
+          3206,
+          300
+        ],
+        [
+          3268,
+          299
+        ],
+        [
+          3279,
+          290
+        ],
+        [
+          3290,
+          295
+        ],
+        [
+          3297,
+          277
+        ],
+        [
+          3293,
+          267
+        ],
+        [
+          3275,
+          254
+        ],
+        [
+          3279,
+          224
+        ],
+        [
+          3283,
+          221
+        ],
+        [
+          3301,
+          224
+        ],
+        [
+          3325,
+          208
+        ],
+        [
+          3335,
+          208
+        ],
+        [
+          3356,
+          199
+        ],
+        [
+          3358,
+          177
+        ],
+        [
+          3194,
+          175
+        ],
+        [
+          3188,
+          192
+        ],
+        [
+          3190,
+          220
+        ],
+        [
+          3197,
+          231
+        ],
+        [
+          3190,
+          263
+        ],
+        [
+          3195,
+          270
+        ]
+      ],
+      "center_px": [
+        3253,
+        228
+      ],
+      "navigation_seed_px": [
+        3237,
+        217
+      ],
+      "ocr_anchor_px": [
+        3237,
+        230
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.7,
+      "center_map_m": [
+        97.59,
+        28.29
+      ],
+      "navigation_seed_map_m": [
+        97.11,
+        28.62
+      ],
+      "polygon_map_m": [
+        [
+          95.79,
+          26.46
+        ],
+        [
+          96.18,
+          26.13
+        ],
+        [
+          98.04,
+          26.16
+        ],
+        [
+          98.37,
+          26.43
+        ],
+        [
+          98.7,
+          26.28
+        ],
+        [
+          98.91,
+          26.82
+        ],
+        [
+          98.79,
+          27.12
+        ],
+        [
+          98.25,
+          27.51
+        ],
+        [
+          98.37,
+          28.41
+        ],
+        [
+          98.49,
+          28.5
+        ],
+        [
+          99.03,
+          28.41
+        ],
+        [
+          99.75,
+          28.89
+        ],
+        [
+          100.05,
+          28.89
+        ],
+        [
+          100.68,
+          29.16
+        ],
+        [
+          100.74,
+          29.82
+        ],
+        [
+          95.82,
+          29.88
+        ],
+        [
+          95.64,
+          29.37
+        ],
+        [
+          95.7,
+          28.53
+        ],
+        [
+          95.91,
+          28.2
+        ],
+        [
+          95.7,
+          27.24
+        ],
+        [
+          95.85,
+          27.03
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        97.11,
+        28.23
+      ],
+      "label_id": 10,
+      "semantic_class": "room",
+      "mask": "spaces/010_room_010.png",
+      "mask_pixel_count": 14304,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_011",
+      "type": "room",
+      "room_number": "114",
+      "room_number_aliases": [],
+      "name": "과 기계공학과 학회실",
+      "text_entity_id": "text_010",
+      "area_px": 22457,
+      "bbox_px": [
+        2997,
+        177,
+        121,
+        221
+      ],
+      "polygon_px": [
+        [
+          3007,
+          177
+        ],
+        [
+          3006,
+          263
+        ],
+        [
+          3001,
+          265
+        ],
+        [
+          3004,
+          276
+        ],
+        [
+          2997,
+          281
+        ],
+        [
+          2998,
+          286
+        ],
+        [
+          3006,
+          289
+        ],
+        [
+          3006,
+          381
+        ],
+        [
+          3087,
+          383
+        ],
+        [
+          3092,
+          387
+        ],
+        [
+          3093,
+          396
+        ],
+        [
+          3105,
+          397
+        ],
+        [
+          3111,
+          386
+        ],
+        [
+          3111,
+          294
+        ],
+        [
+          3116,
+          290
+        ],
+        [
+          3117,
+          282
+        ],
+        [
+          3116,
+          264
+        ],
+        [
+          3112,
+          262
+        ],
+        [
+          3112,
+          179
+        ]
+      ],
+      "center_px": [
+        3059,
+        280
+      ],
+      "navigation_seed_px": [
+        3059,
+        277
+      ],
+      "ocr_anchor_px": [
+        3059,
+        229
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.9,
+      "center_map_m": [
+        91.77,
+        26.73
+      ],
+      "navigation_seed_map_m": [
+        91.77,
+        26.82
+      ],
+      "polygon_map_m": [
+        [
+          90.21,
+          29.82
+        ],
+        [
+          90.18,
+          27.24
+        ],
+        [
+          90.03,
+          27.18
+        ],
+        [
+          90.12,
+          26.85
+        ],
+        [
+          89.91,
+          26.7
+        ],
+        [
+          89.94,
+          26.55
+        ],
+        [
+          90.18,
+          26.46
+        ],
+        [
+          90.18,
+          23.7
+        ],
+        [
+          92.61,
+          23.64
+        ],
+        [
+          92.76,
+          23.52
+        ],
+        [
+          92.79,
+          23.25
+        ],
+        [
+          93.15,
+          23.22
+        ],
+        [
+          93.33,
+          23.55
+        ],
+        [
+          93.33,
+          26.31
+        ],
+        [
+          93.48,
+          26.43
+        ],
+        [
+          93.51,
+          26.67
+        ],
+        [
+          93.48,
+          27.21
+        ],
+        [
+          93.36,
+          27.27
+        ],
+        [
+          93.36,
+          29.76
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        91.77,
+        28.26
+      ],
+      "label_id": 11,
+      "semantic_class": "room",
+      "mask": "spaces/011_room_011.png",
+      "mask_pixel_count": 22457,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_012",
+      "type": "room",
+      "room_number": null,
+      "room_number_aliases": [],
+      "name": "가 멀티 멀티미디어강의실",
+      "text_entity_id": null,
+      "area_px": 34406,
+      "bbox_px": [
+        3127,
+        176,
+        231,
+        222
+      ],
+      "polygon_px": [
+        [
+          3131,
+          178
+        ],
+        [
+          3127,
+          386
+        ],
+        [
+          3134,
+          394
+        ],
+        [
+          3207,
+          382
+        ],
+        [
+          3332,
+          387
+        ],
+        [
+          3336,
+          397
+        ],
+        [
+          3357,
+          388
+        ],
+        [
+          3355,
+          199
+        ],
+        [
+          3304,
+          224
+        ],
+        [
+          3280,
+          224
+        ],
+        [
+          3277,
+          254
+        ],
+        [
+          3298,
+          277
+        ],
+        [
+          3290,
+          296
+        ],
+        [
+          3279,
+          291
+        ],
+        [
+          3268,
+          300
+        ],
+        [
+          3206,
+          301
+        ],
+        [
+          3191,
+          285
+        ],
+        [
+          3196,
+          236
+        ],
+        [
+          3187,
+          207
+        ],
+        [
+          3191,
+          177
+        ]
+      ],
+      "center_px": [
+        3239,
+        304
+      ],
+      "navigation_seed_px": [
+        3306,
+        340
+      ],
+      "ocr_anchor_px": null,
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.8,
+      "center_map_m": [
+        97.17,
+        26.01
+      ],
+      "navigation_seed_map_m": [
+        99.18,
+        24.93
+      ],
+      "polygon_map_m": [
+        [
+          93.93,
+          29.79
+        ],
+        [
+          93.81,
+          23.55
+        ],
+        [
+          94.02,
+          23.31
+        ],
+        [
+          96.21,
+          23.67
+        ],
+        [
+          99.96,
+          23.52
+        ],
+        [
+          100.08,
+          23.22
+        ],
+        [
+          100.71,
+          23.49
+        ],
+        [
+          100.65,
+          29.16
+        ],
+        [
+          99.12,
+          28.41
+        ],
+        [
+          98.4,
+          28.41
+        ],
+        [
+          98.31,
+          27.51
+        ],
+        [
+          98.94,
+          26.82
+        ],
+        [
+          98.7,
+          26.25
+        ],
+        [
+          98.37,
+          26.4
+        ],
+        [
+          98.04,
+          26.13
+        ],
+        [
+          96.18,
+          26.1
+        ],
+        [
+          95.73,
+          26.58
+        ],
+        [
+          95.88,
+          28.05
+        ],
+        [
+          95.61,
+          28.92
+        ],
+        [
+          95.73,
+          29.82
+        ]
+      ],
+      "label_id": 12,
+      "semantic_class": "room",
+      "mask": "spaces/012_room_012.png",
+      "mask_pixel_count": 34406,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_013",
+      "type": "room",
+      "room_number": "122",
+      "room_number_aliases": [],
+      "name": "토목공작과 주화실",
+      "text_entity_id": "text_017",
+      "area_px": 10425,
+      "bbox_px": [
+        679,
+        247,
+        110,
+        112
+      ],
+      "polygon_px": [
+        [
+          683,
+          247
+        ],
+        [
+          679,
+          314
+        ],
+        [
+          681,
+          337
+        ],
+        [
+          703,
+          351
+        ],
+        [
+          704,
+          346
+        ],
+        [
+          698,
+          337
+        ],
+        [
+          699,
+          324
+        ],
+        [
+          702,
+          341
+        ],
+        [
+          711,
+          343
+        ],
+        [
+          715,
+          348
+        ],
+        [
+          723,
+          344
+        ],
+        [
+          731,
+          344
+        ],
+        [
+          734,
+          348
+        ],
+        [
+          729,
+          347
+        ],
+        [
+          731,
+          351
+        ],
+        [
+          734,
+          348
+        ],
+        [
+          759,
+          348
+        ],
+        [
+          760,
+          322
+        ],
+        [
+          763,
+          347
+        ],
+        [
+          753,
+          351
+        ],
+        [
+          752,
+          357
+        ],
+        [
+          787,
+          358
+        ],
+        [
+          788,
+          354
+        ],
+        [
+          782,
+          350
+        ],
+        [
+          782,
+          249
+        ]
+      ],
+      "center_px": [
+        733,
+        299
+      ],
+      "navigation_seed_px": [
+        728,
+        291
+      ],
+      "ocr_anchor_px": [
+        729,
+        272
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.8,
+      "center_map_m": [
+        21.99,
+        26.16
+      ],
+      "navigation_seed_map_m": [
+        21.84,
+        26.4
+      ],
+      "polygon_map_m": [
+        [
+          20.49,
+          27.72
+        ],
+        [
+          20.37,
+          25.71
+        ],
+        [
+          20.43,
+          25.02
+        ],
+        [
+          21.09,
+          24.6
+        ],
+        [
+          21.12,
+          24.75
+        ],
+        [
+          20.94,
+          25.02
+        ],
+        [
+          20.97,
+          25.41
+        ],
+        [
+          21.06,
+          24.9
+        ],
+        [
+          21.33,
+          24.84
+        ],
+        [
+          21.45,
+          24.69
+        ],
+        [
+          21.69,
+          24.81
+        ],
+        [
+          21.93,
+          24.81
+        ],
+        [
+          22.02,
+          24.69
+        ],
+        [
+          21.87,
+          24.72
+        ],
+        [
+          21.93,
+          24.6
+        ],
+        [
+          22.02,
+          24.69
+        ],
+        [
+          22.77,
+          24.69
+        ],
+        [
+          22.8,
+          25.47
+        ],
+        [
+          22.89,
+          24.72
+        ],
+        [
+          22.59,
+          24.6
+        ],
+        [
+          22.56,
+          24.42
+        ],
+        [
+          23.61,
+          24.39
+        ],
+        [
+          23.64,
+          24.51
+        ],
+        [
+          23.46,
+          24.63
+        ],
+        [
+          23.46,
+          27.66
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        21.87,
+        26.97
+      ],
+      "label_id": 13,
+      "semantic_class": "room",
+      "mask": "spaces/013_room_013.png",
+      "mask_pixel_count": 10425,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_014",
+      "type": "room",
+      "room_number": "110",
+      "room_number_aliases": [],
+      "name": "기계공학과 석명은",
+      "text_entity_id": "text_034",
+      "area_px": 13264,
+      "bbox_px": [
+        3772,
+        270,
+        128,
+        115
+      ],
+      "polygon_px": [
+        [
+          3785,
+          270
+        ],
+        [
+          3783,
+          363
+        ],
+        [
+          3772,
+          363
+        ],
+        [
+          3772,
+          376
+        ],
+        [
+          3775,
+          383
+        ],
+        [
+          3877,
+          384
+        ],
+        [
+          3898,
+          363
+        ],
+        [
+          3899,
+          271
+        ]
+      ],
+      "center_px": [
+        3838,
+        326
+      ],
+      "navigation_seed_px": [
+        3841,
+        327
+      ],
+      "ocr_anchor_px": [
+        3838,
+        300
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.8,
+      "center_map_m": [
+        115.14,
+        25.35
+      ],
+      "navigation_seed_map_m": [
+        115.23,
+        25.32
+      ],
+      "polygon_map_m": [
+        [
+          113.55,
+          27.03
+        ],
+        [
+          113.49,
+          24.24
+        ],
+        [
+          113.16,
+          24.24
+        ],
+        [
+          113.16,
+          23.85
+        ],
+        [
+          113.25,
+          23.64
+        ],
+        [
+          116.31,
+          23.61
+        ],
+        [
+          116.94,
+          24.24
+        ],
+        [
+          116.97,
+          27.0
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        115.14,
+        26.13
+      ],
+      "label_id": 14,
+      "semantic_class": "room",
+      "mask": "spaces/014_room_014.png",
+      "mask_pixel_count": 13264,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_015",
+      "type": "room",
+      "room_number": "128",
+      "room_number_aliases": [],
+      "name": "학과 토목공학과 크스 료 건설재료 실 실험실",
+      "text_entity_id": "text_065",
+      "area_px": 81419,
+      "bbox_px": [
+        1380,
+        466,
+        228,
+        374
+      ],
+      "polygon_px": [
+        [
+          1395,
+          466
+        ],
+        [
+          1384,
+          479
+        ],
+        [
+          1381,
+          837
+        ],
+        [
+          1604,
+          839
+        ],
+        [
+          1604,
+          467
+        ],
+        [
+          1586,
+          467
+        ],
+        [
+          1583,
+          481
+        ],
+        [
+          1426,
+          481
+        ],
+        [
+          1421,
+          466
+        ]
+      ],
+      "center_px": [
+        1493,
+        658
+      ],
+      "navigation_seed_px": [
+        1494,
+        644
+      ],
+      "ocr_anchor_px": [
+        1495,
+        600
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.95,
+      "center_map_m": [
+        44.79,
+        15.39
+      ],
+      "navigation_seed_map_m": [
+        44.82,
+        15.81
+      ],
+      "polygon_map_m": [
+        [
+          41.85,
+          21.15
+        ],
+        [
+          41.52,
+          20.76
+        ],
+        [
+          41.43,
+          10.02
+        ],
+        [
+          48.12,
+          9.96
+        ],
+        [
+          48.12,
+          21.12
+        ],
+        [
+          47.58,
+          21.12
+        ],
+        [
+          47.49,
+          20.7
+        ],
+        [
+          42.78,
+          20.7
+        ],
+        [
+          42.63,
+          21.15
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        44.85,
+        17.13
+      ],
+      "label_id": 15,
+      "semantic_class": "room",
+      "mask": "spaces/015_room_015.png",
+      "mask_pixel_count": 81419,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_016",
+      "type": "room",
+      "room_number": "127",
+      "room_number_aliases": [],
+      "name": "원형강의실",
+      "text_entity_id": "text_082",
+      "area_px": 172756,
+      "bbox_px": [
+        947,
+        468,
+        427,
+        436
+      ],
+      "polygon_px": [
+        [
+          1370,
+          468
+        ],
+        [
+          1351,
+          469
+        ],
+        [
+          1348,
+          480
+        ],
+        [
+          1105,
+          480
+        ],
+        [
+          1101,
+          469
+        ],
+        [
+          1071,
+          469
+        ],
+        [
+          1071,
+          481
+        ],
+        [
+          1013,
+          482
+        ],
+        [
+          961,
+          534
+        ],
+        [
+          961,
+          580
+        ],
+        [
+          947,
+          590
+        ],
+        [
+          947,
+          618
+        ],
+        [
+          960,
+          623
+        ],
+        [
+          960,
+          901
+        ],
+        [
+          1363,
+          902
+        ]
+      ],
+      "center_px": [
+        1165,
+        691
+      ],
+      "navigation_seed_px": [
+        1164,
+        684
+      ],
+      "ocr_anchor_px": [
+        1154,
+        662
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.7,
+      "center_map_m": [
+        34.95,
+        14.4
+      ],
+      "navigation_seed_map_m": [
+        34.92,
+        14.61
+      ],
+      "polygon_map_m": [
+        [
+          41.1,
+          21.09
+        ],
+        [
+          40.53,
+          21.06
+        ],
+        [
+          40.44,
+          20.73
+        ],
+        [
+          33.15,
+          20.73
+        ],
+        [
+          33.03,
+          21.06
+        ],
+        [
+          32.13,
+          21.06
+        ],
+        [
+          32.13,
+          20.7
+        ],
+        [
+          30.39,
+          20.67
+        ],
+        [
+          28.83,
+          19.11
+        ],
+        [
+          28.83,
+          17.73
+        ],
+        [
+          28.41,
+          17.43
+        ],
+        [
+          28.41,
+          16.59
+        ],
+        [
+          28.8,
+          16.44
+        ],
+        [
+          28.8,
+          8.1
+        ],
+        [
+          40.89,
+          8.07
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        34.62,
+        15.27
+      ],
+      "label_id": 16,
+      "semantic_class": "room",
+      "mask": "spaces/016_room_016.png",
+      "mask_pixel_count": 172756,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_017",
+      "type": "room",
+      "room_number": "129",
+      "room_number_aliases": [],
+      "name": "토목공학과 고고서 지반공학실험실 지반공학연구회",
+      "text_entity_id": "text_066",
+      "area_px": 81785,
+      "bbox_px": [
+        1615,
+        468,
+        229,
+        373
+      ],
+      "polygon_px": [
+        [
+          1841,
+          468
+        ],
+        [
+          1810,
+          468
+        ],
+        [
+          1809,
+          480
+        ],
+        [
+          1618,
+          481
+        ],
+        [
+          1616,
+          839
+        ],
+        [
+          1841,
+          839
+        ]
+      ],
+      "center_px": [
+        1729,
+        658
+      ],
+      "navigation_seed_px": [
+        1729,
+        673
+      ],
+      "ocr_anchor_px": [
+        1729,
+        601
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.95,
+      "center_map_m": [
+        51.87,
+        15.39
+      ],
+      "navigation_seed_map_m": [
+        51.87,
+        14.94
+      ],
+      "polygon_map_m": [
+        [
+          55.23,
+          21.09
+        ],
+        [
+          54.3,
+          21.09
+        ],
+        [
+          54.27,
+          20.73
+        ],
+        [
+          48.54,
+          20.7
+        ],
+        [
+          48.48,
+          9.96
+        ],
+        [
+          55.23,
+          9.96
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        51.87,
+        17.1
+      ],
+      "label_id": 17,
+      "semantic_class": "room",
+      "mask": "spaces/017_room_017.png",
+      "mask_pixel_count": 81785,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_018",
+      "type": "room",
+      "room_number": "130",
+      "room_number_aliases": [],
+      "name": "막치실 토목공학과 프극스 수리실험실 CvHydro",
+      "text_entity_id": "text_068",
+      "area_px": 86391,
+      "bbox_px": [
+        1851,
+        468,
+        240,
+        374
+      ],
+      "polygon_px": [
+        [
+          1864,
+          468
+        ],
+        [
+          1853,
+          480
+        ],
+        [
+          1851,
+          839
+        ],
+        [
+          2089,
+          841
+        ],
+        [
+          2090,
+          483
+        ],
+        [
+          2068,
+          482
+        ],
+        [
+          2066,
+          470
+        ],
+        [
+          2049,
+          470
+        ],
+        [
+          2048,
+          483
+        ],
+        [
+          1900,
+          480
+        ],
+        [
+          1899,
+          468
+        ]
+      ],
+      "center_px": [
+        1970,
+        659
+      ],
+      "navigation_seed_px": [
+        1971,
+        625
+      ],
+      "ocr_anchor_px": [
+        1972,
+        603
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.95,
+      "center_map_m": [
+        59.1,
+        15.36
+      ],
+      "navigation_seed_map_m": [
+        59.13,
+        16.38
+      ],
+      "polygon_map_m": [
+        [
+          55.92,
+          21.09
+        ],
+        [
+          55.59,
+          20.73
+        ],
+        [
+          55.53,
+          9.96
+        ],
+        [
+          62.67,
+          9.9
+        ],
+        [
+          62.7,
+          20.64
+        ],
+        [
+          62.04,
+          20.67
+        ],
+        [
+          61.98,
+          21.03
+        ],
+        [
+          61.47,
+          21.03
+        ],
+        [
+          61.44,
+          20.64
+        ],
+        [
+          57.0,
+          20.73
+        ],
+        [
+          56.97,
+          21.09
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        59.16,
+        17.04
+      ],
+      "label_id": 18,
+      "semantic_class": "room",
+      "mask": "spaces/018_room_018.png",
+      "mask_pixel_count": 86391,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_019",
+      "type": "room",
+      "room_number": "123",
+      "room_number_aliases": [],
+      "name": "공실",
+      "text_entity_id": "text_053",
+      "area_px": 12216,
+      "bbox_px": [
+        746,
+        480,
+        139,
+        97
+      ],
+      "polygon_px": [
+        [
+          746,
+          500
+        ],
+        [
+          747,
+          576
+        ],
+        [
+          874,
+          576
+        ],
+        [
+          876,
+          567
+        ],
+        [
+          884,
+          566
+        ],
+        [
+          884,
+          553
+        ],
+        [
+          876,
+          551
+        ],
+        [
+          873,
+          544
+        ],
+        [
+          872,
+          481
+        ],
+        [
+          767,
+          480
+        ],
+        [
+          755,
+          495
+        ],
+        [
+          751,
+          495
+        ]
+      ],
+      "center_px": [
+        811,
+        529
+      ],
+      "navigation_seed_px": [
+        793,
+        527
+      ],
+      "ocr_anchor_px": [
+        808,
+        511
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.7,
+      "center_map_m": [
+        24.33,
+        19.26
+      ],
+      "navigation_seed_map_m": [
+        23.79,
+        19.32
+      ],
+      "polygon_map_m": [
+        [
+          22.38,
+          20.13
+        ],
+        [
+          22.41,
+          17.85
+        ],
+        [
+          26.22,
+          17.85
+        ],
+        [
+          26.28,
+          18.12
+        ],
+        [
+          26.52,
+          18.15
+        ],
+        [
+          26.52,
+          18.54
+        ],
+        [
+          26.28,
+          18.6
+        ],
+        [
+          26.19,
+          18.81
+        ],
+        [
+          26.16,
+          20.7
+        ],
+        [
+          23.01,
+          20.73
+        ],
+        [
+          22.65,
+          20.28
+        ],
+        [
+          22.53,
+          20.28
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        24.24,
+        19.8
+      ],
+      "label_id": 19,
+      "semantic_class": "room",
+      "mask": "spaces/019_room_019.png",
+      "mask_pixel_count": 12216,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_020",
+      "type": "room",
+      "room_number": "101",
+      "room_number_aliases": [],
+      "name": "조 과 기계공학과 재료 파괴실함실 실 프 I",
+      "text_entity_id": "text_062",
+      "area_px": 83725,
+      "bbox_px": [
+        2377,
+        478,
+        250,
+        372
+      ],
+      "polygon_px": [
+        [
+          2617,
+          478
+        ],
+        [
+          2377,
+          488
+        ],
+        [
+          2377,
+          658
+        ],
+        [
+          2394,
+          669
+        ],
+        [
+          2395,
+          846
+        ],
+        [
+          2555,
+          848
+        ],
+        [
+          2564,
+          804
+        ],
+        [
+          2567,
+          848
+        ],
+        [
+          2626,
+          847
+        ],
+        [
+          2625,
+          762
+        ],
+        [
+          2566,
+          762
+        ],
+        [
+          2565,
+          780
+        ],
+        [
+          2555,
+          780
+        ],
+        [
+          2556,
+          512
+        ],
+        [
+          2565,
+          516
+        ],
+        [
+          2565,
+          751
+        ],
+        [
+          2626,
+          752
+        ],
+        [
+          2625,
+          522
+        ],
+        [
+          2595,
+          515
+        ],
+        [
+          2625,
+          511
+        ]
+      ],
+      "center_px": [
+        2503,
+        662
+      ],
+      "navigation_seed_px": [
+        2466,
+        594
+      ],
+      "ocr_anchor_px": [
+        2478,
+        596
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.95,
+      "center_map_m": [
+        75.09,
+        15.27
+      ],
+      "navigation_seed_map_m": [
+        73.98,
+        17.31
+      ],
+      "polygon_map_m": [
+        [
+          78.51,
+          20.79
+        ],
+        [
+          71.31,
+          20.49
+        ],
+        [
+          71.31,
+          15.39
+        ],
+        [
+          71.82,
+          15.06
+        ],
+        [
+          71.85,
+          9.75
+        ],
+        [
+          76.65,
+          9.69
+        ],
+        [
+          76.92,
+          11.01
+        ],
+        [
+          77.01,
+          9.69
+        ],
+        [
+          78.78,
+          9.72
+        ],
+        [
+          78.75,
+          12.27
+        ],
+        [
+          76.98,
+          12.27
+        ],
+        [
+          76.95,
+          11.73
+        ],
+        [
+          76.65,
+          11.73
+        ],
+        [
+          76.68,
+          19.77
+        ],
+        [
+          76.95,
+          19.65
+        ],
+        [
+          76.95,
+          12.6
+        ],
+        [
+          78.78,
+          12.57
+        ],
+        [
+          78.75,
+          19.47
+        ],
+        [
+          77.85,
+          19.68
+        ],
+        [
+          78.75,
+          19.8
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        74.34,
+        17.25
+      ],
+      "label_id": 20,
+      "semantic_class": "room",
+      "mask": "spaces/020_room_020.png",
+      "mask_pixel_count": 83725,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_021",
+      "type": "room",
+      "room_number": "103",
+      "room_number_aliases": [],
+      "name": "'학과 기계공학과 주소유고면 열유체실험실 실험실",
+      "text_entity_id": "text_067",
+      "area_px": 84735,
+      "bbox_px": [
+        2879,
+        478,
+        238,
+        379
+      ],
+      "polygon_px": [
+        [
+          2890,
+          478
+        ],
+        [
+          2890,
+          490
+        ],
+        [
+          2879,
+          492
+        ],
+        [
+          2881,
+          851
+        ],
+        [
+          3115,
+          856
+        ],
+        [
+          3114,
+          773
+        ],
+        [
+          2946,
+          769
+        ],
+        [
+          3115,
+          763
+        ],
+        [
+          3109,
+          482
+        ],
+        [
+          3090,
+          481
+        ],
+        [
+          3088,
+          493
+        ],
+        [
+          2966,
+          493
+        ]
+      ],
+      "center_px": [
+        2996,
+        669
+      ],
+      "navigation_seed_px": [
+        2997,
+        610
+      ],
+      "ocr_anchor_px": [
+        2996,
+        602
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.95,
+      "center_map_m": [
+        89.88,
+        15.06
+      ],
+      "navigation_seed_map_m": [
+        89.91,
+        16.83
+      ],
+      "polygon_map_m": [
+        [
+          86.7,
+          20.79
+        ],
+        [
+          86.7,
+          20.43
+        ],
+        [
+          86.37,
+          20.37
+        ],
+        [
+          86.43,
+          9.6
+        ],
+        [
+          93.45,
+          9.45
+        ],
+        [
+          93.42,
+          11.94
+        ],
+        [
+          88.38,
+          12.06
+        ],
+        [
+          93.45,
+          12.24
+        ],
+        [
+          93.27,
+          20.67
+        ],
+        [
+          92.7,
+          20.7
+        ],
+        [
+          92.64,
+          20.34
+        ],
+        [
+          88.98,
+          20.34
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        89.88,
+        17.07
+      ],
+      "label_id": 21,
+      "semantic_class": "room",
+      "mask": "spaces/021_room_021.png",
+      "mask_pixel_count": 84735,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_022",
+      "type": "room",
+      "room_number": "102-A",
+      "room_number_aliases": [],
+      "name": "102-A 기계공학과 생산설계 실험실",
+      "text_entity_id": null,
+      "area_px": 43126,
+      "bbox_px": [
+        2636,
+        480,
+        235,
+        196
+      ],
+      "polygon_px": [
+        [
+          2636,
+          487
+        ],
+        [
+          2638,
+          671
+        ],
+        [
+          2747,
+          670
+        ],
+        [
+          2766,
+          675
+        ],
+        [
+          2870,
+          671
+        ],
+        [
+          2868,
+          491
+        ],
+        [
+          2709,
+          490
+        ],
+        [
+          2704,
+          481
+        ],
+        [
+          2666,
+          480
+        ]
+      ],
+      "center_px": [
+        2751,
+        579
+      ],
+      "navigation_seed_px": [
+        2776,
+        582
+      ],
+      "ocr_anchor_px": [
+        2750,
+        542
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.95,
+      "center_map_m": [
+        82.53,
+        17.76
+      ],
+      "navigation_seed_map_m": [
+        83.28,
+        17.67
+      ],
+      "polygon_map_m": [
+        [
+          79.08,
+          20.52
+        ],
+        [
+          79.14,
+          15.0
+        ],
+        [
+          82.41,
+          15.03
+        ],
+        [
+          82.98,
+          14.88
+        ],
+        [
+          86.1,
+          15.0
+        ],
+        [
+          86.04,
+          20.4
+        ],
+        [
+          81.27,
+          20.43
+        ],
+        [
+          81.12,
+          20.7
+        ],
+        [
+          79.98,
+          20.73
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        82.5,
+        18.87
+      ],
+      "label_id": 22,
+      "semantic_class": "room",
+      "mask": "spaces/022_room_022.png",
+      "mask_pixel_count": 43126,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_023",
+      "type": "room",
+      "room_number": "104-B",
+      "room_number_aliases": [],
+      "name": "상의공의실계실 DOAOA",
+      "text_entity_id": "text_054",
+      "area_px": 16364,
+      "bbox_px": [
+        3176,
+        491,
+        183,
+        95
+      ],
+      "polygon_px": [
+        [
+          3358,
+          495
+        ],
+        [
+          3353,
+          491
+        ],
+        [
+          3334,
+          491
+        ],
+        [
+          3331,
+          496
+        ],
+        [
+          3249,
+          496
+        ],
+        [
+          3245,
+          493
+        ],
+        [
+          3182,
+          495
+        ],
+        [
+          3181,
+          529
+        ],
+        [
+          3176,
+          532
+        ],
+        [
+          3179,
+          582
+        ],
+        [
+          3357,
+          585
+        ]
+      ],
+      "center_px": [
+        3269,
+        539
+      ],
+      "navigation_seed_px": [
+        3237,
+        539
+      ],
+      "ocr_anchor_px": [
+        3266,
+        513
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.8,
+      "center_map_m": [
+        98.07,
+        18.96
+      ],
+      "navigation_seed_map_m": [
+        97.11,
+        18.96
+      ],
+      "polygon_map_m": [
+        [
+          100.74,
+          20.28
+        ],
+        [
+          100.59,
+          20.4
+        ],
+        [
+          100.02,
+          20.4
+        ],
+        [
+          99.93,
+          20.25
+        ],
+        [
+          97.47,
+          20.25
+        ],
+        [
+          97.35,
+          20.34
+        ],
+        [
+          95.46,
+          20.28
+        ],
+        [
+          95.43,
+          19.26
+        ],
+        [
+          95.28,
+          19.17
+        ],
+        [
+          95.37,
+          17.67
+        ],
+        [
+          100.71,
+          17.58
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        97.98,
+        19.74
+      ],
+      "label_id": 23,
+      "semantic_class": "room",
+      "mask": "spaces/023_room_023.png",
+      "mask_pixel_count": 16364,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_024",
+      "type": "room",
+      "room_number": "105",
+      "room_number_aliases": [],
+      "name": "기계공학과 진동/제어실험실 진동세어 실험실",
+      "text_entity_id": "text_087",
+      "area_px": 91382,
+      "bbox_px": [
+        3368,
+        488,
+        248,
+        443
+      ],
+      "polygon_px": [
+        [
+          3378,
+          488
+        ],
+        [
+          3368,
+          495
+        ],
+        [
+          3371,
+          826
+        ],
+        [
+          3410,
+          832
+        ],
+        [
+          3371,
+          834
+        ],
+        [
+          3375,
+          929
+        ],
+        [
+          3613,
+          930
+        ],
+        [
+          3613,
+          837
+        ],
+        [
+          3438,
+          832
+        ],
+        [
+          3615,
+          826
+        ],
+        [
+          3615,
+          694
+        ],
+        [
+          3599,
+          691
+        ],
+        [
+          3598,
+          651
+        ],
+        [
+          3533,
+          647
+        ],
+        [
+          3532,
+          500
+        ],
+        [
+          3414,
+          498
+        ],
+        [
+          3410,
+          489
+        ]
+      ],
+      "center_px": [
+        3479,
+        728
+      ],
+      "navigation_seed_px": [
+        3470,
+        726
+      ],
+      "ocr_anchor_px": [
+        3488,
+        675
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.9,
+      "center_map_m": [
+        104.37,
+        13.29
+      ],
+      "navigation_seed_map_m": [
+        104.1,
+        13.35
+      ],
+      "polygon_map_m": [
+        [
+          101.34,
+          20.49
+        ],
+        [
+          101.04,
+          20.28
+        ],
+        [
+          101.13,
+          10.35
+        ],
+        [
+          102.3,
+          10.17
+        ],
+        [
+          101.13,
+          10.11
+        ],
+        [
+          101.25,
+          7.26
+        ],
+        [
+          108.39,
+          7.23
+        ],
+        [
+          108.39,
+          10.02
+        ],
+        [
+          103.14,
+          10.17
+        ],
+        [
+          108.45,
+          10.35
+        ],
+        [
+          108.45,
+          14.31
+        ],
+        [
+          107.97,
+          14.4
+        ],
+        [
+          107.94,
+          15.6
+        ],
+        [
+          105.99,
+          15.72
+        ],
+        [
+          105.96,
+          20.13
+        ],
+        [
+          102.42,
+          20.19
+        ],
+        [
+          102.3,
+          20.46
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        104.64,
+        14.88
+      ],
+      "label_id": 24,
+      "semantic_class": "room",
+      "mask": "spaces/024_room_024.png",
+      "mask_pixel_count": 91382,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_025",
+      "type": "room",
+      "room_number": "109",
+      "room_number_aliases": [],
+      "name": "기계공학과 아싱필",
+      "text_entity_id": "text_055",
+      "area_px": 15679,
+      "bbox_px": [
+        3664,
+        500,
+        172,
+        102
+      ],
+      "polygon_px": [
+        [
+          3680,
+          501
+        ],
+        [
+          3680,
+          577
+        ],
+        [
+          3664,
+          579
+        ],
+        [
+          3665,
+          596
+        ],
+        [
+          3678,
+          596
+        ],
+        [
+          3681,
+          600
+        ],
+        [
+          3835,
+          600
+        ],
+        [
+          3835,
+          524
+        ],
+        [
+          3821,
+          510
+        ],
+        [
+          3817,
+          510
+        ],
+        [
+          3812,
+          501
+        ]
+      ],
+      "center_px": [
+        3754,
+        551
+      ],
+      "navigation_seed_px": [
+        3746,
+        550
+      ],
+      "ocr_anchor_px": [
+        3754,
+        522
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.8,
+      "center_map_m": [
+        112.62,
+        18.6
+      ],
+      "navigation_seed_map_m": [
+        112.38,
+        18.63
+      ],
+      "polygon_map_m": [
+        [
+          110.4,
+          20.1
+        ],
+        [
+          110.4,
+          17.82
+        ],
+        [
+          109.92,
+          17.76
+        ],
+        [
+          109.95,
+          17.25
+        ],
+        [
+          110.34,
+          17.25
+        ],
+        [
+          110.43,
+          17.13
+        ],
+        [
+          115.05,
+          17.13
+        ],
+        [
+          115.05,
+          19.41
+        ],
+        [
+          114.63,
+          19.83
+        ],
+        [
+          114.51,
+          19.83
+        ],
+        [
+          114.36,
+          20.1
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        112.62,
+        19.47
+      ],
+      "label_id": 25,
+      "semantic_class": "room",
+      "mask": "spaces/025_room_025.png",
+      "mask_pixel_count": 15679,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_026",
+      "type": "room",
+      "room_number": "124",
+      "room_number_aliases": [],
+      "name": "토목공혁적 아석킨",
+      "text_entity_id": "text_069",
+      "area_px": 12982,
+      "bbox_px": [
+        744,
+        584,
+        141,
+        102
+      ],
+      "polygon_px": [
+        [
+          745,
+          586
+        ],
+        [
+          745,
+          682
+        ],
+        [
+          873,
+          682
+        ],
+        [
+          877,
+          685
+        ],
+        [
+          883,
+          677
+        ],
+        [
+          884,
+          661
+        ],
+        [
+          874,
+          659
+        ],
+        [
+          873,
+          586
+        ],
+        [
+          781,
+          584
+        ]
+      ],
+      "center_px": [
+        810,
+        634
+      ],
+      "navigation_seed_px": [
+        792,
+        633
+      ],
+      "ocr_anchor_px": [
+        809,
+        607
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.8,
+      "center_map_m": [
+        24.3,
+        16.11
+      ],
+      "navigation_seed_map_m": [
+        23.76,
+        16.14
+      ],
+      "polygon_map_m": [
+        [
+          22.35,
+          17.55
+        ],
+        [
+          22.35,
+          14.67
+        ],
+        [
+          26.19,
+          14.67
+        ],
+        [
+          26.31,
+          14.58
+        ],
+        [
+          26.49,
+          14.82
+        ],
+        [
+          26.52,
+          15.3
+        ],
+        [
+          26.22,
+          15.36
+        ],
+        [
+          26.19,
+          17.55
+        ],
+        [
+          23.43,
+          17.61
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        24.27,
+        16.92
+      ],
+      "label_id": 26,
+      "semantic_class": "room",
+      "mask": "spaces/026_room_026.png",
+      "mask_pixel_count": 12982,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_027",
+      "type": "room",
+      "room_number": "108",
+      "room_number_aliases": [],
+      "name": "기계공학과 만방현",
+      "text_entity_id": "text_072",
+      "area_px": 16056,
+      "bbox_px": [
+        3664,
+        610,
+        172,
+        102
+      ],
+      "polygon_px": [
+        [
+          3681,
+          611
+        ],
+        [
+          3681,
+          684
+        ],
+        [
+          3665,
+          686
+        ],
+        [
+          3665,
+          702
+        ],
+        [
+          3679,
+          702
+        ],
+        [
+          3682,
+          711
+        ],
+        [
+          3834,
+          710
+        ],
+        [
+          3834,
+          610
+        ]
+      ],
+      "center_px": [
+        3756,
+        661
+      ],
+      "navigation_seed_px": [
+        3731,
+        660
+      ],
+      "ocr_anchor_px": [
+        3756,
+        633
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.8,
+      "center_map_m": [
+        112.68,
+        15.3
+      ],
+      "navigation_seed_map_m": [
+        111.93,
+        15.33
+      ],
+      "polygon_map_m": [
+        [
+          110.43,
+          16.8
+        ],
+        [
+          110.43,
+          14.61
+        ],
+        [
+          109.95,
+          14.55
+        ],
+        [
+          109.95,
+          14.07
+        ],
+        [
+          110.37,
+          14.07
+        ],
+        [
+          110.46,
+          13.8
+        ],
+        [
+          115.02,
+          13.83
+        ],
+        [
+          115.02,
+          16.83
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        112.68,
+        16.14
+      ],
+      "label_id": 27,
+      "semantic_class": "room",
+      "mask": "spaces/027_room_027.png",
+      "mask_pixel_count": 16056,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_028",
+      "type": "room",
+      "room_number": "102-B",
+      "room_number_aliases": [],
+      "name": "102-B102-C 102-8 102-C 기계공학과 조 세미나실",
+      "text_entity_id": null,
+      "area_px": 19699,
+      "bbox_px": [
+        2633,
+        670,
+        122,
+        179
+      ],
+      "polygon_px": [
+        [
+          2641,
+          671
+        ],
+        [
+          2644,
+          674
+        ],
+        [
+          2636,
+          677
+        ],
+        [
+          2634,
+          706
+        ],
+        [
+          2638,
+          761
+        ],
+        [
+          2634,
+          765
+        ],
+        [
+          2636,
+          778
+        ],
+        [
+          2633,
+          786
+        ],
+        [
+          2638,
+          798
+        ],
+        [
+          2638,
+          846
+        ],
+        [
+          2747,
+          848
+        ],
+        [
+          2749,
+          786
+        ],
+        [
+          2754,
+          781
+        ],
+        [
+          2754,
+          694
+        ],
+        [
+          2750,
+          692
+        ],
+        [
+          2749,
+          683
+        ],
+        [
+          2746,
+          680
+        ],
+        [
+          2677,
+          680
+        ],
+        [
+          2672,
+          678
+        ],
+        [
+          2671,
+          673
+        ]
+      ],
+      "center_px": [
+        2693,
+        761
+      ],
+      "navigation_seed_px": [
+        2695,
+        749
+      ],
+      "ocr_anchor_px": [
+        2695,
+        726
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.95,
+      "center_map_m": [
+        80.79,
+        12.3
+      ],
+      "navigation_seed_map_m": [
+        80.85,
+        12.66
+      ],
+      "polygon_map_m": [
+        [
+          79.23,
+          15.0
+        ],
+        [
+          79.32,
+          14.91
+        ],
+        [
+          79.08,
+          14.82
+        ],
+        [
+          79.02,
+          13.95
+        ],
+        [
+          79.14,
+          12.3
+        ],
+        [
+          79.02,
+          12.18
+        ],
+        [
+          79.08,
+          11.79
+        ],
+        [
+          78.99,
+          11.55
+        ],
+        [
+          79.14,
+          11.19
+        ],
+        [
+          79.14,
+          9.75
+        ],
+        [
+          82.41,
+          9.69
+        ],
+        [
+          82.47,
+          11.55
+        ],
+        [
+          82.62,
+          11.7
+        ],
+        [
+          82.62,
+          14.31
+        ],
+        [
+          82.5,
+          14.37
+        ],
+        [
+          82.47,
+          14.64
+        ],
+        [
+          82.38,
+          14.73
+        ],
+        [
+          80.31,
+          14.73
+        ],
+        [
+          80.16,
+          14.79
+        ],
+        [
+          80.13,
+          14.94
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        80.85,
+        13.35
+      ],
+      "label_id": 28,
+      "semantic_class": "room",
+      "mask": "spaces/028_room_028.png",
+      "mask_pixel_count": 19699,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_029",
+      "type": "room",
+      "room_number": "125",
+      "room_number_aliases": [],
+      "name": "목공학과 황주영",
+      "text_entity_id": "text_102",
+      "area_px": 15071,
+      "bbox_px": [
+        742,
+        687,
+        166,
+        105
+      ],
+      "polygon_px": [
+        [
+          898,
+          690
+        ],
+        [
+          876,
+          687
+        ],
+        [
+          877,
+          692
+        ],
+        [
+          745,
+          692
+        ],
+        [
+          742,
+          787
+        ],
+        [
+          782,
+          788
+        ],
+        [
+          784,
+          791
+        ],
+        [
+          799,
+          787
+        ],
+        [
+          893,
+          788
+        ],
+        [
+          896,
+          781
+        ],
+        [
+          905,
+          781
+        ],
+        [
+          907,
+          763
+        ],
+        [
+          901,
+          761
+        ],
+        [
+          897,
+          765
+        ],
+        [
+          894,
+          762
+        ],
+        [
+          894,
+          694
+        ],
+        [
+          897,
+          695
+        ]
+      ],
+      "center_px": [
+        820,
+        739
+      ],
+      "navigation_seed_px": [
+        800,
+        739
+      ],
+      "ocr_anchor_px": [
+        808,
+        713
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.8,
+      "center_map_m": [
+        24.6,
+        12.96
+      ],
+      "navigation_seed_map_m": [
+        24.0,
+        12.96
+      ],
+      "polygon_map_m": [
+        [
+          26.94,
+          14.43
+        ],
+        [
+          26.28,
+          14.52
+        ],
+        [
+          26.31,
+          14.37
+        ],
+        [
+          22.35,
+          14.37
+        ],
+        [
+          22.26,
+          11.52
+        ],
+        [
+          23.46,
+          11.49
+        ],
+        [
+          23.52,
+          11.4
+        ],
+        [
+          23.97,
+          11.52
+        ],
+        [
+          26.79,
+          11.49
+        ],
+        [
+          26.88,
+          11.7
+        ],
+        [
+          27.15,
+          11.7
+        ],
+        [
+          27.21,
+          12.24
+        ],
+        [
+          27.03,
+          12.3
+        ],
+        [
+          26.91,
+          12.18
+        ],
+        [
+          26.82,
+          12.27
+        ],
+        [
+          26.82,
+          14.31
+        ],
+        [
+          26.91,
+          14.28
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        24.24,
+        13.74
+      ],
+      "label_id": 29,
+      "semantic_class": "room",
+      "mask": "spaces/029_room_029.png",
+      "mask_pixel_count": 15071,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_030",
+      "type": "room",
+      "room_number": "107",
+      "room_number_aliases": [],
+      "name": "기계공학과 조조 __ 손영석",
+      "text_entity_id": "text_117",
+      "area_px": 15873,
+      "bbox_px": [
+        3664,
+        719,
+        171,
+        104
+      ],
+      "polygon_px": [
+        [
+          3681,
+          721
+        ],
+        [
+          3681,
+          793
+        ],
+        [
+          3664,
+          795
+        ],
+        [
+          3664,
+          809
+        ],
+        [
+          3678,
+          809
+        ],
+        [
+          3681,
+          821
+        ],
+        [
+          3834,
+          821
+        ],
+        [
+          3833,
+          721
+        ]
+      ],
+      "center_px": [
+        3755,
+        771
+      ],
+      "navigation_seed_px": [
+        3731,
+        771
+      ],
+      "ocr_anchor_px": [
+        3754,
+        742
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.9,
+      "center_map_m": [
+        112.65,
+        12.0
+      ],
+      "navigation_seed_map_m": [
+        111.93,
+        12.0
+      ],
+      "polygon_map_m": [
+        [
+          110.43,
+          13.5
+        ],
+        [
+          110.43,
+          11.34
+        ],
+        [
+          109.92,
+          11.28
+        ],
+        [
+          109.92,
+          10.86
+        ],
+        [
+          110.34,
+          10.86
+        ],
+        [
+          110.43,
+          10.5
+        ],
+        [
+          115.02,
+          10.5
+        ],
+        [
+          114.99,
+          13.5
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        112.62,
+        12.87
+      ],
+      "label_id": 30,
+      "semantic_class": "room",
+      "mask": "spaces/030_room_030.png",
+      "mask_pixel_count": 15873,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_031",
+      "type": "room",
+      "room_number": "126",
+      "room_number_aliases": [],
+      "name": "토목정학자 요준",
+      "text_entity_id": "text_129",
+      "area_px": 16610,
+      "bbox_px": [
+        740,
+        797,
+        166,
+        108
+      ],
+      "polygon_px": [
+        [
+          742,
+          799
+        ],
+        [
+          741,
+          904
+        ],
+        [
+          895,
+          902
+        ],
+        [
+          895,
+          882
+        ],
+        [
+          905,
+          879
+        ],
+        [
+          905,
+          865
+        ],
+        [
+          894,
+          862
+        ],
+        [
+          893,
+          797
+        ]
+      ],
+      "center_px": [
+        818,
+        850
+      ],
+      "navigation_seed_px": [
+        815,
+        850
+      ],
+      "ocr_anchor_px": [
+        807,
+        822
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.8,
+      "center_map_m": [
+        24.54,
+        9.63
+      ],
+      "navigation_seed_map_m": [
+        24.45,
+        9.63
+      ],
+      "polygon_map_m": [
+        [
+          22.26,
+          11.16
+        ],
+        [
+          22.23,
+          8.01
+        ],
+        [
+          26.85,
+          8.07
+        ],
+        [
+          26.85,
+          8.67
+        ],
+        [
+          27.15,
+          8.76
+        ],
+        [
+          27.15,
+          9.18
+        ],
+        [
+          26.82,
+          9.27
+        ],
+        [
+          26.79,
+          11.22
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        24.21,
+        10.47
+      ],
+      "label_id": 31,
+      "semantic_class": "room",
+      "mask": "spaces/031_room_031.png",
+      "mask_pixel_count": 16610,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_032",
+      "type": "room",
+      "room_number": "106",
+      "room_number_aliases": [],
+      "name": "기대당과 예상도",
+      "text_entity_id": "text_130",
+      "area_px": 15935,
+      "bbox_px": [
+        3662,
+        829,
+        172,
+        105
+      ],
+      "polygon_px": [
+        [
+          3680,
+          832
+        ],
+        [
+          3679,
+          906
+        ],
+        [
+          3662,
+          907
+        ],
+        [
+          3664,
+          925
+        ],
+        [
+          3672,
+          926
+        ],
+        [
+          3675,
+          930
+        ],
+        [
+          3722,
+          932
+        ],
+        [
+          3832,
+          930
+        ],
+        [
+          3832,
+          831
+        ],
+        [
+          3747,
+          829
+        ]
+      ],
+      "center_px": [
+        3754,
+        881
+      ],
+      "navigation_seed_px": [
+        3748,
+        881
+      ],
+      "ocr_anchor_px": [
+        3754,
+        851
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.8,
+      "center_map_m": [
+        112.62,
+        8.7
+      ],
+      "navigation_seed_map_m": [
+        112.44,
+        8.7
+      ],
+      "polygon_map_m": [
+        [
+          110.4,
+          10.17
+        ],
+        [
+          110.37,
+          7.95
+        ],
+        [
+          109.86,
+          7.92
+        ],
+        [
+          109.92,
+          7.38
+        ],
+        [
+          110.16,
+          7.35
+        ],
+        [
+          110.25,
+          7.23
+        ],
+        [
+          111.66,
+          7.17
+        ],
+        [
+          114.96,
+          7.23
+        ],
+        [
+          114.96,
+          10.2
+        ],
+        [
+          112.41,
+          10.26
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        112.62,
+        9.6
+      ],
+      "label_id": 32,
+      "semantic_class": "room",
+      "mask": "spaces/032_room_032.png",
+      "mask_pixel_count": 15935,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_033",
+      "type": "room",
+      "room_number": "104-A",
+      "room_number_aliases": [],
+      "name": "10 104-A 가전 기계공학과 전산실습실",
+      "text_entity_id": null,
+      "area_px": 62568,
+      "bbox_px": [
+        3125,
+        588,
+        237,
+        273
+      ],
+      "polygon_px": [
+        [
+          3126,
+          588
+        ],
+        [
+          3126,
+          855
+        ],
+        [
+          3360,
+          860
+        ],
+        [
+          3358,
+          595
+        ]
+      ],
+      "center_px": [
+        3242,
+        725
+      ],
+      "navigation_seed_px": [
+        3242,
+        710
+      ],
+      "ocr_anchor_px": [
+        3240,
+        670
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.95,
+      "center_map_m": [
+        97.26,
+        13.38
+      ],
+      "navigation_seed_map_m": [
+        97.26,
+        13.83
+      ],
+      "polygon_map_m": [
+        [
+          93.78,
+          17.49
+        ],
+        [
+          93.78,
+          9.48
+        ],
+        [
+          100.8,
+          9.33
+        ],
+        [
+          100.74,
+          17.28
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        97.2,
+        15.03
+      ],
+      "label_id": 33,
+      "semantic_class": "room",
+      "mask": "spaces/033_room_033.png",
+      "mask_pixel_count": 62568,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "room_035",
+      "type": "room",
+      "room_number": "102-C",
+      "room_number_aliases": [],
+      "name": null,
+      "text_entity_id": null,
+      "area_px": 17370,
+      "bbox_px": [
+        2754,
+        680,
+        114,
+        168
+      ],
+      "polygon_px": [
+        [
+          2764,
+          682
+        ],
+        [
+          2762,
+          694
+        ],
+        [
+          2754,
+          699
+        ],
+        [
+          2754,
+          779
+        ],
+        [
+          2764,
+          785
+        ],
+        [
+          2765,
+          844
+        ],
+        [
+          2864,
+          847
+        ],
+        [
+          2866,
+          770
+        ],
+        [
+          2856,
+          765
+        ],
+        [
+          2832,
+          766
+        ],
+        [
+          2827,
+          762
+        ],
+        [
+          2827,
+          756
+        ],
+        [
+          2835,
+          752
+        ],
+        [
+          2866,
+          750
+        ],
+        [
+          2867,
+          685
+        ]
+      ],
+      "center_px": [
+        2811,
+        762
+      ],
+      "navigation_seed_px": [
+        2807,
+        802
+      ],
+      "ocr_anchor_px": [
+        2811,
+        726
+      ],
+      "geometry_source": "panel_colour_face_cut_by_walls",
+      "confidence": 0.6,
+      "center_map_m": [
+        84.33,
+        12.27
+      ],
+      "navigation_seed_map_m": [
+        84.21,
+        11.07
+      ],
+      "polygon_map_m": [
+        [
+          82.92,
+          14.67
+        ],
+        [
+          82.86,
+          14.31
+        ],
+        [
+          82.62,
+          14.16
+        ],
+        [
+          82.62,
+          11.76
+        ],
+        [
+          82.92,
+          11.58
+        ],
+        [
+          82.95,
+          9.81
+        ],
+        [
+          85.92,
+          9.72
+        ],
+        [
+          85.98,
+          12.03
+        ],
+        [
+          85.68,
+          12.18
+        ],
+        [
+          84.96,
+          12.15
+        ],
+        [
+          84.81,
+          12.27
+        ],
+        [
+          84.81,
+          12.45
+        ],
+        [
+          85.05,
+          12.57
+        ],
+        [
+          85.98,
+          12.63
+        ],
+        [
+          86.01,
+          14.58
+        ]
+      ],
+      "ocr_anchor_map_m": [
+        84.33,
+        13.35
+      ],
+      "label_id": 35,
+      "semantic_class": "room",
+      "mask": "spaces/035_room_035.png",
+      "mask_pixel_count": 17370,
+      "mask_clipped_to_navigation_free": true
+    },
+    {
+      "id": "restroom_001",
+      "label_id": 36,
+      "type": "restroom",
+      "semantic_class": "restroom",
+      "area_px": 18417,
+      "bbox_px": [
+        2427,
+        169,
+        106,
+        212
+      ],
+      "polygon_px": [
+        [
+          2532,
+          170
+        ],
+        [
+          2428,
+          169
+        ],
+        [
+          2427,
+          379
+        ],
+        [
+          2465,
+          380
+        ],
+        [
+          2465,
+          339
+        ],
+        [
+          2468,
+          336
+        ],
+        [
+          2514,
+          337
+        ],
+        [
+          2514,
+          290
+        ],
+        [
+          2532,
+          288
+        ]
+      ],
+      "polygon_map_m": [
+        [
+          119.074916,
+          47.075036
+        ],
+        [
+          114.184003,
+          47.122064
+        ],
+        [
+          114.136975,
+          37.246182
+        ],
+        [
+          115.92404,
+          37.199154
+        ],
+        [
+          115.92404,
+          39.127303
+        ],
+        [
+          116.065124,
+          39.268387
+        ],
+        [
+          118.228412,
+          39.221359
+        ],
+        [
+          118.228412,
+          41.431675
+        ],
+        [
+          119.074916,
+          41.525731
+        ]
+      ],
+      "center_px": [
+        2480,
+        221
+      ],
+      "center_map_m": [
+        116.62946,
+        44.676608
+      ],
+      "navigation_seed_px": [
+        2480,
+        221
+      ],
+      "navigation_seed_map_m": [
+        116.62946,
+        44.676608
+      ],
+      "mask": "spaces/036_restroom_001.png",
+      "confidence": 0.65,
+      "geometry_source": "21_vlm_icons.json accepted icons"
+    },
+    {
+      "id": "restroom_002",
+      "label_id": 37,
+      "type": "restroom",
+      "semantic_class": "restroom",
+      "area_px": 18964,
+      "bbox_px": [
+        2525,
+        170,
+        111,
+        213
+      ],
+      "polygon_px": [
+        [
+          2543,
+          170
+        ],
+        [
+          2543,
+          296
+        ],
+        [
+          2525,
+          297
+        ],
+        [
+          2525,
+          336
+        ],
+        [
+          2571,
+          338
+        ],
+        [
+          2573,
+          380
+        ],
+        [
+          2635,
+          382
+        ],
+        [
+          2634,
+          171
+        ]
+      ],
+      "polygon_map_m": [
+        [
+          119.592224,
+          47.075036
+        ],
+        [
+          119.592224,
+          41.149507
+        ],
+        [
+          118.74572,
+          41.102479
+        ],
+        [
+          118.74572,
+          39.268387
+        ],
+        [
+          120.909009,
+          39.174331
+        ],
+        [
+          121.003065,
+          37.199154
+        ],
+        [
+          123.918801,
+          37.105098
+        ],
+        [
+          123.871773,
+          47.028008
+        ]
+      ],
+      "center_px": [
+        2588,
+        215
+      ],
+      "center_map_m": [
+        121.708485,
+        44.958776
+      ],
+      "navigation_seed_px": [
+        2588,
+        215
+      ],
+      "navigation_seed_map_m": [
+        121.708485,
+        44.958776
+      ],
+      "mask": "spaces/037_restroom_002.png",
+      "confidence": 0.65,
+      "geometry_source": "21_vlm_icons.json accepted icons"
+    },
+    {
+      "id": "stair_001",
+      "label_id": 38,
+      "type": "stair",
+      "semantic_class": "stair",
+      "area_px": 15555,
+      "bbox_px": [
+        3603,
+        198,
+        150,
+        107
+      ],
+      "polygon_px": [
+        [
+          3605,
+          198
+        ],
+        [
+          3604,
+          304
+        ],
+        [
+          3752,
+          304
+        ],
+        [
+          3752,
+          269
+        ],
+        [
+          3747,
+          267
+        ],
+        [
+          3748,
+          198
+        ]
+      ],
+      "polygon_map_m": [
+        [
+          169.535969,
+          45.758252
+        ],
+        [
+          169.488941,
+          40.773283
+        ],
+        [
+          176.449086,
+          40.773283
+        ],
+        [
+          176.449086,
+          42.419263
+        ],
+        [
+          176.213946,
+          42.513319
+        ],
+        [
+          176.260974,
+          45.758252
+        ]
+      ],
+      "center_px": [
+        3658,
+        251
+      ],
+      "center_map_m": [
+        172.028453,
+        43.265767
+      ],
+      "navigation_seed_px": [
+        3658,
+        251
+      ],
+      "navigation_seed_map_m": [
+        172.028453,
+        43.265767
+      ],
+      "mask": "spaces/038_stair_001.png",
+      "confidence": 0.65,
+      "geometry_source": "18_structural_fixes.json stair_hatch_regions"
+    },
+    {
+      "id": "stair_002",
+      "label_id": 39,
+      "type": "stair",
+      "semantic_class": "stair",
+      "area_px": 14040,
+      "bbox_px": [
+        2094,
+        229,
+        120,
+        117
+      ],
+      "polygon_px": [
+        [
+          2094,
+          229
+        ],
+        [
+          2094,
+          345
+        ],
+        [
+          2213,
+          345
+        ],
+        [
+          2213,
+          229
+        ]
+      ],
+      "polygon_map_m": [
+        [
+          98.476649,
+          44.300384
+        ],
+        [
+          98.476649,
+          38.845135
+        ],
+        [
+          104.072982,
+          38.845135
+        ],
+        [
+          104.072982,
+          44.300384
+        ]
+      ],
+      "center_px": [
+        2152,
+        287
+      ],
+      "center_map_m": [
+        101.204273,
+        41.572759
+      ],
+      "navigation_seed_px": [
+        2152,
+        287
+      ],
+      "navigation_seed_map_m": [
+        101.204273,
+        41.572759
+      ],
+      "mask": "spaces/039_stair_002.png",
+      "confidence": 0.65,
+      "geometry_source": "18_structural_fixes.json stair_hatch_regions"
+    },
+    {
+      "id": "stair_003",
+      "label_id": 40,
+      "type": "stair",
+      "semantic_class": "stair",
+      "area_px": 5823,
+      "bbox_px": [
+        831,
+        230,
+        101,
+        58
+      ],
+      "polygon_px": [
+        [
+          835,
+          230
+        ],
+        [
+          835,
+          237
+        ],
+        [
+          831,
+          239
+        ],
+        [
+          831,
+          287
+        ],
+        [
+          931,
+          287
+        ],
+        [
+          931,
+          230
+        ]
+      ],
+      "polygon_map_m": [
+        [
+          39.268387,
+          44.253356
+        ],
+        [
+          39.268387,
+          43.924159
+        ],
+        [
+          39.080275,
+          43.830103
+        ],
+        [
+          39.080275,
+          41.572759
+        ],
+        [
+          43.783075,
+          41.572759
+        ],
+        [
+          43.783075,
+          44.253356
+        ]
+      ],
+      "center_px": [
+        859,
+        258
+      ],
+      "center_map_m": [
+        40.397059,
+        42.936571
+      ],
+      "navigation_seed_px": [
+        859,
+        258
+      ],
+      "navigation_seed_map_m": [
+        40.397059,
+        42.936571
+      ],
+      "mask": "spaces/040_stair_003.png",
+      "confidence": 0.65,
+      "geometry_source": "18_structural_fixes.json stair_hatch_regions"
+    },
+    {
+      "id": "stair_004",
+      "label_id": 41,
+      "type": "stair",
+      "semantic_class": "stair",
+      "area_px": 12372,
+      "bbox_px": [
+        3533,
+        510,
+        89,
+        141
+      ],
+      "polygon_px": [
+        [
+          3533,
+          510
+        ],
+        [
+          3534,
+          647
+        ],
+        [
+          3538,
+          649
+        ],
+        [
+          3621,
+          650
+        ],
+        [
+          3621,
+          510
+        ]
+      ],
+      "polygon_map_m": [
+        [
+          166.149952,
+          31.085513
+        ],
+        [
+          166.19698,
+          24.642676
+        ],
+        [
+          166.385092,
+          24.54862
+        ],
+        [
+          170.288417,
+          24.501592
+        ],
+        [
+          170.288417,
+          31.085513
+        ]
+      ],
+      "center_px": [
+        3577,
+        554
+      ],
+      "center_map_m": [
+        168.219185,
+        29.016281
+      ],
+      "navigation_seed_px": [
+        3577,
+        554
+      ],
+      "navigation_seed_map_m": [
+        168.219185,
+        29.016281
+      ],
+      "mask": "spaces/041_stair_004.png",
+      "confidence": 0.65,
+      "geometry_source": "18_structural_fixes.json stair_hatch_regions"
+    }
+  ],
+  "corridors": [
+    {
+      "id": "corridor_001",
+      "label_id": 42,
+      "type": "corridor",
+      "semantic_class": "corridor",
+      "area_px": 447508,
+      "bbox_px": [
+        707,
+        110,
+        3199,
+        849
+      ],
+      "polygon_px": [
+        [
+          707,
+          407
+        ],
+        [
+          735,
+          484
+        ],
+        [
+          894,
+          465
+        ],
+        [
+          910,
+          903
+        ],
+        [
+          931,
+          533
+        ],
+        [
+          1005,
+          462
+        ],
+        [
+          2108,
+          453
+        ],
+        [
+          2168,
+          673
+        ],
+        [
+          2104,
+          954
+        ],
+        [
+          2383,
+          958
+        ],
+        [
+          2358,
+          608
+        ],
+        [
+          2299,
+          662
+        ],
+        [
+          2363,
+          451
+        ],
+        [
+          3125,
+          463
+        ],
+        [
+          3163,
+          583
+        ],
+        [
+          3172,
+          476
+        ],
+        [
+          3615,
+          481
+        ],
+        [
+          3632,
+          930
+        ],
+        [
+          3650,
+          483
+        ],
+        [
+          3905,
+          497
+        ],
+        [
+          3896,
+          386
+        ],
+        [
+          3755,
+          397
+        ],
+        [
+          3774,
+          286
+        ],
+        [
+          3742,
+          402
+        ],
+        [
+          3728,
+          305
+        ],
+        [
+          3626,
+          305
+        ],
+        [
+          3612,
+          418
+        ],
+        [
+          2361,
+          411
+        ],
+        [
+          2350,
+          110
+        ],
+        [
+          2282,
+          116
+        ],
+        [
+          2304,
+          244
+        ],
+        [
+          2226,
+          238
+        ],
+        [
+          2285,
+          153
+        ],
+        [
+          2112,
+          152
+        ],
+        [
+          2112,
+          225
+        ],
+        [
+          2210,
+          177
+        ],
+        [
+          2144,
+          396
+        ],
+        [
+          957,
+          399
+        ],
+        [
+          902,
+          139
+        ],
+        [
+          932,
+          287
+        ],
+        [
+          835,
+          380
+        ],
+        [
+          798,
+          244
+        ],
+        [
+          803,
+          377
+        ]
+      ],
+      "polygon_map_m": [
+        [
+          33.248802,
+          35.929398
+        ],
+        [
+          34.565586,
+          32.308241
+        ],
+        [
+          42.043039,
+          33.201774
+        ],
+        [
+          42.795487,
+          12.603506
+        ],
+        [
+          43.783075,
+          30.003869
+        ],
+        [
+          47.263148,
+          33.342858
+        ],
+        [
+          99.135041,
+          33.76611
+        ],
+        [
+          101.956721,
+          23.419948
+        ],
+        [
+          98.946929,
+          10.205078
+        ],
+        [
+          112.067743,
+          10.016966
+        ],
+        [
+          110.892043,
+          26.476769
+        ],
+        [
+          108.11739,
+          23.937256
+        ],
+        [
+          111.127183,
+          33.860166
+        ],
+        [
+          146.962525,
+          33.29583
+        ],
+        [
+          148.749589,
+          27.652469
+        ],
+        [
+          149.172841,
+          32.684466
+        ],
+        [
+          170.006249,
+          32.449326
+        ],
+        [
+          170.805725,
+          11.33375
+        ],
+        [
+          171.652229,
+          32.35527
+        ],
+        [
+          183.644371,
+          31.696877
+        ],
+        [
+          183.221119,
+          36.916986
+        ],
+        [
+          176.59017,
+          36.399678
+        ],
+        [
+          177.483702,
+          41.619787
+        ],
+        [
+          175.978806,
+          36.164538
+        ],
+        [
+          175.320414,
+          40.726255
+        ],
+        [
+          170.523557,
+          40.726255
+        ],
+        [
+          169.865165,
+          35.41209
+        ],
+        [
+          111.033127,
+          35.741286
+        ],
+        [
+          110.515819,
+          49.896716
+        ],
+        [
+          107.317914,
+          49.614548
+        ],
+        [
+          108.35253,
+          43.594963
+        ],
+        [
+          104.684346,
+          43.877131
+        ],
+        [
+          107.458998,
+          47.874512
+        ],
+        [
+          99.323153,
+          47.92154
+        ],
+        [
+          99.323153,
+          44.488496
+        ],
+        [
+          103.931898,
+          46.74584
+        ],
+        [
+          100.828049,
+          36.446706
+        ],
+        [
+          45.005804,
+          36.305622
+        ],
+        [
+          42.419263,
+          48.532904
+        ],
+        [
+          43.830103,
+          41.572759
+        ],
+        [
+          39.268387,
+          37.199154
+        ],
+        [
+          37.52835,
+          43.594963
+        ],
+        [
+          37.76349,
+          37.340238
+        ]
+      ],
+      "center_px": [
+        2245,
+        781
+      ],
+      "center_map_m": [
+        105.577878,
+        18.340923
+      ],
+      "navigation_seed_px": [
+        2245,
+        781
+      ],
+      "navigation_seed_map_m": [
+        105.577878,
+        18.340923
+      ],
+      "mask": "corridors/042_corridor_001.png",
+      "confidence": 0.75,
+      "geometry_source": "unclaimed_free_space"
+    },
+    {
+      "id": "corridor_002",
+      "label_id": 43,
+      "type": "corridor",
+      "semantic_class": "corridor",
+      "area_px": 1212,
+      "bbox_px": [
+        853,
+        123,
+        41,
+        40
+      ],
+      "polygon_px": [
+        [
+          867,
+          123
+        ],
+        [
+          867,
+          138
+        ],
+        [
+          853,
+          140
+        ],
+        [
+          854,
+          161
+        ],
+        [
+          892,
+          161
+        ],
+        [
+          893,
+          139
+        ],
+        [
+          884,
+          138
+        ],
+        [
+          884,
+          124
+        ]
+      ],
+      "polygon_map_m": [
+        [
+          40.773283,
+          49.285352
+        ],
+        [
+          40.773283,
+          48.579932
+        ],
+        [
+          40.114891,
+          48.485876
+        ],
+        [
+          40.161919,
+          47.498288
+        ],
+        [
+          41.948983,
+          47.498288
+        ],
+        [
+          41.996011,
+          48.532904
+        ],
+        [
+          41.572759,
+          48.579932
+        ],
+        [
+          41.572759,
+          49.238324
+        ]
+      ],
+      "center_px": [
+        875,
+        149
+      ],
+      "center_map_m": [
+        41.149507,
+        48.062624
+      ],
+      "navigation_seed_px": [
+        875,
+        149
+      ],
+      "navigation_seed_map_m": [
+        41.149507,
+        48.062624
+      ],
+      "mask": "corridors/043_corridor_002.png",
+      "confidence": 0.75,
+      "geometry_source": "unclaimed_free_space"
+    },
+    {
+      "id": "corridor_003",
+      "label_id": 44,
+      "type": "corridor",
+      "semantic_class": "corridor",
+      "area_px": 2721,
+      "bbox_px": [
+        3626,
+        137,
+        55,
+        61
+      ],
+      "polygon_px": [
+        [
+          3672,
+          137
+        ],
+        [
+          3653,
+          137
+        ],
+        [
+          3654,
+          152
+        ],
+        [
+          3652,
+          154
+        ],
+        [
+          3626,
+          155
+        ],
+        [
+          3626,
+          197
+        ],
+        [
+          3680,
+          197
+        ],
+        [
+          3680,
+          154
+        ],
+        [
+          3673,
+          154
+        ],
+        [
+          3671,
+          152
+        ]
+      ],
+      "polygon_map_m": [
+        [
+          172.686845,
+          48.62696
+        ],
+        [
+          171.793313,
+          48.62696
+        ],
+        [
+          171.840341,
+          47.92154
+        ],
+        [
+          171.746285,
+          47.827484
+        ],
+        [
+          170.523557,
+          47.780456
+        ],
+        [
+          170.523557,
+          45.80528
+        ],
+        [
+          173.063069,
+          45.80528
+        ],
+        [
+          173.063069,
+          47.827484
+        ],
+        [
+          172.733873,
+          47.827484
+        ],
+        [
+          172.639817,
+          47.92154
+        ]
+      ],
+      "center_px": [
+        3658,
+        175
+      ],
+      "center_map_m": [
+        172.028453,
+        46.839896
+      ],
+      "navigation_seed_px": [
+        3658,
+        175
+      ],
+      "navigation_seed_map_m": [
+        172.028453,
+        46.839896
+      ],
+      "mask": "corridors/044_corridor_003.png",
+      "confidence": 0.75,
+      "geometry_source": "unclaimed_free_space"
+    },
+    {
+      "id": "corridor_004",
+      "label_id": 45,
+      "type": "corridor",
+      "semantic_class": "corridor",
+      "area_px": 1781,
+      "bbox_px": [
+        3689,
+        154,
+        41,
+        44
+      ],
+      "polygon_px": [
+        [
+          3689,
+          154
+        ],
+        [
+          3690,
+          197
+        ],
+        [
+          3729,
+          197
+        ],
+        [
+          3729,
+          155
+        ]
+      ],
+      "polygon_map_m": [
+        [
+          173.486322,
+          47.827484
+        ],
+        [
+          173.53335,
+          45.80528
+        ],
+        [
+          175.367442,
+          45.80528
+        ],
+        [
+          175.367442,
+          47.780456
+        ]
+      ],
+      "center_px": [
+        3709,
+        174
+      ],
+      "center_map_m": [
+        174.426882,
+        46.886924
+      ],
+      "navigation_seed_px": [
+        3709,
+        174
+      ],
+      "navigation_seed_map_m": [
+        174.426882,
+        46.886924
+      ],
+      "mask": "corridors/045_corridor_004.png",
+      "confidence": 0.75,
+      "geometry_source": "unclaimed_free_space"
+    },
+    {
+      "id": "corridor_005",
+      "label_id": 46,
+      "type": "corridor",
+      "semantic_class": "corridor",
+      "area_px": 1503,
+      "bbox_px": [
+        2476,
+        346,
+        46,
+        35
+      ],
+      "polygon_px": [
+        [
+          2476,
+          346
+        ],
+        [
+          2476,
+          380
+        ],
+        [
+          2512,
+          380
+        ],
+        [
+          2516,
+          379
+        ],
+        [
+          2517,
+          376
+        ],
+        [
+          2521,
+          374
+        ],
+        [
+          2521,
+          357
+        ],
+        [
+          2517,
+          357
+        ],
+        [
+          2515,
+          355
+        ],
+        [
+          2513,
+          347
+        ]
+      ],
+      "polygon_map_m": [
+        [
+          116.441348,
+          38.798107
+        ],
+        [
+          116.441348,
+          37.199154
+        ],
+        [
+          118.134356,
+          37.199154
+        ],
+        [
+          118.322468,
+          37.246182
+        ],
+        [
+          118.369496,
+          37.387266
+        ],
+        [
+          118.557608,
+          37.481322
+        ],
+        [
+          118.557608,
+          38.280799
+        ],
+        [
+          118.369496,
+          38.280799
+        ],
+        [
+          118.27544,
+          38.374855
+        ],
+        [
+          118.181384,
+          38.751079
+        ]
+      ],
+      "center_px": [
+        2493,
+        363
+      ],
+      "center_map_m": [
+        117.240824,
+        37.99863
+      ],
+      "navigation_seed_px": [
+        2493,
+        363
+      ],
+      "navigation_seed_map_m": [
+        117.240824,
+        37.99863
+      ],
+      "mask": "corridors/046_corridor_005.png",
+      "confidence": 0.75,
+      "geometry_source": "unclaimed_free_space"
+    },
+    {
+      "id": "corridor_006",
+      "label_id": 47,
+      "type": "corridor",
+      "semantic_class": "corridor",
+      "area_px": 5848,
+      "bbox_px": [
+        645,
+        349,
+        82,
+        163
+      ],
+      "polygon_px": [
+        [
+          660,
+          349
+        ],
+        [
+          652,
+          356
+        ],
+        [
+          652,
+          382
+        ],
+        [
+          646,
+          383
+        ],
+        [
+          658,
+          412
+        ],
+        [
+          656,
+          438
+        ],
+        [
+          645,
+          458
+        ],
+        [
+          650,
+          459
+        ],
+        [
+          651,
+          473
+        ],
+        [
+          692,
+          511
+        ],
+        [
+          726,
+          511
+        ],
+        [
+          726,
+          505
+        ],
+        [
+          693,
+          505
+        ],
+        [
+          654,
+          466
+        ],
+        [
+          659,
+          458
+        ],
+        [
+          662,
+          467
+        ],
+        [
+          698,
+          499
+        ],
+        [
+          723,
+          499
+        ],
+        [
+          721,
+          495
+        ],
+        [
+          693,
+          493
+        ],
+        [
+          665,
+          465
+        ],
+        [
+          664,
+          459
+        ],
+        [
+          671,
+          458
+        ],
+        [
+          697,
+          486
+        ],
+        [
+          709,
+          486
+        ],
+        [
+          700,
+          477
+        ],
+        [
+          700,
+          459
+        ],
+        [
+          713,
+          458
+        ],
+        [
+          713,
+          448
+        ],
+        [
+          698,
+          447
+        ],
+        [
+          698,
+          374
+        ],
+        [
+          681,
+          360
+        ],
+        [
+          673,
+          365
+        ],
+        [
+          672,
+          382
+        ],
+        [
+          666,
+          383
+        ],
+        [
+          663,
+          360
+        ],
+        [
+          661,
+          382
+        ],
+        [
+          655,
+          383
+        ],
+        [
+          654,
+          361
+        ]
+      ],
+      "polygon_map_m": [
+        [
+          31.038485,
+          38.657023
+        ],
+        [
+          30.662261,
+          38.327827
+        ],
+        [
+          30.662261,
+          37.105098
+        ],
+        [
+          30.380093,
+          37.05807
+        ],
+        [
+          30.944429,
+          35.694258
+        ],
+        [
+          30.850373,
+          34.47153
+        ],
+        [
+          30.333065,
+          33.53097
+        ],
+        [
+          30.568205,
+          33.483942
+        ],
+        [
+          30.615233,
+          32.82555
+        ],
+        [
+          32.543382,
+          31.038485
+        ],
+        [
+          34.142334,
+          31.038485
+        ],
+        [
+          34.142334,
+          31.320653
+        ],
+        [
+          32.59041,
+          31.320653
+        ],
+        [
+          30.756317,
+          33.154746
+        ],
+        [
+          30.991457,
+          33.53097
+        ],
+        [
+          31.132541,
+          33.107718
+        ],
+        [
+          32.82555,
+          31.602821
+        ],
+        [
+          34.00125,
+          31.602821
+        ],
+        [
+          33.907194,
+          31.790933
+        ],
+        [
+          32.59041,
+          31.884989
+        ],
+        [
+          31.273625,
+          33.201774
+        ],
+        [
+          31.226597,
+          33.483942
+        ],
+        [
+          31.555793,
+          33.53097
+        ],
+        [
+          32.778522,
+          32.214185
+        ],
+        [
+          33.342858,
+          32.214185
+        ],
+        [
+          32.919606,
+          32.637438
+        ],
+        [
+          32.919606,
+          33.483942
+        ],
+        [
+          33.53097,
+          33.53097
+        ],
+        [
+          33.53097,
+          34.00125
+        ],
+        [
+          32.82555,
+          34.048278
+        ],
+        [
+          32.82555,
+          37.481322
+        ],
+        [
+          32.026073,
+          38.139714
+        ],
+        [
+          31.649849,
+          37.904574
+        ],
+        [
+          31.602821,
+          37.105098
+        ],
+        [
+          31.320653,
+          37.05807
+        ],
+        [
+          31.179569,
+          38.139714
+        ],
+        [
+          31.085513,
+          37.105098
+        ],
+        [
+          30.803345,
+          37.05807
+        ],
+        [
+          30.756317,
+          38.092686
+        ]
+      ],
+      "center_px": [
+        677,
+        438
+      ],
+      "center_map_m": [
+        31.837961,
+        34.47153
+      ],
+      "navigation_seed_px": [
+        677,
+        438
+      ],
+      "navigation_seed_map_m": [
+        31.837961,
+        34.47153
+      ],
+      "mask": "corridors/047_corridor_006.png",
+      "confidence": 0.75,
+      "geometry_source": "unclaimed_free_space"
+    },
+    {
+      "id": "corridor_007",
+      "label_id": 48,
+      "type": "corridor",
+      "semantic_class": "corridor",
+      "area_px": 2222,
+      "bbox_px": [
+        2100,
+        482,
+        13,
+        175
+      ],
+      "polygon_px": [
+        [
+          2101,
+          482
+        ],
+        [
+          2100,
+          656
+        ],
+        [
+          2111,
+          656
+        ],
+        [
+          2112,
+          482
+        ]
+      ],
+      "polygon_map_m": [
+        [
+          98.805845,
+          32.402298
+        ],
+        [
+          98.758817,
+          24.219424
+        ],
+        [
+          99.276125,
+          24.219424
+        ],
+        [
+          99.323153,
+          32.402298
+        ]
+      ],
+      "center_px": [
+        2106,
+        536
+      ],
+      "center_map_m": [
+        99.040985,
+        29.862785
+      ],
+      "navigation_seed_px": [
+        2106,
+        536
+      ],
+      "navigation_seed_map_m": [
+        99.040985,
+        29.862785
+      ],
+      "mask": "corridors/048_corridor_007.png",
+      "confidence": 0.75,
+      "geometry_source": "unclaimed_free_space"
+    }
+  ],
+  "doors": [
+    {
+      "id": "door_001",
+      "center_px": [
+        814,
+        254
+      ],
+      "center_map_m": [
+        24.42,
+        27.51
+      ],
+      "width_px": 32,
+      "orientation": "horizontal",
+      "bbox_px": [
+        803,
+        244,
+        32,
+        14
+      ],
+      "opening_area_px": 45,
+      "source": "room_outline_opening",
+      "room_id": "room_001",
+      "room_number": "131",
+      "connects": [
+        "room_001",
+        "corridor_002"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        818,
+        235,
+        18,
+        10
+      ]
+    },
+    {
+      "id": "door_002",
+      "center_px": [
+        976,
+        397
+      ],
+      "center_map_m": [
+        29.28,
+        23.22
+      ],
+      "width_px": 45,
+      "orientation": "horizontal",
+      "bbox_px": [
+        955,
+        390,
+        45,
+        10
+      ],
+      "opening_area_px": 62,
+      "source": "room_outline_opening",
+      "room_id": "room_002",
+      "room_number": "121",
+      "connects": [
+        "room_002",
+        "corridor_002"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        970,
+        378,
+        20,
+        9
+      ]
+    },
+    {
+      "id": "door_003",
+      "center_px": [
+        1146,
+        397
+      ],
+      "center_map_m": [
+        34.38,
+        23.22
+      ],
+      "width_px": 47,
+      "orientation": "horizontal",
+      "bbox_px": [
+        1123,
+        391,
+        47,
+        9
+      ],
+      "opening_area_px": 63,
+      "source": "room_outline_opening",
+      "room_id": "room_002",
+      "room_number": "121",
+      "connects": [
+        "room_002",
+        "corridor_002"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        1131,
+        378,
+        54,
+        9
+      ]
+    },
+    {
+      "id": "door_004",
+      "center_px": [
+        1187,
+        397
+      ],
+      "center_map_m": [
+        35.61,
+        23.22
+      ],
+      "width_px": 46,
+      "orientation": "horizontal",
+      "bbox_px": [
+        1165,
+        391,
+        46,
+        9
+      ],
+      "opening_area_px": 62,
+      "source": "room_outline_opening",
+      "room_id": "room_003",
+      "room_number": "120",
+      "connects": [
+        "room_003",
+        "corridor_002"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        1150,
+        378,
+        49,
+        9
+      ]
+    },
+    {
+      "id": "door_005",
+      "center_px": [
+        1361,
+        397
+      ],
+      "center_map_m": [
+        40.83,
+        23.22
+      ],
+      "width_px": 45,
+      "orientation": "horizontal",
+      "bbox_px": [
+        1339,
+        391,
+        45,
+        8
+      ],
+      "opening_area_px": 59,
+      "source": "room_outline_opening",
+      "room_id": "room_003",
+      "room_number": "120",
+      "connects": [
+        "room_003",
+        "corridor_002"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        1348,
+        377,
+        51,
+        11
+      ]
+    },
+    {
+      "id": "door_006",
+      "center_px": [
+        3385,
+        414
+      ],
+      "center_map_m": [
+        101.55,
+        22.71
+      ],
+      "width_px": 46,
+      "orientation": "horizontal",
+      "bbox_px": [
+        3363,
+        408,
+        46,
+        9
+      ],
+      "opening_area_px": 61,
+      "source": "room_outline_opening",
+      "room_id": "room_004",
+      "room_number": "112",
+      "connects": [
+        "room_004",
+        "corridor_003"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        3348,
+        394,
+        51,
+        10
+      ]
+    },
+    {
+      "id": "door_007",
+      "center_px": [
+        3591,
+        416
+      ],
+      "center_map_m": [
+        107.73,
+        22.65
+      ],
+      "width_px": 44,
+      "orientation": "horizontal",
+      "bbox_px": [
+        3570,
+        410,
+        44,
+        9
+      ],
+      "opening_area_px": 60,
+      "source": "room_outline_opening",
+      "room_id": "room_004",
+      "room_number": "112",
+      "connects": [
+        "room_004",
+        "corridor_003"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        3579,
+        396,
+        23,
+        10
+      ]
+    },
+    {
+      "id": "door_008",
+      "center_px": [
+        3761,
+        286
+      ],
+      "center_map_m": [
+        112.83,
+        26.55
+      ],
+      "width_px": 27,
+      "orientation": "horizontal",
+      "bbox_px": [
+        3748,
+        286,
+        27,
+        1
+      ],
+      "opening_area_px": 27,
+      "source": "room_outline_opening",
+      "room_id": "room_005",
+      "room_number": "111",
+      "connects": [
+        "room_005",
+        "corridor_004"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        3747,
+        271,
+        20,
+        3
+      ]
+    },
+    {
+      "id": "door_009",
+      "center_px": [
+        1401,
+        398
+      ],
+      "center_map_m": [
+        42.03,
+        23.19
+      ],
+      "width_px": 46,
+      "orientation": "horizontal",
+      "bbox_px": [
+        1379,
+        391,
+        46,
+        10
+      ],
+      "opening_area_px": 64,
+      "source": "room_outline_opening",
+      "room_id": "room_006",
+      "room_number": "119",
+      "connects": [
+        "room_006",
+        "corridor_002"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        1364,
+        377,
+        51,
+        11
+      ]
+    },
+    {
+      "id": "door_010",
+      "center_px": [
+        1592,
+        398
+      ],
+      "center_map_m": [
+        47.76,
+        23.19
+      ],
+      "width_px": 36,
+      "orientation": "horizontal",
+      "bbox_px": [
+        1577,
+        392,
+        36,
+        8
+      ],
+      "opening_area_px": 44,
+      "source": "room_outline_opening",
+      "room_id": "room_006",
+      "room_number": "119",
+      "connects": [
+        "room_006",
+        "corridor_007"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        1586,
+        378,
+        18,
+        9
+      ]
+    },
+    {
+      "id": "door_011",
+      "center_px": [
+        1828,
+        401
+      ],
+      "center_map_m": [
+        54.84,
+        23.1
+      ],
+      "width_px": 49,
+      "orientation": "horizontal",
+      "bbox_px": [
+        1805,
+        392,
+        49,
+        12
+      ],
+      "opening_area_px": 70,
+      "source": "room_outline_opening",
+      "room_id": "room_007",
+      "room_number": "117",
+      "connects": [
+        "room_007",
+        "corridor_007"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        1816,
+        382,
+        28,
+        9
+      ]
+    },
+    {
+      "id": "door_012",
+      "center_px": [
+        2063,
+        403
+      ],
+      "center_map_m": [
+        61.89,
+        23.04
+      ],
+      "width_px": 49,
+      "orientation": "horizontal",
+      "bbox_px": [
+        2040,
+        394,
+        49,
+        12
+      ],
+      "opening_area_px": 69,
+      "source": "room_outline_opening",
+      "room_id": "room_007",
+      "room_number": "117",
+      "connects": [
+        "room_007",
+        "corridor_007"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        2051,
+        384,
+        29,
+        9
+      ]
+    },
+    {
+      "id": "door_013",
+      "center_px": [
+        2659,
+        408
+      ],
+      "center_map_m": [
+        79.77,
+        22.89
+      ],
+      "width_px": 42,
+      "orientation": "horizontal",
+      "bbox_px": [
+        2639,
+        401,
+        42,
+        10
+      ],
+      "opening_area_px": 60,
+      "source": "room_outline_opening",
+      "room_id": "room_008",
+      "room_number": "115-A",
+      "connects": [
+        "room_008",
+        "corridor_005"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        2649,
+        389,
+        21,
+        9
+      ]
+    },
+    {
+      "id": "door_014",
+      "center_px": [
+        2978,
+        409
+      ],
+      "center_map_m": [
+        89.34,
+        22.86
+      ],
+      "width_px": 34,
+      "orientation": "horizontal",
+      "bbox_px": [
+        2962,
+        403,
+        34,
+        9
+      ],
+      "opening_area_px": 49,
+      "source": "room_outline_opening",
+      "room_id": "room_009",
+      "room_number": "115-B",
+      "connects": [
+        "room_009",
+        "corridor_005"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        2967,
+        390,
+        18,
+        9
+      ]
+    },
+    {
+      "id": "door_015",
+      "center_px": [
+        3098,
+        413
+      ],
+      "center_map_m": [
+        92.94,
+        22.74
+      ],
+      "width_px": 47,
+      "orientation": "horizontal",
+      "bbox_px": [
+        3076,
+        404,
+        47,
+        12
+      ],
+      "opening_area_px": 68,
+      "source": "room_outline_opening",
+      "room_id": "room_011",
+      "room_number": "114",
+      "connects": [
+        "room_011",
+        "corridor_005"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        3090,
+        391,
+        48,
+        12
+      ]
+    },
+    {
+      "id": "door_016",
+      "center_px": [
+        804,
+        351
+      ],
+      "center_map_m": [
+        24.12,
+        24.6
+      ],
+      "width_px": 27,
+      "orientation": "vertical",
+      "bbox_px": [
+        796,
+        341,
+        11,
+        27
+      ],
+      "opening_area_px": 40,
+      "source": "room_outline_opening",
+      "room_id": "room_013",
+      "room_number": "122",
+      "connects": [
+        "room_013",
+        "corridor_006"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        788,
+        353,
+        2,
+        6
+      ]
+    },
+    {
+      "id": "door_017",
+      "center_px": [
+        3757,
+        370
+      ],
+      "center_map_m": [
+        112.71,
+        24.03
+      ],
+      "width_px": 56,
+      "orientation": "vertical",
+      "bbox_px": [
+        3754,
+        344,
+        21,
+        56
+      ],
+      "opening_area_px": 92,
+      "source": "room_outline_opening",
+      "room_id": "room_014",
+      "room_number": "110",
+      "connects": [
+        "room_014",
+        "corridor_004"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        3767,
+        358,
+        11,
+        28
+      ]
+    },
+    {
+      "id": "door_018",
+      "center_px": [
+        1407,
+        450
+      ],
+      "center_map_m": [
+        42.21,
+        21.63
+      ],
+      "width_px": 64,
+      "orientation": "horizontal",
+      "bbox_px": [
+        1376,
+        448,
+        64,
+        15
+      ],
+      "opening_area_px": 92,
+      "source": "room_outline_opening",
+      "room_id": "room_015",
+      "room_number": "128",
+      "connects": [
+        "room_015",
+        "corridor_002"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        1361,
+        461,
+        63,
+        11
+      ]
+    },
+    {
+      "id": "door_019",
+      "center_px": [
+        1587,
+        449
+      ],
+      "center_map_m": [
+        47.61,
+        21.66
+      ],
+      "width_px": 45,
+      "orientation": "horizontal",
+      "bbox_px": [
+        1569,
+        448,
+        45,
+        15
+      ],
+      "opening_area_px": 63,
+      "source": "room_outline_opening",
+      "room_id": "room_015",
+      "room_number": "128",
+      "connects": [
+        "room_015",
+        "corridor_007"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        1583,
+        461,
+        23,
+        10
+      ]
+    },
+    {
+      "id": "door_020",
+      "center_px": [
+        1085,
+        452
+      ],
+      "center_map_m": [
+        32.55,
+        21.57
+      ],
+      "width_px": 62,
+      "orientation": "horizontal",
+      "bbox_px": [
+        1055,
+        451,
+        62,
+        12
+      ],
+      "opening_area_px": 83,
+      "source": "room_outline_opening",
+      "room_id": "room_016",
+      "room_number": "127",
+      "connects": [
+        "room_016",
+        "corridor_002"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        1068,
+        464,
+        36,
+        9
+      ]
+    },
+    {
+      "id": "door_021",
+      "center_px": [
+        1361,
+        452
+      ],
+      "center_map_m": [
+        40.83,
+        21.57
+      ],
+      "width_px": 52,
+      "orientation": "horizontal",
+      "bbox_px": [
+        1335,
+        450,
+        52,
+        14
+      ],
+      "opening_area_px": 76,
+      "source": "room_outline_opening",
+      "room_id": "room_016",
+      "room_number": "127",
+      "connects": [
+        "room_016",
+        "corridor_002"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        1348,
+        461,
+        54,
+        12
+      ]
+    },
+    {
+      "id": "door_022",
+      "center_px": [
+        930,
+        603
+      ],
+      "center_map_m": [
+        27.9,
+        17.04
+      ],
+      "width_px": 64,
+      "orientation": "vertical",
+      "bbox_px": [
+        929,
+        572,
+        12,
+        64
+      ],
+      "opening_area_px": 86,
+      "source": "room_outline_opening",
+      "room_id": "room_016",
+      "room_number": "127",
+      "connects": [
+        "room_016",
+        "corridor_006"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        942,
+        586,
+        9,
+        37
+      ]
+    },
+    {
+      "id": "door_023",
+      "center_px": [
+        1827,
+        452
+      ],
+      "center_map_m": [
+        54.81,
+        21.57
+      ],
+      "width_px": 63,
+      "orientation": "horizontal",
+      "bbox_px": [
+        1795,
+        450,
+        63,
+        16
+      ],
+      "opening_area_px": 90,
+      "source": "room_outline_opening",
+      "room_id": "room_017",
+      "room_number": "129",
+      "connects": [
+        "room_017",
+        "corridor_007"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        1808,
+        463,
+        65,
+        9
+      ]
+    },
+    {
+      "id": "door_024",
+      "center_px": [
+        1880,
+        451
+      ],
+      "center_map_m": [
+        56.4,
+        21.6
+      ],
+      "width_px": 72,
+      "orientation": "horizontal",
+      "bbox_px": [
+        1845,
+        450,
+        72,
+        15
+      ],
+      "opening_area_px": 99,
+      "source": "room_outline_opening",
+      "room_id": "room_018",
+      "room_number": "130",
+      "connects": [
+        "room_018",
+        "corridor_007"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        1830,
+        463,
+        72,
+        9
+      ]
+    },
+    {
+      "id": "door_025",
+      "center_px": [
+        2057,
+        454
+      ],
+      "center_map_m": [
+        61.71,
+        21.51
+      ],
+      "width_px": 50,
+      "orientation": "horizontal",
+      "bbox_px": [
+        2033,
+        452,
+        50,
+        14
+      ],
+      "opening_area_px": 75,
+      "source": "room_outline_opening",
+      "room_id": "room_018",
+      "room_number": "130",
+      "connects": [
+        "room_018",
+        "corridor_007"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        2047,
+        465,
+        22,
+        9
+      ]
+    },
+    {
+      "id": "door_026",
+      "center_px": [
+        900,
+        560
+      ],
+      "center_map_m": [
+        27.0,
+        18.33
+      ],
+      "width_px": 40,
+      "orientation": "vertical",
+      "bbox_px": [
+        892,
+        540,
+        11,
+        40
+      ],
+      "opening_area_px": 57,
+      "source": "room_outline_opening",
+      "room_id": "room_019",
+      "room_number": "123",
+      "connects": [
+        "room_019",
+        "corridor_006"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        881,
+        550,
+        9,
+        19
+      ]
+    },
+    {
+      "id": "door_027",
+      "center_px": [
+        2596,
+        461
+      ],
+      "center_map_m": [
+        77.88,
+        21.3
+      ],
+      "width_px": 76,
+      "orientation": "horizontal",
+      "bbox_px": [
+        2559,
+        460,
+        76,
+        12
+      ],
+      "opening_area_px": 97,
+      "source": "room_outline_opening",
+      "room_id": "room_020",
+      "room_number": "101",
+      "connects": [
+        "room_020",
+        "corridor_005"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        2571,
+        473,
+        79,
+        14
+      ]
+    },
+    {
+      "id": "door_028",
+      "center_px": [
+        2910,
+        461
+      ],
+      "center_map_m": [
+        87.3,
+        21.3
+      ],
+      "width_px": 72,
+      "orientation": "horizontal",
+      "bbox_px": [
+        2873,
+        460,
+        72,
+        15
+      ],
+      "opening_area_px": 95,
+      "source": "room_outline_opening",
+      "room_id": "room_021",
+      "room_number": "103",
+      "connects": [
+        "room_021",
+        "corridor_005"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        2888,
+        473,
+        43,
+        10
+      ]
+    },
+    {
+      "id": "door_029",
+      "center_px": [
+        3100,
+        465
+      ],
+      "center_map_m": [
+        93.0,
+        21.18
+      ],
+      "width_px": 53,
+      "orientation": "horizontal",
+      "bbox_px": [
+        3074,
+        463,
+        53,
+        15
+      ],
+      "opening_area_px": 79,
+      "source": "room_outline_opening",
+      "room_id": "room_021",
+      "room_number": "103",
+      "connects": [
+        "room_021",
+        "corridor_005"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        3088,
+        476,
+        24,
+        9
+      ]
+    },
+    {
+      "id": "door_030",
+      "center_px": [
+        2677,
+        463
+      ],
+      "center_map_m": [
+        80.31,
+        21.24
+      ],
+      "width_px": 78,
+      "orientation": "horizontal",
+      "bbox_px": [
+        2639,
+        462,
+        78,
+        11
+      ],
+      "opening_area_px": 97,
+      "source": "room_outline_opening",
+      "room_id": "room_022",
+      "room_number": "102-A",
+      "connects": [
+        "room_022",
+        "corridor_005"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        2649,
+        475,
+        58,
+        12
+      ]
+    },
+    {
+      "id": "door_031",
+      "center_px": [
+        3344,
+        473
+      ],
+      "center_map_m": [
+        100.32,
+        20.94
+      ],
+      "width_px": 39,
+      "orientation": "horizontal",
+      "bbox_px": [
+        3325,
+        473,
+        39,
+        6
+      ],
+      "opening_area_px": 49,
+      "source": "room_outline_opening",
+      "room_id": "room_023",
+      "room_number": "104-B",
+      "connects": [
+        "room_023",
+        "corridor_003"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        3332,
+        483,
+        47,
+        11
+      ]
+    },
+    {
+      "id": "door_032",
+      "center_px": [
+        3160,
+        542
+      ],
+      "center_map_m": [
+        94.8,
+        18.87
+      ],
+      "width_px": 53,
+      "orientation": "vertical",
+      "bbox_px": [
+        3158,
+        516,
+        15,
+        53
+      ],
+      "opening_area_px": 80,
+      "source": "room_outline_opening",
+      "room_id": "room_023",
+      "room_number": "104-B",
+      "connects": [
+        "room_023",
+        "corridor_003"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        3143,
+        530,
+        37,
+        54
+      ]
+    },
+    {
+      "id": "door_033",
+      "center_px": [
+        3392,
+        471
+      ],
+      "center_map_m": [
+        101.76,
+        21.0
+      ],
+      "width_px": 59,
+      "orientation": "horizontal",
+      "bbox_px": [
+        3363,
+        470,
+        59,
+        10
+      ],
+      "opening_area_px": 76,
+      "source": "room_outline_opening",
+      "room_id": "room_024",
+      "room_number": "105",
+      "connects": [
+        "room_024",
+        "corridor_003"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        3348,
+        483,
+        65,
+        12
+      ]
+    },
+    {
+      "id": "door_034",
+      "center_px": [
+        3649,
+        587
+      ],
+      "center_map_m": [
+        109.47,
+        17.52
+      ],
+      "width_px": 53,
+      "orientation": "vertical",
+      "bbox_px": [
+        3646,
+        561,
+        17,
+        53
+      ],
+      "opening_area_px": 85,
+      "source": "room_outline_opening",
+      "room_id": "room_025",
+      "room_number": "109",
+      "connects": [
+        "room_025",
+        "corridor_003"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        3659,
+        577,
+        9,
+        21
+      ]
+    },
+    {
+      "id": "door_035",
+      "center_px": [
+        900,
+        670
+      ],
+      "center_map_m": [
+        27.0,
+        15.03
+      ],
+      "width_px": 50,
+      "orientation": "vertical",
+      "bbox_px": [
+        892,
+        648,
+        11,
+        50
+      ],
+      "opening_area_px": 65,
+      "source": "room_outline_opening",
+      "room_id": "room_026",
+      "room_number": "124",
+      "connects": [
+        "room_026",
+        "corridor_006"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        877,
+        659,
+        27,
+        40
+      ]
+    },
+    {
+      "id": "door_036",
+      "center_px": [
+        876,
+        701
+      ],
+      "center_map_m": [
+        26.28,
+        14.1
+      ],
+      "width_px": 29,
+      "orientation": "horizontal",
+      "bbox_px": [
+        866,
+        692,
+        29,
+        12
+      ],
+      "opening_area_px": 40,
+      "source": "room_outline_opening",
+      "room_id": "room_026",
+      "room_number": "124",
+      "connects": [
+        "room_026",
+        "corridor_006"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        873,
+        677,
+        31,
+        22
+      ]
+    },
+    {
+      "id": "door_037",
+      "center_px": [
+        3649,
+        693
+      ],
+      "center_map_m": [
+        109.47,
+        14.34
+      ],
+      "width_px": 52,
+      "orientation": "vertical",
+      "bbox_px": [
+        3646,
+        668,
+        18,
+        52
+      ],
+      "opening_area_px": 85,
+      "source": "room_outline_opening",
+      "room_id": "room_027",
+      "room_number": "108",
+      "connects": [
+        "room_027",
+        "corridor_003"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        3659,
+        683,
+        10,
+        21
+      ]
+    },
+    {
+      "id": "door_038",
+      "center_px": [
+        896,
+        683
+      ],
+      "center_map_m": [
+        26.88,
+        14.64
+      ],
+      "width_px": 57,
+      "orientation": "horizontal",
+      "bbox_px": [
+        860,
+        669,
+        57,
+        45
+      ],
+      "opening_area_px": 134,
+      "source": "room_outline_opening",
+      "room_id": "room_029",
+      "room_number": "125",
+      "connects": [
+        "room_029",
+        "corridor_006"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        873,
+        659,
+        31,
+        40
+      ]
+    },
+    {
+      "id": "door_039",
+      "center_px": [
+        919,
+        764
+      ],
+      "center_map_m": [
+        27.57,
+        12.21
+      ],
+      "width_px": 53,
+      "orientation": "vertical",
+      "bbox_px": [
+        896,
+        743,
+        30,
+        53
+      ],
+      "opening_area_px": 94,
+      "source": "room_outline_opening",
+      "room_id": "room_029",
+      "room_number": "125",
+      "connects": [
+        "room_029",
+        "corridor_006"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        898,
+        756,
+        15,
+        27
+      ]
+    },
+    {
+      "id": "door_040",
+      "center_px": [
+        3649,
+        801
+      ],
+      "center_map_m": [
+        109.47,
+        11.1
+      ],
+      "width_px": 51,
+      "orientation": "vertical",
+      "bbox_px": [
+        3646,
+        777,
+        18,
+        51
+      ],
+      "opening_area_px": 83,
+      "source": "room_outline_opening",
+      "room_id": "room_030",
+      "room_number": "107",
+      "connects": [
+        "room_030",
+        "corridor_003"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        3659,
+        792,
+        9,
+        20
+      ]
+    },
+    {
+      "id": "door_041",
+      "center_px": [
+        921,
+        862
+      ],
+      "center_map_m": [
+        27.63,
+        9.27
+      ],
+      "width_px": 31,
+      "orientation": "vertical",
+      "bbox_px": [
+        912,
+        851,
+        12,
+        31
+      ],
+      "opening_area_px": 42,
+      "source": "room_outline_opening",
+      "room_id": "room_031",
+      "room_number": "126",
+      "connects": [
+        "room_031",
+        "corridor_006"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        902,
+        863,
+        9,
+        20
+      ]
+    },
+    {
+      "id": "door_042",
+      "center_px": [
+        3646,
+        903
+      ],
+      "center_map_m": [
+        109.38,
+        8.04
+      ],
+      "width_px": 42,
+      "orientation": "vertical",
+      "bbox_px": [
+        3644,
+        889,
+        18,
+        42
+      ],
+      "opening_area_px": 59,
+      "source": "room_outline_opening",
+      "room_id": "room_032",
+      "room_number": "106",
+      "connects": [
+        "room_032",
+        "corridor_003"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        3657,
+        904,
+        10,
+        25
+      ]
+    },
+    {
+      "id": "door_043",
+      "center_px": [
+        3148,
+        571
+      ],
+      "center_map_m": [
+        94.44,
+        18.0
+      ],
+      "width_px": 39,
+      "orientation": "horizontal",
+      "bbox_px": [
+        3125,
+        570,
+        39,
+        14
+      ],
+      "opening_area_px": 52,
+      "source": "room_outline_opening",
+      "room_id": "room_033",
+      "room_number": "104-A",
+      "connects": [
+        "room_033",
+        "corridor_003"
+      ],
+      "state": "closed",
+      "closure_bbox_px": [
+        3124,
+        583,
+        27,
+        9
+      ]
+    }
+  ],
+  "semantic_objects": [
+    {
+      "type": "room_label",
+      "value": "131",
+      "room_id": "room_001",
+      "px": [
+        754,
+        169
+      ],
+      "map_m": [
+        22.62,
+        30.06
+      ],
+      "confidence": 0.7,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "121",
+      "room_id": "room_002",
+      "px": [
+        1063,
+        219
+      ],
+      "map_m": [
+        31.89,
+        28.56
+      ],
+      "confidence": 0.9,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "120",
+      "room_id": "room_003",
+      "px": [
+        1276,
+        218
+      ],
+      "map_m": [
+        38.28,
+        28.59
+      ],
+      "confidence": 0.9,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "112",
+      "room_id": "room_004",
+      "px": [
+        3489,
+        232
+      ],
+      "map_m": [
+        104.67,
+        28.17
+      ],
+      "confidence": 0.8,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "111",
+      "room_id": "room_005",
+      "px": [
+        3824,
+        181
+      ],
+      "map_m": [
+        114.72,
+        29.7
+      ],
+      "confidence": 0.8,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "119",
+      "room_id": "room_006",
+      "px": [
+        1501,
+        218
+      ],
+      "map_m": [
+        45.03,
+        28.59
+      ],
+      "confidence": 0.95,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "117",
+      "room_id": "room_007",
+      "px": [
+        1851,
+        220
+      ],
+      "map_m": [
+        55.53,
+        28.53
+      ],
+      "confidence": 0.8,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "115-A",
+      "room_id": "room_008",
+      "px": [
+        2705,
+        225
+      ],
+      "map_m": [
+        81.15,
+        28.38
+      ],
+      "confidence": 0.95,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "115-B",
+      "room_id": "room_009",
+      "px": [
+        2885,
+        227
+      ],
+      "map_m": [
+        86.55,
+        28.32
+      ],
+      "confidence": 0.8,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "113",
+      "room_id": "room_010",
+      "px": [
+        3237,
+        230
+      ],
+      "map_m": [
+        97.11,
+        28.23
+      ],
+      "confidence": 0.7,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "114",
+      "room_id": "room_011",
+      "px": [
+        3059,
+        229
+      ],
+      "map_m": [
+        91.77,
+        28.26
+      ],
+      "confidence": 0.9,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "가 멀티 멀티미디어강의실",
+      "room_id": "room_012",
+      "px": [
+        3306,
+        340
+      ],
+      "map_m": [
+        99.18,
+        24.93
+      ],
+      "confidence": 0.8,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "122",
+      "room_id": "room_013",
+      "px": [
+        729,
+        272
+      ],
+      "map_m": [
+        21.87,
+        26.97
+      ],
+      "confidence": 0.8,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "110",
+      "room_id": "room_014",
+      "px": [
+        3838,
+        300
+      ],
+      "map_m": [
+        115.14,
+        26.13
+      ],
+      "confidence": 0.8,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "128",
+      "room_id": "room_015",
+      "px": [
+        1495,
+        600
+      ],
+      "map_m": [
+        44.85,
+        17.13
+      ],
+      "confidence": 0.95,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "127",
+      "room_id": "room_016",
+      "px": [
+        1154,
+        662
+      ],
+      "map_m": [
+        34.62,
+        15.27
+      ],
+      "confidence": 0.7,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "129",
+      "room_id": "room_017",
+      "px": [
+        1729,
+        601
+      ],
+      "map_m": [
+        51.87,
+        17.1
+      ],
+      "confidence": 0.95,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "130",
+      "room_id": "room_018",
+      "px": [
+        1972,
+        603
+      ],
+      "map_m": [
+        59.16,
+        17.04
+      ],
+      "confidence": 0.95,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "123",
+      "room_id": "room_019",
+      "px": [
+        808,
+        511
+      ],
+      "map_m": [
+        24.24,
+        19.8
+      ],
+      "confidence": 0.7,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "101",
+      "room_id": "room_020",
+      "px": [
+        2478,
+        596
+      ],
+      "map_m": [
+        74.34,
+        17.25
+      ],
+      "confidence": 0.95,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "103",
+      "room_id": "room_021",
+      "px": [
+        2996,
+        602
+      ],
+      "map_m": [
+        89.88,
+        17.07
+      ],
+      "confidence": 0.95,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "102-A",
+      "room_id": "room_022",
+      "px": [
+        2750,
+        542
+      ],
+      "map_m": [
+        82.5,
+        18.87
+      ],
+      "confidence": 0.95,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "104-B",
+      "room_id": "room_023",
+      "px": [
+        3266,
+        513
+      ],
+      "map_m": [
+        97.98,
+        19.74
+      ],
+      "confidence": 0.8,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "105",
+      "room_id": "room_024",
+      "px": [
+        3488,
+        675
+      ],
+      "map_m": [
+        104.64,
+        14.88
+      ],
+      "confidence": 0.9,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "109",
+      "room_id": "room_025",
+      "px": [
+        3754,
+        522
+      ],
+      "map_m": [
+        112.62,
+        19.47
+      ],
+      "confidence": 0.8,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "124",
+      "room_id": "room_026",
+      "px": [
+        809,
+        607
+      ],
+      "map_m": [
+        24.27,
+        16.92
+      ],
+      "confidence": 0.8,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "108",
+      "room_id": "room_027",
+      "px": [
+        3756,
+        633
+      ],
+      "map_m": [
+        112.68,
+        16.14
+      ],
+      "confidence": 0.8,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "102-B",
+      "room_id": "room_028",
+      "px": [
+        2695,
+        726
+      ],
+      "map_m": [
+        80.85,
+        13.35
+      ],
+      "confidence": 0.95,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "125",
+      "room_id": "room_029",
+      "px": [
+        808,
+        713
+      ],
+      "map_m": [
+        24.24,
+        13.74
+      ],
+      "confidence": 0.8,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "107",
+      "room_id": "room_030",
+      "px": [
+        3754,
+        742
+      ],
+      "map_m": [
+        112.62,
+        12.87
+      ],
+      "confidence": 0.9,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "126",
+      "room_id": "room_031",
+      "px": [
+        807,
+        822
+      ],
+      "map_m": [
+        24.21,
+        10.47
+      ],
+      "confidence": 0.8,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "106",
+      "room_id": "room_032",
+      "px": [
+        3754,
+        851
+      ],
+      "map_m": [
+        112.62,
+        9.6
+      ],
+      "confidence": 0.8,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "104-A",
+      "room_id": "room_033",
+      "px": [
+        3240,
+        670
+      ],
+      "map_m": [
+        97.2,
+        15.03
+      ],
+      "confidence": 0.95,
+      "aliases": []
+    },
+    {
+      "type": "room_label",
+      "value": "102-C",
+      "room_id": "room_035",
+      "px": [
+        2811,
+        726
+      ],
+      "map_m": [
+        84.33,
+        13.35
+      ],
+      "confidence": 0.6,
+      "aliases": []
+    },
+    {
+      "type": "facility_icon",
+      "value": "stairs_icon",
+      "semantic_class": "stair",
+      "px": [
+        2154,
+        215
+      ],
+      "map_m": [
+        101.298329,
+        44.958776
+      ],
+      "source": "21_vlm_icons.json",
+      "has_region": false
+    },
+    {
+      "type": "facility_icon",
+      "value": "stairs_icon",
+      "semantic_class": "stair",
+      "px": [
+        3693,
+        233
+      ],
+      "map_m": [
+        173.674434,
+        44.112272
+      ],
+      "source": "21_vlm_icons.json",
+      "has_region": false
+    },
+    {
+      "type": "facility_icon",
+      "value": "restroom_female",
+      "semantic_class": "restroom",
+      "px": [
+        2477,
+        262
+      ],
+      "map_m": [
+        116.488376,
+        42.748459
+      ],
+      "source": "21_vlm_icons.json",
+      "has_region": false
+    },
+    {
+      "type": "facility_icon",
+      "value": "restroom_male",
+      "semantic_class": "restroom",
+      "px": [
+        2588,
+        263
+      ],
+      "map_m": [
+        121.708485,
+        42.701431
+      ],
+      "source": "21_vlm_icons.json",
+      "has_region": false
+    },
+    {
+      "type": "facility_icon",
+      "value": "restroom_accessible",
+      "semantic_class": "restroom",
+      "px": [
+        2397,
+        335
+      ],
+      "map_m": [
+        112.726135,
+        39.315415
+      ],
+      "source": "21_vlm_icons.json",
+      "has_region": false
+    }
+  ],
+  "topology": {
+    "nodes": [
+      {
+        "id": "room_001",
+        "type": "room",
+        "center_px": [
+          760,
+          186
+        ],
+        "center_map_m": [
+          22.8,
+          29.55
+        ]
+      },
+      {
+        "id": "room_002",
+        "type": "room",
+        "center_px": [
+          1064,
+          239
+        ],
+        "center_map_m": [
+          31.92,
+          27.96
+        ]
+      },
+      {
+        "id": "room_003",
+        "type": "room",
+        "center_px": [
+          1275,
+          263
+        ],
+        "center_map_m": [
+          38.25,
+          27.24
+        ]
+      },
+      {
+        "id": "room_004",
+        "type": "room",
+        "center_px": [
+          3487,
+          271
+        ],
+        "center_map_m": [
+          104.61,
+          27.0
+        ]
+      },
+      {
+        "id": "room_005",
+        "type": "room",
+        "center_px": [
+          3801,
+          207
+        ],
+        "center_map_m": [
+          114.03,
+          28.92
+        ]
+      },
+      {
+        "id": "room_006",
+        "type": "room",
+        "center_px": [
+          1492,
+          268
+        ],
+        "center_map_m": [
+          44.76,
+          27.09
+        ]
+      },
+      {
+        "id": "room_007",
+        "type": "room",
+        "center_px": [
+          1829,
+          272
+        ],
+        "center_map_m": [
+          54.87,
+          26.97
+        ]
+      },
+      {
+        "id": "room_008",
+        "type": "room",
+        "center_px": [
+          2706,
+          232
+        ],
+        "center_map_m": [
+          81.18,
+          28.17
+        ]
+      },
+      {
+        "id": "room_009",
+        "type": "room",
+        "center_px": [
+          2885,
+          278
+        ],
+        "center_map_m": [
+          86.55,
+          26.79
+        ]
+      },
+      {
+        "id": "room_010",
+        "type": "room",
+        "center_px": [
+          3237,
+          217
+        ],
+        "center_map_m": [
+          97.11,
+          28.62
+        ]
+      },
+      {
+        "id": "room_011",
+        "type": "room",
+        "center_px": [
+          3059,
+          277
+        ],
+        "center_map_m": [
+          91.77,
+          26.82
+        ]
+      },
+      {
+        "id": "room_012",
+        "type": "room",
+        "center_px": [
+          3306,
+          340
+        ],
+        "center_map_m": [
+          99.18,
+          24.93
+        ]
+      },
+      {
+        "id": "room_013",
+        "type": "room",
+        "center_px": [
+          728,
+          291
+        ],
+        "center_map_m": [
+          21.84,
+          26.4
+        ]
+      },
+      {
+        "id": "room_014",
+        "type": "room",
+        "center_px": [
+          3841,
+          327
+        ],
+        "center_map_m": [
+          115.23,
+          25.32
+        ]
+      },
+      {
+        "id": "room_015",
+        "type": "room",
+        "center_px": [
+          1494,
+          644
+        ],
+        "center_map_m": [
+          44.82,
+          15.81
+        ]
+      },
+      {
+        "id": "room_016",
+        "type": "room",
+        "center_px": [
+          1164,
+          684
+        ],
+        "center_map_m": [
+          34.92,
+          14.61
+        ]
+      },
+      {
+        "id": "room_017",
+        "type": "room",
+        "center_px": [
+          1729,
+          673
+        ],
+        "center_map_m": [
+          51.87,
+          14.94
+        ]
+      },
+      {
+        "id": "room_018",
+        "type": "room",
+        "center_px": [
+          1971,
+          625
+        ],
+        "center_map_m": [
+          59.13,
+          16.38
+        ]
+      },
+      {
+        "id": "room_019",
+        "type": "room",
+        "center_px": [
+          793,
+          527
+        ],
+        "center_map_m": [
+          23.79,
+          19.32
+        ]
+      },
+      {
+        "id": "room_020",
+        "type": "room",
+        "center_px": [
+          2466,
+          594
+        ],
+        "center_map_m": [
+          73.98,
+          17.31
+        ]
+      },
+      {
+        "id": "room_021",
+        "type": "room",
+        "center_px": [
+          2997,
+          610
+        ],
+        "center_map_m": [
+          89.91,
+          16.83
+        ]
+      },
+      {
+        "id": "room_022",
+        "type": "room",
+        "center_px": [
+          2776,
+          582
+        ],
+        "center_map_m": [
+          83.28,
+          17.67
+        ]
+      },
+      {
+        "id": "room_023",
+        "type": "room",
+        "center_px": [
+          3237,
+          539
+        ],
+        "center_map_m": [
+          97.11,
+          18.96
+        ]
+      },
+      {
+        "id": "room_024",
+        "type": "room",
+        "center_px": [
+          3470,
+          726
+        ],
+        "center_map_m": [
+          104.1,
+          13.35
+        ]
+      },
+      {
+        "id": "room_025",
+        "type": "room",
+        "center_px": [
+          3746,
+          550
+        ],
+        "center_map_m": [
+          112.38,
+          18.63
+        ]
+      },
+      {
+        "id": "room_026",
+        "type": "room",
+        "center_px": [
+          792,
+          633
+        ],
+        "center_map_m": [
+          23.76,
+          16.14
+        ]
+      },
+      {
+        "id": "room_027",
+        "type": "room",
+        "center_px": [
+          3731,
+          660
+        ],
+        "center_map_m": [
+          111.93,
+          15.33
+        ]
+      },
+      {
+        "id": "room_028",
+        "type": "room",
+        "center_px": [
+          2695,
+          749
+        ],
+        "center_map_m": [
+          80.85,
+          12.66
+        ]
+      },
+      {
+        "id": "room_029",
+        "type": "room",
+        "center_px": [
+          800,
+          739
+        ],
+        "center_map_m": [
+          24.0,
+          12.96
+        ]
+      },
+      {
+        "id": "room_030",
+        "type": "room",
+        "center_px": [
+          3731,
+          771
+        ],
+        "center_map_m": [
+          111.93,
+          12.0
+        ]
+      },
+      {
+        "id": "room_031",
+        "type": "room",
+        "center_px": [
+          815,
+          850
+        ],
+        "center_map_m": [
+          24.45,
+          9.63
+        ]
+      },
+      {
+        "id": "room_032",
+        "type": "room",
+        "center_px": [
+          3748,
+          881
+        ],
+        "center_map_m": [
+          112.44,
+          8.7
+        ]
+      },
+      {
+        "id": "room_033",
+        "type": "room",
+        "center_px": [
+          3242,
+          710
+        ],
+        "center_map_m": [
+          97.26,
+          13.83
+        ]
+      },
+      {
+        "id": "room_035",
+        "type": "room",
+        "center_px": [
+          2807,
+          802
+        ],
+        "center_map_m": [
+          84.21,
+          11.07
+        ]
+      },
+      {
+        "id": "restroom_001",
+        "type": "restroom",
+        "center_px": [
+          2480,
+          221
+        ],
+        "center_map_m": [
+          116.62946,
+          44.676608
+        ]
+      },
+      {
+        "id": "restroom_002",
+        "type": "restroom",
+        "center_px": [
+          2588,
+          215
+        ],
+        "center_map_m": [
+          121.708485,
+          44.958776
+        ]
+      },
+      {
+        "id": "stair_001",
+        "type": "stair",
+        "center_px": [
+          3658,
+          251
+        ],
+        "center_map_m": [
+          172.028453,
+          43.265767
+        ]
+      },
+      {
+        "id": "stair_002",
+        "type": "stair",
+        "center_px": [
+          2152,
+          287
+        ],
+        "center_map_m": [
+          101.204273,
+          41.572759
+        ]
+      },
+      {
+        "id": "stair_003",
+        "type": "stair",
+        "center_px": [
+          859,
+          258
+        ],
+        "center_map_m": [
+          40.397059,
+          42.936571
+        ]
+      },
+      {
+        "id": "stair_004",
+        "type": "stair",
+        "center_px": [
+          3577,
+          554
+        ],
+        "center_map_m": [
+          168.219185,
+          29.016281
+        ]
+      },
+      {
+        "id": "corridor_001",
+        "type": "corridor",
+        "center_px": [
+          2245,
+          781
+        ],
+        "center_map_m": [
+          105.577878,
+          18.340923
+        ]
+      },
+      {
+        "id": "corridor_002",
+        "type": "corridor",
+        "center_px": [
+          875,
+          149
+        ],
+        "center_map_m": [
+          41.149507,
+          48.062624
+        ]
+      },
+      {
+        "id": "corridor_003",
+        "type": "corridor",
+        "center_px": [
+          3658,
+          175
+        ],
+        "center_map_m": [
+          172.028453,
+          46.839896
+        ]
+      },
+      {
+        "id": "corridor_004",
+        "type": "corridor",
+        "center_px": [
+          3709,
+          174
+        ],
+        "center_map_m": [
+          174.426882,
+          46.886924
+        ]
+      },
+      {
+        "id": "corridor_005",
+        "type": "corridor",
+        "center_px": [
+          2493,
+          363
+        ],
+        "center_map_m": [
+          117.240824,
+          37.99863
+        ]
+      },
+      {
+        "id": "corridor_006",
+        "type": "corridor",
+        "center_px": [
+          677,
+          438
+        ],
+        "center_map_m": [
+          31.837961,
+          34.47153
+        ]
+      },
+      {
+        "id": "corridor_007",
+        "type": "corridor",
+        "center_px": [
+          2106,
+          536
+        ],
+        "center_map_m": [
+          99.040985,
+          29.862785
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "a": "room_001",
+        "b": "corridor_002",
+        "via": "door_001"
+      },
+      {
+        "a": "room_002",
+        "b": "corridor_002",
+        "via": "door_002"
+      },
+      {
+        "a": "room_002",
+        "b": "corridor_002",
+        "via": "door_003"
+      },
+      {
+        "a": "room_003",
+        "b": "corridor_002",
+        "via": "door_004"
+      },
+      {
+        "a": "room_003",
+        "b": "corridor_002",
+        "via": "door_005"
+      },
+      {
+        "a": "room_004",
+        "b": "corridor_003",
+        "via": "door_006"
+      },
+      {
+        "a": "room_004",
+        "b": "corridor_003",
+        "via": "door_007"
+      },
+      {
+        "a": "room_005",
+        "b": "corridor_004",
+        "via": "door_008"
+      },
+      {
+        "a": "room_006",
+        "b": "corridor_002",
+        "via": "door_009"
+      },
+      {
+        "a": "room_006",
+        "b": "corridor_007",
+        "via": "door_010"
+      },
+      {
+        "a": "room_007",
+        "b": "corridor_007",
+        "via": "door_011"
+      },
+      {
+        "a": "room_007",
+        "b": "corridor_007",
+        "via": "door_012"
+      },
+      {
+        "a": "room_008",
+        "b": "corridor_005",
+        "via": "door_013"
+      },
+      {
+        "a": "room_009",
+        "b": "corridor_005",
+        "via": "door_014"
+      },
+      {
+        "a": "room_011",
+        "b": "corridor_005",
+        "via": "door_015"
+      },
+      {
+        "a": "room_013",
+        "b": "corridor_006",
+        "via": "door_016"
+      },
+      {
+        "a": "room_014",
+        "b": "corridor_004",
+        "via": "door_017"
+      },
+      {
+        "a": "room_015",
+        "b": "corridor_002",
+        "via": "door_018"
+      },
+      {
+        "a": "room_015",
+        "b": "corridor_007",
+        "via": "door_019"
+      },
+      {
+        "a": "room_016",
+        "b": "corridor_002",
+        "via": "door_020"
+      },
+      {
+        "a": "room_016",
+        "b": "corridor_002",
+        "via": "door_021"
+      },
+      {
+        "a": "room_016",
+        "b": "corridor_006",
+        "via": "door_022"
+      },
+      {
+        "a": "room_017",
+        "b": "corridor_007",
+        "via": "door_023"
+      },
+      {
+        "a": "room_018",
+        "b": "corridor_007",
+        "via": "door_024"
+      },
+      {
+        "a": "room_018",
+        "b": "corridor_007",
+        "via": "door_025"
+      },
+      {
+        "a": "room_019",
+        "b": "corridor_006",
+        "via": "door_026"
+      },
+      {
+        "a": "room_020",
+        "b": "corridor_005",
+        "via": "door_027"
+      },
+      {
+        "a": "room_021",
+        "b": "corridor_005",
+        "via": "door_028"
+      },
+      {
+        "a": "room_021",
+        "b": "corridor_005",
+        "via": "door_029"
+      },
+      {
+        "a": "room_022",
+        "b": "corridor_005",
+        "via": "door_030"
+      },
+      {
+        "a": "room_023",
+        "b": "corridor_003",
+        "via": "door_031"
+      },
+      {
+        "a": "room_023",
+        "b": "corridor_003",
+        "via": "door_032"
+      },
+      {
+        "a": "room_024",
+        "b": "corridor_003",
+        "via": "door_033"
+      },
+      {
+        "a": "room_025",
+        "b": "corridor_003",
+        "via": "door_034"
+      },
+      {
+        "a": "room_026",
+        "b": "corridor_006",
+        "via": "door_035"
+      },
+      {
+        "a": "room_026",
+        "b": "corridor_006",
+        "via": "door_036"
+      },
+      {
+        "a": "room_027",
+        "b": "corridor_003",
+        "via": "door_037"
+      },
+      {
+        "a": "room_029",
+        "b": "corridor_006",
+        "via": "door_038"
+      },
+      {
+        "a": "room_029",
+        "b": "corridor_006",
+        "via": "door_039"
+      },
+      {
+        "a": "room_030",
+        "b": "corridor_003",
+        "via": "door_040"
+      },
+      {
+        "a": "room_031",
+        "b": "corridor_006",
+        "via": "door_041"
+      },
+      {
+        "a": "room_032",
+        "b": "corridor_003",
+        "via": "door_042"
+      },
+      {
+        "a": "room_033",
+        "b": "corridor_003",
+        "via": "door_043"
+      }
+    ]
+  },
+  "extraction": {
+    "source": "G1F_rooms_doors.json",
+    "geometry_source": "panel_colour_face_cut_by_walls",
+    "colour_source_image": "04_symbols_removed_for_structure.png",
+    "identity_reconciliation": {
+      "enabled": false,
+      "reconciled": 0,
+      "supplemented": 0
+    },
+    "room_alias_reconciliation": [],
+    "sparse_face_leak_repairs": []
+  }
+}

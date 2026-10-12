@@ -1,0 +1,30 @@
+{
+ "floor": "G2F",
+ "source": "의미지도 자동(make_search_config.py 공통 변환표)",
+ "map_kinds": {
+  "room": 32,
+  "stair": 3
+ },
+ "small_sign": [
+  {
+   "map_kind": "room",
+   "phrases": [
+    "a small room name plate",
+    "a small room name plate near a door",
+    "a hallway sign perpendicular to the wall"
+   ]
+  }
+ ],
+ "scene_object": [
+  {
+   "map_kind": "stair",
+   "name": "계단",
+   "answer_words": [
+    "stair",
+    "staircase"
+   ],
+   "box_phrase": "staircase",
+   "need_map": false
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+# 건물별 설정. 패키지 안의 상대 경로를 쓴다(온보드에서 경로 수정 불필요).
+# n_maps  : 그 건물에서 후보로 둘 층 수
+# scale   : 축척 탐색 방식. fixed = 모든 지도에 같은 픽셀 축척 목록,
+#           per_map = 지도 yaml 해상도 비율로 목록을 옮김(층마다 해상도가 다른 건물용)
+buildings:
+  kci:                      # 정보관 (KCI) 1F~9F
+    name: 정보관
+    maps_root: maps/kci_maps_perfloor
+    semmaps_root: maps/kci_semmaps
+    n_maps: 9
+    scale: fixed
+  gong:                     # 공대 G1F~G7F
+    name: 공대
+    maps_root: maps/gong_maps_perfloor
+    semmaps_root: maps/gong_semmaps
+    n_maps: 7
+    scale: fixed
+  sw:                       # 소융대 S1F~S8F
+    name: 소융대
+    maps_root: maps/sw_maps_perfloor
+    semmaps_root: maps/sw_semmaps
+    n_maps: 8
+    scale: per_map          # 층마다 안내도 해상도가 3700~6400px 로 달라 필요하다
+
+# 장면 분류원. lidar = 깊이 카메라 없이 LiDAR 로 장면 라벨 생성(2026-09-28 결정).
+scene_source: lidar
+
+# 알고리즘 상수(바꾸지 말 것. 바꾸면 성적을 다시 재야 한다)
+consts:
+  window_s: 60.0            # 정합 창 길이
+  dt_s: 3.0                 # 창 안 프레임 간격
+  scene_fwd_deg: 7.0        # LiDAR 장면: 정면 부채꼴 반각
+  scene_side_lo_deg: 17.5   # 옆 부채꼴 시작
+  scene_side_hi_deg: 35.0   # 옆 부채꼴 끝
+  scene_side_near_m: 0      # 0 = 옆 거리 제한 없음(제한하면 성능이 떨어진다)

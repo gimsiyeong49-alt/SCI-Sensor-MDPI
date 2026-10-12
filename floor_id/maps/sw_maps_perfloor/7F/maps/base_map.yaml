@@ -1,0 +1,7 @@
+image: S7F_map.png
+mode: trinary
+resolution: 0.024962179
+origin: [0.000000000, 0.000000000, 0.000000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196

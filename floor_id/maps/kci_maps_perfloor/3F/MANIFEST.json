@@ -1,0 +1,104 @@
+{
+ "3F": {
+  "base_map.png": {
+   "shape": [
+    1926,
+    4000
+   ],
+   "bytes": 174131,
+   "md5": "e918cfb7dad7",
+   "free_pct": 87.63,
+   "on_pct": 87.63
+  },
+  "building_footprint.png": {
+   "shape": [
+    1926,
+    4000
+   ],
+   "bytes": 13985,
+   "md5": "8d43c15d4540",
+   "free_pct": 44.45,
+   "on_pct": 44.45
+  },
+  "corridor_mask.png": {
+   "shape": [
+    1926,
+    4000
+   ],
+   "bytes": 69498,
+   "md5": "34cbbb0d6227",
+   "free_pct": 11.06,
+   "on_pct": 11.06
+  },
+  "door_mask.png": {
+   "shape": [
+    1926,
+    4000
+   ],
+   "bytes": 12567,
+   "md5": "14befbaeb6b9",
+   "free_pct": 0.27,
+   "on_pct": 0.27
+  },
+  "elevator.png": {
+   "shape": [
+    1926,
+    4000
+   ],
+   "bytes": 9024,
+   "md5": "d6b5489cf3ca",
+   "free_pct": 0.07,
+   "on_pct": 0.07
+  },
+  "navigation_map_MCL.png": {
+   "shape": [
+    1926,
+    4000
+   ],
+   "bytes": 24523,
+   "md5": "f17116010249",
+   "free_pct": 87.63,
+   "on_pct": 87.63
+  },
+  "no_go.png": {
+   "shape": [
+    1926,
+    4000
+   ],
+   "bytes": 17700,
+   "md5": "ef328df4f62e",
+   "free_pct": 72.55,
+   "on_pct": 72.55
+  },
+  "restroom_mask.png": {
+   "shape": [
+    1926,
+    4000
+   ],
+   "bytes": 12777,
+   "md5": "a51398ec1948",
+   "free_pct": 0.67,
+   "on_pct": 0.67
+  },
+  "room_mask.png": {
+   "shape": [
+    1926,
+    4000
+   ],
+   "bytes": 35571,
+   "md5": "4ac0c4824837",
+   "free_pct": 17.89,
+   "on_pct": 17.89
+  },
+  "stair_mask.png": {
+   "shape": [
+    1926,
+    4000
+   ],
+   "bytes": 12969,
+   "md5": "e30ab2165d5c",
+   "free_pct": 0.71,
+   "on_pct": 0.71
+  }
+ }
+}

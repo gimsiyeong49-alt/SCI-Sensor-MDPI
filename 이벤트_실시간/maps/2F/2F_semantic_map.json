@@ -1,0 +1,8996 @@
+{
+  "schema_version": "1.0",
+  "map_meta": {
+    "floor_id": "2F",
+    "frame_id": "map",
+    "image_size": {
+      "width": 3493,
+      "height": 1599
+    },
+    "resolution_m_per_px": 0.036666667,
+    "origin_m": [
+      0,
+      0,
+      0
+    ],
+    "pixel_frame": {
+      "origin": "top_left",
+      "x_axis": "right",
+      "y_axis": "down"
+    },
+    "map_frame": {
+      "origin": "bottom_left",
+      "x_axis": "right",
+      "y_axis": "up"
+    },
+    "scale_handshake": {
+      "corridor_width_m": 3.3,
+      "corridor_width_px": 90,
+      "scale_uniform_assumption": true
+    },
+    "navigation_map": "2F_map.png",
+    "ros_map_yaml": "2F_map.yaml",
+    "door_model_included": false,
+    "source_reviewed_semantic_json": "reference/semantic_prior_1F_9F/2F_map/2F_semantic_map.json",
+    "source_latest_wall_output": "output/reconstructed_2F/20_navigation_occupancy_map.png",
+    "occupancy_encoding": {
+      "occupied": 0,
+      "free": 255,
+      "unknown": null
+    },
+    "semantic_mask_policy": "reviewed_geometry clipped to latest navigation free pixels; facility > room > corridor priority"
+  },
+  "layers": {
+    "room_mask": "01_fused_room_mask.png",
+    "corridor_mask": "02_fused_corridor_mask.png",
+    "facility_mask": "03_fused_facility_mask.png",
+    "restroom_mask": "03a_restroom_mask.png",
+    "elevator_mask": "03b_elevator_mask.png",
+    "stair_mask": "03c_stair_mask.png",
+    "other_facility_mask": "03d_other_facility_mask.png",
+    "label_raster": "04_fused_labels_uint16.png",
+    "all_spaces_original_overlay": "10_all_spaces_on_original.png",
+    "all_spaces_navigation_overlay": "11_all_spaces_on_navigation.png",
+    "individual_space_masks": "spaces/*.png",
+    "individual_corridor_masks": "corridors/*.png"
+  },
+  "spaces": [
+    {
+      "id": "room_201",
+      "label_id": 1,
+      "type": "room",
+      "semantic_class": "room",
+      "room_number": "201",
+      "polygon_px": [
+        [
+          2133,
+          637
+        ],
+        [
+          1950,
+          625
+        ],
+        [
+          1939,
+          610
+        ],
+        [
+          1939,
+          327
+        ],
+        [
+          1772,
+          328
+        ],
+        [
+          1766,
+          371
+        ],
+        [
+          1409,
+          371
+        ],
+        [
+          1408,
+          636
+        ],
+        [
+          1553,
+          638
+        ],
+        [
+          1553,
+          655
+        ],
+        [
+          1393,
+          652
+        ],
+        [
+          1393,
+          461
+        ],
+        [
+          1374,
+          459
+        ],
+        [
+          1374,
+          675
+        ],
+        [
+          1942,
+          675
+        ],
+        [
+          1942,
+          655
+        ],
+        [
+          1578,
+          655
+        ],
+        [
+          1579,
+          637
+        ],
+        [
+          1922,
+          625
+        ]
+      ],
+      "bbox_px": [
+        1374,
+        327,
+        760,
+        349
+      ],
+      "center_px": [
+        1679.9473684210527,
+        562.7368421052631
+      ],
+      "polygon_map_m": [
+        [
+          78.21,
+          35.273333
+        ],
+        [
+          71.5,
+          35.713333
+        ],
+        [
+          71.096667,
+          36.263333
+        ],
+        [
+          71.096667,
+          46.64
+        ],
+        [
+          64.973333,
+          46.603333
+        ],
+        [
+          64.753333,
+          45.026667
+        ],
+        [
+          51.663333,
+          45.026667
+        ],
+        [
+          51.626667,
+          35.31
+        ],
+        [
+          56.943333,
+          35.236667
+        ],
+        [
+          56.943333,
+          34.613333
+        ],
+        [
+          51.076667,
+          34.723333
+        ],
+        [
+          51.076667,
+          41.726667
+        ],
+        [
+          50.38,
+          41.8
+        ],
+        [
+          50.38,
+          33.88
+        ],
+        [
+          71.206667,
+          33.88
+        ],
+        [
+          71.206667,
+          34.613333
+        ],
+        [
+          57.86,
+          34.613333
+        ],
+        [
+          57.896667,
+          35.273333
+        ],
+        [
+          70.473333,
+          35.713333
+        ]
+      ],
+      "center_map_m": [
+        61.59807,
+        37.996316
+      ],
+      "pose_hint_map": {
+        "frame_id": "map",
+        "position_m": [
+          61.600001,
+          37.986667
+        ],
+        "yaw_rad": null,
+        "source": "reviewed_center_inside_latest_free_mask"
+      },
+      "mask": "spaces/001_room_201.png",
+      "confidence": 0.88,
+      "geometry_source": "floor_specific_visual_review_plus_navigation_ink",
+      "mask_pixel_count": 159929,
+      "mask_clipped_to_navigation_free": true,
+      "navigation_seed_px": [
+        1680,
+        563
+      ],
+      "navigation_seed_map_m": [
+        61.600001,
+        37.986667
+      ],
+      "ocr_anchor_px": [
+        1668.0,
+        460.0
+      ],
+      "ocr_anchor_map_m": [
+        61.160001,
+        41.763334
+      ],
+      "text_entity_id": "nav_text_006",
+      "preferred_display_name": "201 교직원 식당",
+      "name": "201 교직원 식당",
+      "text_source": "latest_semantic_landmarks.navigation_text_entities"
+    },
+    {
+      "id": "room_202",
+      "label_id": 2,
+      "type": "room",
+      "semantic_class": "room",
+      "room_number": "202",
+      "polygon_px": [
+        [
+          1256,
+          833
+        ],
+        [
+          1943,
+          833
+        ],
+        [
+          1942,
+          808
+        ],
+        [
+          1664,
+          808
+        ],
+        [
+          1672,
+          683
+        ],
+        [
+          1942,
+          683
+        ],
+        [
+          1942,
+          655
+        ],
+        [
+          1578,
+          655
+        ],
+        [
+          1575,
+          642
+        ],
+        [
+          1993,
+          636
+        ],
+        [
+          1408,
+          636
+        ],
+        [
+          1550,
+          637
+        ],
+        [
+          1553,
+          655
+        ],
+        [
+          1396,
+          655
+        ],
+        [
+          1392,
+          636
+        ],
+        [
+          1364,
+          636
+        ],
+        [
+          1365,
+          807
+        ],
+        [
+          1387,
+          808
+        ],
+        [
+          1271,
+          809
+        ]
+      ],
+      "bbox_px": [
+        1256,
+        636,
+        738,
+        198
+      ],
+      "center_px": [
+        1589.1052631578948,
+        711.3157894736842
+      ],
+      "polygon_map_m": [
+        [
+          46.053333,
+          28.086667
+        ],
+        [
+          71.243333,
+          28.086667
+        ],
+        [
+          71.206667,
+          29.003333
+        ],
+        [
+          61.013333,
+          29.003333
+        ],
+        [
+          61.306667,
+          33.586667
+        ],
+        [
+          71.206667,
+          33.586667
+        ],
+        [
+          71.206667,
+          34.613333
+        ],
+        [
+          57.86,
+          34.613333
+        ],
+        [
+          57.75,
+          35.09
+        ],
+        [
+          73.076667,
+          35.31
+        ],
+        [
+          51.626667,
+          35.31
+        ],
+        [
+          56.833333,
+          35.273333
+        ],
+        [
+          56.943333,
+          34.613333
+        ],
+        [
+          51.186667,
+          34.613333
+        ],
+        [
+          51.04,
+          35.31
+        ],
+        [
+          50.013333,
+          35.31
+        ],
+        [
+          50.05,
+          29.04
+        ],
+        [
+          50.856667,
+          29.003333
+        ],
+        [
+          46.603333,
+          28.966667
+        ]
+      ],
+      "center_map_m": [
+        58.267193,
+        32.548421
+      ],
+      "pose_hint_map": {
+        "frame_id": "map",
+        "position_m": [
+          58.263334,
+          32.56
+        ],
+        "yaw_rad": null,
+        "source": "reviewed_center_inside_latest_free_mask"
+      },
+      "mask": "spaces/002_room_202.png",
+      "confidence": 0.88,
+      "geometry_source": "floor_specific_visual_review_plus_navigation_ink",
+      "mask_pixel_count": 54729,
+      "mask_clipped_to_navigation_free": true,
+      "navigation_seed_px": [
+        1589,
+        711
+      ],
+      "navigation_seed_map_m": [
+        58.263334,
+        32.56
+      ],
+      "ocr_anchor_px": [
+        1517.0,
+        710.0
+      ],
+      "ocr_anchor_map_m": [
+        55.623334,
+        32.596667
+      ],
+      "text_entity_id": "nav_text_012",
+      "preferred_display_name": "202 주방",
+      "name": "202 주방",
+      "text_source": "latest_semantic_landmarks.navigation_text_entities"
+    },
+    {
+      "id": "room_203",
+      "label_id": 3,
+      "type": "room",
+      "semantic_class": "room",
+      "room_number": "203",
+      "polygon_px": [
+        [
+          1530,
+          780
+        ],
+        [
+          1530,
+          807
+        ],
+        [
+          1547,
+          808
+        ],
+        [
+          1530,
+          809
+        ],
+        [
+          1530,
+          836
+        ],
+        [
+          1645,
+          847
+        ],
+        [
+          1641,
+          861
+        ],
+        [
+          1593,
+          862
+        ],
+        [
+          1594,
+          996
+        ],
+        [
+          1559,
+          1001
+        ],
+        [
+          1559,
+          1124
+        ],
+        [
+          1750,
+          1310
+        ],
+        [
+          2191,
+          1308
+        ],
+        [
+          2207,
+          1269
+        ],
+        [
+          2339,
+          1252
+        ],
+        [
+          2293,
+          1244
+        ],
+        [
+          2292,
+          780
+        ],
+        [
+          2136,
+          780
+        ],
+        [
+          2133,
+          859
+        ],
+        [
+          1686,
+          861
+        ],
+        [
+          1686,
+          844
+        ],
+        [
+          1942,
+          843
+        ],
+        [
+          1943,
+          808
+        ],
+        [
+          1665,
+          809
+        ],
+        [
+          1668,
+          780
+        ]
+      ],
+      "bbox_px": [
+        1530,
+        780,
+        810,
+        531
+      ],
+      "center_px": [
+        1807.56,
+        939.12
+      ],
+      "polygon_map_m": [
+        [
+          56.1,
+          30.03
+        ],
+        [
+          56.1,
+          29.04
+        ],
+        [
+          56.723333,
+          29.003333
+        ],
+        [
+          56.1,
+          28.966667
+        ],
+        [
+          56.1,
+          27.976667
+        ],
+        [
+          60.316667,
+          27.573333
+        ],
+        [
+          60.17,
+          27.06
+        ],
+        [
+          58.41,
+          27.023333
+        ],
+        [
+          58.446667,
+          22.11
+        ],
+        [
+          57.163333,
+          21.926667
+        ],
+        [
+          57.163333,
+          17.416667
+        ],
+        [
+          64.166667,
+          10.596667
+        ],
+        [
+          80.336667,
+          10.67
+        ],
+        [
+          80.923333,
+          12.1
+        ],
+        [
+          85.763333,
+          12.723333
+        ],
+        [
+          84.076667,
+          13.016667
+        ],
+        [
+          84.04,
+          30.03
+        ],
+        [
+          78.32,
+          30.03
+        ],
+        [
+          78.21,
+          27.133333
+        ],
+        [
+          61.82,
+          27.06
+        ],
+        [
+          61.82,
+          27.683333
+        ],
+        [
+          71.206667,
+          27.72
+        ],
+        [
+          71.243333,
+          29.003333
+        ],
+        [
+          61.05,
+          28.966667
+        ],
+        [
+          61.16,
+          30.03
+        ]
+      ],
+      "center_map_m": [
+        66.2772,
+        24.1956
+      ],
+      "pose_hint_map": {
+        "frame_id": "map",
+        "position_m": [
+          66.293334,
+          24.2
+        ],
+        "yaw_rad": null,
+        "source": "reviewed_center_inside_latest_free_mask"
+      },
+      "mask": "spaces/003_room_203.png",
+      "confidence": 0.88,
+      "geometry_source": "floor_specific_visual_review_plus_navigation_ink",
+      "mask_pixel_count": 316241,
+      "mask_clipped_to_navigation_free": true,
+      "navigation_seed_px": [
+        1808,
+        939
+      ],
+      "navigation_seed_map_m": [
+        66.293334,
+        24.2
+      ],
+      "ocr_anchor_px": [
+        1945.0,
+        1021.0
+      ],
+      "ocr_anchor_map_m": [
+        71.316667,
+        21.193334
+      ],
+      "text_entity_id": "nav_text_033",
+      "preferred_display_name": "203 학생 학생식당 식당 |",
+      "name": "203 학생 학생식당 식당 |",
+      "text_source": "latest_semantic_landmarks.navigation_text_entities"
+    },
+    {
+      "id": "room_204",
+      "label_id": 4,
+      "type": "room",
+      "semantic_class": "room",
+      "room_number": "204",
+      "polygon_px": [
+        [
+          2428,
+          753
+        ],
+        [
+          2307,
+          755
+        ],
+        [
+          2308,
+          850
+        ],
+        [
+          2429,
+          850
+        ],
+        [
+          2429,
+          814
+        ],
+        [
+          2434,
+          809
+        ],
+        [
+          2433,
+          793
+        ],
+        [
+          2429,
+          789
+        ]
+      ],
+      "bbox_px": [
+        2307,
+        753,
+        128,
+        98
+      ],
+      "center_px": [
+        2399.625,
+        801.625
+      ],
+      "polygon_map_m": [
+        [
+          89.026667,
+          31.02
+        ],
+        [
+          84.59,
+          30.946667
+        ],
+        [
+          84.626667,
+          27.463333
+        ],
+        [
+          89.063333,
+          27.463333
+        ],
+        [
+          89.063333,
+          28.783333
+        ],
+        [
+          89.246667,
+          28.966667
+        ],
+        [
+          89.21,
+          29.553333
+        ],
+        [
+          89.063333,
+          29.7
+        ]
+      ],
+      "center_map_m": [
+        87.98625,
+        29.237083
+      ],
+      "pose_hint_map": {
+        "frame_id": "map",
+        "position_m": [
+          88.000001,
+          29.223334
+        ],
+        "yaw_rad": null,
+        "source": "reviewed_center_inside_latest_free_mask"
+      },
+      "mask": "spaces/004_room_204.png",
+      "confidence": 0.88,
+      "geometry_source": "floor_specific_visual_review_plus_navigation_ink",
+      "mask_pixel_count": 11564,
+      "mask_clipped_to_navigation_free": true,
+      "navigation_seed_px": [
+        2400,
+        802
+      ],
+      "navigation_seed_map_m": [
+        88.000001,
+        29.223334
+      ],
+      "ocr_anchor_px": [
+        2366.0,
+        783.0
+      ],
+      "ocr_anchor_map_m": [
+        86.753334,
+        29.92
+      ],
+      "text_entity_id": "nav_text_015",
+      "preferred_display_name": "204 이약 운영심",
+      "name": "204 이약 운영심",
+      "text_source": "latest_semantic_landmarks.navigation_text_entities"
+    },
+    {
+      "id": "room_205",
+      "label_id": 5,
+      "type": "room",
+      "semantic_class": "room",
+      "room_number": "205",
+      "polygon_px": [
+        [
+          2486,
+          856
+        ],
+        [
+          2308,
+          860
+        ],
+        [
+          2309,
+          1210
+        ],
+        [
+          2591,
+          1210
+        ],
+        [
+          2591,
+          1135
+        ],
+        [
+          2571,
+          1134
+        ],
+        [
+          2565,
+          1126
+        ],
+        [
+          2567,
+          1112
+        ],
+        [
+          2591,
+          1110
+        ],
+        [
+          2591,
+          1101
+        ],
+        [
+          2583,
+          1098
+        ],
+        [
+          2591,
+          1063
+        ],
+        [
+          2535,
+          1064
+        ],
+        [
+          2546,
+          1040
+        ],
+        [
+          2533,
+          1036
+        ],
+        [
+          2539,
+          1023
+        ],
+        [
+          2558,
+          1032
+        ],
+        [
+          2576,
+          1023
+        ],
+        [
+          2591,
+          1040
+        ],
+        [
+          2591,
+          938
+        ],
+        [
+          2508,
+          938
+        ],
+        [
+          2505,
+          930
+        ],
+        [
+          2489,
+          931
+        ]
+      ],
+      "bbox_px": [
+        2308,
+        856,
+        284,
+        355
+      ],
+      "center_px": [
+        2535.4347826086955,
+        1043.9130434782608
+      ],
+      "polygon_map_m": [
+        [
+          91.153333,
+          27.243333
+        ],
+        [
+          84.626667,
+          27.096667
+        ],
+        [
+          84.663333,
+          14.263333
+        ],
+        [
+          95.003333,
+          14.263333
+        ],
+        [
+          95.003333,
+          17.013333
+        ],
+        [
+          94.27,
+          17.05
+        ],
+        [
+          94.05,
+          17.343333
+        ],
+        [
+          94.123333,
+          17.856667
+        ],
+        [
+          95.003333,
+          17.93
+        ],
+        [
+          95.003333,
+          18.26
+        ],
+        [
+          94.71,
+          18.37
+        ],
+        [
+          95.003333,
+          19.653333
+        ],
+        [
+          92.95,
+          19.616667
+        ],
+        [
+          93.353333,
+          20.496667
+        ],
+        [
+          92.876667,
+          20.643333
+        ],
+        [
+          93.096667,
+          21.12
+        ],
+        [
+          93.793333,
+          20.79
+        ],
+        [
+          94.453333,
+          21.12
+        ],
+        [
+          95.003333,
+          20.496667
+        ],
+        [
+          95.003333,
+          24.236667
+        ],
+        [
+          91.96,
+          24.236667
+        ],
+        [
+          91.85,
+          24.53
+        ],
+        [
+          91.263333,
+          24.493333
+        ]
+      ],
+      "center_map_m": [
+        92.965942,
+        20.353188
+      ],
+      "pose_hint_map": {
+        "frame_id": "map",
+        "position_m": [
+          92.950001,
+          20.35
+        ],
+        "yaw_rad": null,
+        "source": "reviewed_center_inside_latest_free_mask"
+      },
+      "mask": "spaces/005_room_205.png",
+      "confidence": 0.88,
+      "geometry_source": "floor_specific_visual_review_plus_navigation_ink",
+      "mask_pixel_count": 84269,
+      "mask_clipped_to_navigation_free": true,
+      "navigation_seed_px": [
+        2535,
+        1044
+      ],
+      "navigation_seed_map_m": [
+        92.950001,
+        20.35
+      ],
+      "ocr_anchor_px": [
+        2394.5,
+        1045.0
+      ],
+      "ocr_anchor_map_m": [
+        87.798334,
+        20.313334
+      ],
+      "text_entity_id": "nav_text_036",
+      "preferred_display_name": "205 이 공과대학 전산실습실",
+      "name": "205 이 공과대학 전산실습실",
+      "text_source": "latest_semantic_landmarks.navigation_text_entities"
+    },
+    {
+      "id": "room_206",
+      "label_id": 6,
+      "type": "room",
+      "semantic_class": "room",
+      "room_number": "206",
+      "polygon_px": [
+        [
+          2835,
+          833
+        ],
+        [
+          2675,
+          833
+        ],
+        [
+          2676,
+          1179
+        ],
+        [
+          2691,
+          1182
+        ],
+        [
+          2690,
+          1194
+        ],
+        [
+          2676,
+          1197
+        ],
+        [
+          2676,
+          1211
+        ],
+        [
+          2676,
+          1200
+        ],
+        [
+          2688,
+          1197
+        ],
+        [
+          2693,
+          1189
+        ],
+        [
+          2709,
+          1190
+        ],
+        [
+          2713,
+          1197
+        ],
+        [
+          2738,
+          1197
+        ],
+        [
+          2742,
+          1211
+        ],
+        [
+          2741,
+          1197
+        ],
+        [
+          2711,
+          1193
+        ],
+        [
+          2714,
+          1180
+        ],
+        [
+          2839,
+          1180
+        ],
+        [
+          2839,
+          860
+        ]
+      ],
+      "bbox_px": [
+        2675,
+        833,
+        165,
+        379
+      ],
+      "center_px": [
+        2722.2105263157896,
+        1137.8947368421052
+      ],
+      "polygon_map_m": [
+        [
+          103.95,
+          28.086667
+        ],
+        [
+          98.083333,
+          28.086667
+        ],
+        [
+          98.12,
+          15.4
+        ],
+        [
+          98.67,
+          15.29
+        ],
+        [
+          98.633333,
+          14.85
+        ],
+        [
+          98.12,
+          14.74
+        ],
+        [
+          98.12,
+          14.226667
+        ],
+        [
+          98.12,
+          14.63
+        ],
+        [
+          98.56,
+          14.74
+        ],
+        [
+          98.743333,
+          15.033333
+        ],
+        [
+          99.33,
+          14.996667
+        ],
+        [
+          99.476667,
+          14.74
+        ],
+        [
+          100.393333,
+          14.74
+        ],
+        [
+          100.54,
+          14.226667
+        ],
+        [
+          100.503333,
+          14.74
+        ],
+        [
+          99.403333,
+          14.886667
+        ],
+        [
+          99.513333,
+          15.363333
+        ],
+        [
+          104.096667,
+          15.363333
+        ],
+        [
+          104.096667,
+          27.096667
+        ]
+      ],
+      "center_map_m": [
+        99.814386,
+        16.907193
+      ],
+      "pose_hint_map": {
+        "frame_id": "map",
+        "position_m": [
+          99.806668,
+          16.903333
+        ],
+        "yaw_rad": null,
+        "source": "reviewed_center_inside_latest_free_mask"
+      },
+      "mask": "spaces/006_room_206.png",
+      "confidence": 0.88,
+      "geometry_source": "floor_specific_visual_review_plus_navigation_ink",
+      "mask_pixel_count": 55523,
+      "mask_clipped_to_navigation_free": true,
+      "navigation_seed_px": [
+        2722,
+        1138
+      ],
+      "navigation_seed_map_m": [
+        99.806668,
+        16.903333
+      ],
+      "ocr_anchor_px": [
+        2574.5,
+        1045.0
+      ],
+      "ocr_anchor_map_m": [
+        94.398334,
+        20.313334
+      ],
+      "text_entity_id": "nav_text_034",
+      "preferred_display_name": "206 중입아십 공과대 곰과 전산실 [",
+      "name": "206 중입아십 공과대 곰과 전산실 [",
+      "text_source": "latest_semantic_landmarks.navigation_text_entities"
+    },
+    {
+      "id": "room_207",
+      "label_id": 7,
+      "type": "room",
+      "semantic_class": "room",
+      "room_number": "207",
+      "polygon_px": [
+        [
+          2565,
+          644
+        ],
+        [
+          2572,
+          719
+        ],
+        [
+          2565,
+          724
+        ],
+        [
+          2565,
+          734
+        ],
+        [
+          2555,
+          737
+        ],
+        [
+          2565,
+          737
+        ],
+        [
+          2566,
+          725
+        ],
+        [
+          2578,
+          722
+        ],
+        [
+          2581,
+          736
+        ],
+        [
+          2675,
+          741
+        ],
+        [
+          2676,
+          870
+        ],
+        [
+          2839,
+          870
+        ],
+        [
+          2835,
+          858
+        ],
+        [
+          2835,
+          674
+        ],
+        [
+          2831,
+          665
+        ],
+        [
+          2581,
+          664
+        ],
+        [
+          2580,
+          679
+        ],
+        [
+          2573,
+          681
+        ],
+        [
+          2566,
+          676
+        ]
+      ],
+      "bbox_px": [
+        2555,
+        644,
+        285,
+        227
+      ],
+      "center_px": [
+        2637.0,
+        729.2631578947369
+      ],
+      "polygon_map_m": [
+        [
+          94.05,
+          35.016667
+        ],
+        [
+          94.306667,
+          32.266667
+        ],
+        [
+          94.05,
+          32.083333
+        ],
+        [
+          94.05,
+          31.716667
+        ],
+        [
+          93.683333,
+          31.606667
+        ],
+        [
+          94.05,
+          31.606667
+        ],
+        [
+          94.086667,
+          32.046667
+        ],
+        [
+          94.526667,
+          32.156667
+        ],
+        [
+          94.636667,
+          31.643333
+        ],
+        [
+          98.083333,
+          31.46
+        ],
+        [
+          98.12,
+          26.73
+        ],
+        [
+          104.096667,
+          26.73
+        ],
+        [
+          103.95,
+          27.17
+        ],
+        [
+          103.95,
+          33.916667
+        ],
+        [
+          103.803333,
+          34.246667
+        ],
+        [
+          94.636667,
+          34.283333
+        ],
+        [
+          94.6,
+          33.733333
+        ],
+        [
+          94.343333,
+          33.66
+        ],
+        [
+          94.086667,
+          33.843333
+        ]
+      ],
+      "center_map_m": [
+        96.69,
+        31.890351
+      ],
+      "pose_hint_map": {
+        "frame_id": "map",
+        "position_m": [
+          96.690001,
+          31.9
+        ],
+        "yaw_rad": null,
+        "source": "reviewed_center_inside_latest_free_mask"
+      },
+      "mask": "spaces/007_room_207.png",
+      "confidence": 0.88,
+      "geometry_source": "floor_specific_visual_review_plus_navigation_ink",
+      "mask_pixel_count": 32872,
+      "mask_clipped_to_navigation_free": true,
+      "navigation_seed_px": [
+        2637,
+        729
+      ],
+      "navigation_seed_map_m": [
+        96.690001,
+        31.9
+      ],
+      "ocr_anchor_px": [
+        2595.0,
+        804.5
+      ],
+      "ocr_anchor_map_m": [
+        95.150001,
+        29.131667
+      ],
+      "text_entity_id": "nav_text_019",
+      "preferred_display_name": "207 3 P 프린 터실 프린터실",
+      "name": "207 3 P 프린 터실 프린터실",
+      "text_source": "latest_semantic_landmarks.navigation_text_entities"
+    },
+    {
+      "id": "room_208",
+      "label_id": 8,
+      "type": "room",
+      "semantic_class": "room",
+      "room_number": "208",
+      "polygon_px": [
+        [
+          2581,
+          579
+        ],
+        [
+          2581,
+          655
+        ],
+        [
+          2694,
+          653
+        ],
+        [
+          2693,
+          647
+        ],
+        [
+          2690,
+          652
+        ],
+        [
+          2663,
+          652
+        ],
+        [
+          2658,
+          646
+        ],
+        [
+          2658,
+          633
+        ],
+        [
+          2663,
+          627
+        ],
+        [
+          2707,
+          627
+        ],
+        [
+          2699,
+          623
+        ],
+        [
+          2694,
+          616
+        ],
+        [
+          2689,
+          624
+        ],
+        [
+          2664,
+          621
+        ],
+        [
+          2665,
+          612
+        ],
+        [
+          2680,
+          594
+        ],
+        [
+          2676,
+          593
+        ],
+        [
+          2673,
+          598
+        ],
+        [
+          2664,
+          596
+        ],
+        [
+          2664,
+          587
+        ],
+        [
+          2670,
+          580
+        ]
+      ],
+      "bbox_px": [
+        2581,
+        579,
+        127,
+        77
+      ],
+      "center_px": [
+        2667.904761904762,
+        619.7619047619048
+      ],
+      "polygon_map_m": [
+        [
+          94.636667,
+          37.4
+        ],
+        [
+          94.636667,
+          34.613333
+        ],
+        [
+          98.78,
+          34.686667
+        ],
+        [
+          98.743333,
+          34.906667
+        ],
+        [
+          98.633333,
+          34.723333
+        ],
+        [
+          97.643333,
+          34.723333
+        ],
+        [
+          97.46,
+          34.943333
+        ],
+        [
+          97.46,
+          35.42
+        ],
+        [
+          97.643333,
+          35.64
+        ],
+        [
+          99.256667,
+          35.64
+        ],
+        [
+          98.963333,
+          35.786667
+        ],
+        [
+          98.78,
+          36.043333
+        ],
+        [
+          98.596667,
+          35.75
+        ],
+        [
+          97.68,
+          35.86
+        ],
+        [
+          97.716667,
+          36.19
+        ],
+        [
+          98.266667,
+          36.85
+        ],
+        [
+          98.12,
+          36.886667
+        ],
+        [
+          98.01,
+          36.703333
+        ],
+        [
+          97.68,
+          36.776667
+        ],
+        [
+          97.68,
+          37.106667
+        ],
+        [
+          97.9,
+          37.363333
+        ]
+      ],
+      "center_map_m": [
+        97.823175,
+        35.905397
+      ],
+      "pose_hint_map": {
+        "frame_id": "map",
+        "position_m": [
+          97.826668,
+          35.823334
+        ],
+        "yaw_rad": null,
+        "source": "nearest_pixel_in_latest_free_semantic_mask"
+      },
+      "mask": "spaces/008_room_208.png",
+      "confidence": 0.88,
+      "geometry_source": "floor_specific_visual_review_plus_navigation_ink",
+      "mask_pixel_count": 6324,
+      "mask_clipped_to_navigation_free": true,
+      "navigation_seed_px": [
+        2668,
+        622
+      ],
+      "navigation_seed_map_m": [
+        97.826668,
+        35.823334
+      ],
+      "ocr_anchor_px": [
+        2708.0,
+        602.0
+      ],
+      "ocr_anchor_map_m": [
+        99.293334,
+        36.556667
+      ],
+      "text_entity_id": "nav_text_008",
+      "preferred_display_name": "208 65편의점",
+      "name": "208 65편의점",
+      "text_source": "latest_semantic_landmarks.navigation_text_entities"
+    },
+    {
+      "id": "room_209",
+      "label_id": 9,
+      "type": "room",
+      "semantic_class": "room",
+      "room_number": "209",
+      "polygon_px": [
+        [
+          2847,
+          857
+        ],
+        [
+          2847,
+          1179
+        ],
+        [
+          3027,
+          1182
+        ],
+        [
+          3025,
+          1153
+        ],
+        [
+          3029,
+          1150
+        ],
+        [
+          3022,
+          1146
+        ],
+        [
+          3023,
+          858
+        ]
+      ],
+      "bbox_px": [
+        2847,
+        857,
+        183,
+        326
+      ],
+      "center_px": [
+        2974.285714285714,
+        1075.0
+      ],
+      "polygon_map_m": [
+        [
+          104.39,
+          27.206667
+        ],
+        [
+          104.39,
+          15.4
+        ],
+        [
+          110.99,
+          15.29
+        ],
+        [
+          110.916667,
+          16.353333
+        ],
+        [
+          111.063333,
+          16.463333
+        ],
+        [
+          110.806667,
+          16.61
+        ],
+        [
+          110.843333,
+          27.17
+        ]
+      ],
+      "center_map_m": [
+        109.057143,
+        19.213333
+      ],
+      "pose_hint_map": {
+        "frame_id": "map",
+        "position_m": [
+          109.046668,
+          19.213334
+        ],
+        "yaw_rad": null,
+        "source": "reviewed_center_inside_latest_free_mask"
+      },
+      "mask": "spaces/009_room_209.png",
+      "confidence": 0.88,
+      "geometry_source": "floor_specific_visual_review_plus_navigation_ink",
+      "mask_pixel_count": 55361,
+      "mask_clipped_to_navigation_free": true,
+      "navigation_seed_px": [
+        2974,
+        1075
+      ],
+      "navigation_seed_map_m": [
+        109.046668,
+        19.213334
+      ],
+      "ocr_anchor_px": [
+        2933.5,
+        963.0
+      ],
+      "ocr_anchor_map_m": [
+        107.561668,
+        23.32
+      ],
+      "text_entity_id": "nav_text_029",
+      "preferred_display_name": "209 금과대화 칼의실",
+      "name": "209 금과대화 칼의실",
+      "text_source": "latest_semantic_landmarks.navigation_text_entities"
+    },
+    {
+      "id": "room_210",
+      "label_id": 10,
+      "type": "room",
+      "semantic_class": "room",
+      "room_number": "210",
+      "polygon_px": [
+        [
+          3030,
+          858
+        ],
+        [
+          3033,
+          1147
+        ],
+        [
+          3036,
+          1141
+        ],
+        [
+          3054,
+          1141
+        ],
+        [
+          3057,
+          1146
+        ],
+        [
+          3060,
+          1133
+        ],
+        [
+          3173,
+          1133
+        ],
+        [
+          3177,
+          1144
+        ],
+        [
+          3198,
+          1142
+        ],
+        [
+          3201,
+          1158
+        ],
+        [
+          3200,
+          859
+        ]
+      ],
+      "bbox_px": [
+        3030,
+        858,
+        172,
+        301
+      ],
+      "center_px": [
+        3110.818181818182,
+        1091.090909090909
+      ],
+      "polygon_map_m": [
+        [
+          111.1,
+          27.17
+        ],
+        [
+          111.21,
+          16.573333
+        ],
+        [
+          111.32,
+          16.793333
+        ],
+        [
+          111.98,
+          16.793333
+        ],
+        [
+          112.09,
+          16.61
+        ],
+        [
+          112.2,
+          17.086667
+        ],
+        [
+          116.343333,
+          17.086667
+        ],
+        [
+          116.49,
+          16.683333
+        ],
+        [
+          117.26,
+          16.756667
+        ],
+        [
+          117.37,
+          16.17
+        ],
+        [
+          117.333333,
+          27.133333
+        ]
+      ],
+      "center_map_m": [
+        114.063333,
+        18.623333
+      ],
+      "pose_hint_map": {
+        "frame_id": "map",
+        "position_m": [
+          114.070001,
+          18.626667
+        ],
+        "yaw_rad": null,
+        "source": "reviewed_center_inside_latest_free_mask"
+      },
+      "mask": "spaces/010_room_210.png",
+      "confidence": 0.88,
+      "geometry_source": "floor_specific_visual_review_plus_navigation_ink",
+      "mask_pixel_count": 46452,
+      "mask_clipped_to_navigation_free": true,
+      "navigation_seed_px": [
+        3111,
+        1091
+      ],
+      "navigation_seed_map_m": [
+        114.070001,
+        18.626667
+      ],
+      "ocr_anchor_px": [
+        3118.0,
+        964.0
+      ],
+      "ocr_anchor_map_m": [
+        114.326668,
+        23.283334
+      ],
+      "text_entity_id": "nav_text_030",
+      "preferred_display_name": "210 몰과대화 강의실",
+      "name": "210 몰과대화 강의실",
+      "text_source": "latest_semantic_landmarks.navigation_text_entities"
+    },
+    {
+      "id": "stair_west_2f",
+      "label_id": 11,
+      "type": "stair",
+      "semantic_class": "stair",
+      "name": "서측계단",
+      "polygon_px": [
+        [
+          930,
+          340
+        ],
+        [
+          1045,
+          340
+        ],
+        [
+          1045,
+          650
+        ],
+        [
+          930,
+          650
+        ]
+      ],
+      "bbox_px": [
+        930,
+        340,
+        116,
+        311
+      ],
+      "center_px": [
+        987.5,
+        495.0
+      ],
+      "polygon_map_m": [
+        [
+          34.1,
+          46.163333
+        ],
+        [
+          38.316667,
+          46.163333
+        ],
+        [
+          38.316667,
+          34.796667
+        ],
+        [
+          34.1,
+          34.796667
+        ]
+      ],
+      "center_map_m": [
+        36.208333,
+        40.48
+      ],
+      "pose_hint_map": {
+        "frame_id": "map",
+        "position_m": [
+          36.226667,
+          40.48
+        ],
+        "yaw_rad": null,
+        "source": "reviewed_center_inside_latest_free_mask"
+      },
+      "mask": "spaces/011_stair_west_2f.png",
+      "confidence": 0.82,
+      "geometry_source": "floor_specific_visual_review_plus_navigation_ink",
+      "mask_pixel_count": 18881,
+      "mask_clipped_to_navigation_free": true,
+      "navigation_seed_px": [
+        988,
+        495
+      ],
+      "navigation_seed_map_m": [
+        36.226667,
+        40.48
+      ]
+    },
+    {
+      "id": "elevator_2f",
+      "label_id": 12,
+      "type": "elevator",
+      "semantic_class": "elevator",
+      "name": "엘리베이터",
+      "polygon_px": [
+        [
+          1940,
+          310
+        ],
+        [
+          2110,
+          310
+        ],
+        [
+          2110,
+          610
+        ],
+        [
+          1940,
+          610
+        ]
+      ],
+      "bbox_px": [
+        1940,
+        310,
+        171,
+        301
+      ],
+      "center_px": [
+        2025.0,
+        460.0
+      ],
+      "polygon_map_m": [
+        [
+          71.133333,
+          47.263333
+        ],
+        [
+          77.366667,
+          47.263333
+        ],
+        [
+          77.366667,
+          36.263333
+        ],
+        [
+          71.133333,
+          36.263333
+        ]
+      ],
+      "center_map_m": [
+        74.25,
+        41.763333
+      ],
+      "pose_hint_map": {
+        "frame_id": "map",
+        "position_m": [
+          74.250001,
+          41.506667
+        ],
+        "yaw_rad": null,
+        "source": "nearest_pixel_in_latest_free_semantic_mask"
+      },
+      "mask": "spaces/012_elevator_2f.png",
+      "confidence": 0.82,
+      "geometry_source": "floor_specific_visual_review_plus_navigation_ink",
+      "mask_pixel_count": 29631,
+      "mask_clipped_to_navigation_free": true,
+      "navigation_seed_px": [
+        2025,
+        467
+      ],
+      "navigation_seed_map_m": [
+        74.250001,
+        41.506667
+      ]
+    },
+    {
+      "id": "stair_north_2f",
+      "label_id": 13,
+      "type": "stair",
+      "semantic_class": "stair",
+      "name": "북측계단",
+      "polygon_px": [
+        [
+          2180,
+          330
+        ],
+        [
+          2320,
+          330
+        ],
+        [
+          2320,
+          610
+        ],
+        [
+          2180,
+          610
+        ]
+      ],
+      "bbox_px": [
+        2180,
+        330,
+        141,
+        281
+      ],
+      "center_px": [
+        2250.0,
+        470.0
+      ],
+      "polygon_map_m": [
+        [
+          79.933333,
+          46.53
+        ],
+        [
+          85.066667,
+          46.53
+        ],
+        [
+          85.066667,
+          36.263333
+        ],
+        [
+          79.933333,
+          36.263333
+        ]
+      ],
+      "center_map_m": [
+        82.5,
+        41.396667
+      ],
+      "pose_hint_map": {
+        "frame_id": "map",
+        "position_m": [
+          82.500001,
+          41.36
+        ],
+        "yaw_rad": null,
+        "source": "nearest_pixel_in_latest_free_semantic_mask"
+      },
+      "mask": "spaces/013_stair_north_2f.png",
+      "confidence": 0.82,
+      "geometry_source": "floor_specific_visual_review_plus_navigation_ink",
+      "mask_pixel_count": 27139,
+      "mask_clipped_to_navigation_free": true,
+      "navigation_seed_px": [
+        2250,
+        471
+      ],
+      "navigation_seed_map_m": [
+        82.500001,
+        41.36
+      ]
+    },
+    {
+      "id": "restroom_2f",
+      "label_id": 14,
+      "type": "restroom",
+      "semantic_class": "restroom",
+      "name": "화장실",
+      "polygon_px": [
+        [
+          2260,
+          410
+        ],
+        [
+          2460,
+          410
+        ],
+        [
+          2460,
+          610
+        ],
+        [
+          2260,
+          610
+        ]
+      ],
+      "bbox_px": [
+        2260,
+        410,
+        201,
+        201
+      ],
+      "center_px": [
+        2360.0,
+        510.0
+      ],
+      "polygon_map_m": [
+        [
+          82.866667,
+          43.596667
+        ],
+        [
+          90.2,
+          43.596667
+        ],
+        [
+          90.2,
+          36.263333
+        ],
+        [
+          82.866667,
+          36.263333
+        ]
+      ],
+      "center_map_m": [
+        86.533333,
+        39.93
+      ],
+      "pose_hint_map": {
+        "frame_id": "map",
+        "position_m": [
+          86.350001,
+          39.93
+        ],
+        "yaw_rad": null,
+        "source": "nearest_pixel_in_latest_free_semantic_mask"
+      },
+      "mask": "spaces/014_restroom_2f.png",
+      "confidence": 0.82,
+      "geometry_source": "floor_specific_visual_review_plus_navigation_ink",
+      "mask_pixel_count": 18710,
+      "mask_clipped_to_navigation_free": true,
+      "navigation_seed_px": [
+        2355,
+        510
+      ],
+      "navigation_seed_map_m": [
+        86.350001,
+        39.93
+      ]
+    },
+    {
+      "id": "cold_storage_2f",
+      "label_id": 15,
+      "type": "utility",
+      "semantic_class": "utility",
+      "name": "냉장·냉동고",
+      "polygon_px": [
+        [
+          1045,
+          500
+        ],
+        [
+          1270,
+          500
+        ],
+        [
+          1270,
+          820
+        ],
+        [
+          1045,
+          820
+        ]
+      ],
+      "bbox_px": [
+        1045,
+        500,
+        226,
+        321
+      ],
+      "center_px": [
+        1157.5,
+        660.0
+      ],
+      "polygon_map_m": [
+        [
+          38.316667,
+          40.296667
+        ],
+        [
+          46.566667,
+          40.296667
+        ],
+        [
+          46.566667,
+          28.563333
+        ],
+        [
+          38.316667,
+          28.563333
+        ]
+      ],
+      "center_map_m": [
+        42.441667,
+        34.43
+      ],
+      "pose_hint_map": {
+        "frame_id": "map",
+        "position_m": [
+          42.423334,
+          34.246667
+        ],
+        "yaw_rad": null,
+        "source": "nearest_pixel_in_latest_free_semantic_mask"
+      },
+      "mask": "spaces/015_cold_storage_2f.png",
+      "confidence": 0.82,
+      "geometry_source": "floor_specific_visual_review_plus_navigation_ink",
+      "mask_pixel_count": 49571,
+      "mask_clipped_to_navigation_free": true,
+      "navigation_seed_px": [
+        1157,
+        665
+      ],
+      "navigation_seed_map_m": [
+        42.423334,
+        34.246667
+      ]
+    }
+  ],
+  "corridors": [
+    {
+      "id": "corridor_1_2f",
+      "label_id": 16,
+      "type": "corridor",
+      "polygon_px": [
+        [
+          1040,
+          610
+        ],
+        [
+          2460,
+          610
+        ],
+        [
+          2460,
+          740
+        ],
+        [
+          3200,
+          740
+        ],
+        [
+          3200,
+          850
+        ],
+        [
+          2845,
+          850
+        ],
+        [
+          2845,
+          1200
+        ],
+        [
+          3200,
+          1200
+        ],
+        [
+          3200,
+          1240
+        ],
+        [
+          2300,
+          1240
+        ],
+        [
+          2300,
+          820
+        ],
+        [
+          1040,
+          820
+        ]
+      ],
+      "bbox_px": [
+        1040,
+        610,
+        2161,
+        631
+      ],
+      "center_px": [
+        2507.5,
+        910.0
+      ],
+      "polygon_map_m": [
+        [
+          38.133333,
+          36.263333
+        ],
+        [
+          90.2,
+          36.263333
+        ],
+        [
+          90.2,
+          31.496667
+        ],
+        [
+          117.333333,
+          31.496667
+        ],
+        [
+          117.333333,
+          27.463333
+        ],
+        [
+          104.316667,
+          27.463333
+        ],
+        [
+          104.316667,
+          14.63
+        ],
+        [
+          117.333333,
+          14.63
+        ],
+        [
+          117.333333,
+          13.163333
+        ],
+        [
+          84.333333,
+          13.163333
+        ],
+        [
+          84.333333,
+          28.563333
+        ],
+        [
+          38.133333,
+          28.563333
+        ]
+      ],
+      "center_map_m": [
+        91.941667,
+        25.263333
+      ],
+      "confidence": 0.88,
+      "mask": "corridors/016_corridor_1_2f.png",
+      "mask_pixel_count": 234367,
+      "mask_clipped_to_navigation_free": true,
+      "navigation_seed_px": [
+        2508,
+        910
+      ],
+      "navigation_seed_map_m": [
+        91.960001,
+        25.263334
+      ],
+      "pose_hint_map": {
+        "frame_id": "map",
+        "position_m": [
+          91.960001,
+          25.263334
+        ],
+        "yaw_rad": null,
+        "source": "reviewed_center_inside_latest_free_mask"
+      }
+    }
+  ],
+  "package_schema_version": "semantic_prior_package_v1",
+  "navigation_text_entities": [
+    {
+      "id": "nav_text_006",
+      "room_number": "201",
+      "facility_labels": [
+        "교직원식당"
+      ],
+      "canonical_name": "201교직원식당",
+      "display_name": "201 교직원 식당",
+      "centroid": [
+        1668.0,
+        460.0
+      ],
+      "room_text_id": "text_006",
+      "attached_text_ids": [
+        "text_007"
+      ],
+      "map_role": "navigation_destination_landmark",
+      "centroid_map_m": [
+        61.160001,
+        41.763334
+      ]
+    },
+    {
+      "id": "nav_text_008",
+      "room_number": "208",
+      "facility_labels": [
+        "65편의점"
+      ],
+      "canonical_name": "20865편의점",
+      "display_name": "208 65편의점",
+      "centroid": [
+        2708.0,
+        602.0
+      ],
+      "room_text_id": "text_008",
+      "attached_text_ids": [
+        "text_011"
+      ],
+      "map_role": "navigation_destination_landmark",
+      "centroid_map_m": [
+        99.293334,
+        36.556667
+      ]
+    },
+    {
+      "id": "nav_text_012",
+      "room_number": "202",
+      "facility_labels": [
+        "주방"
+      ],
+      "canonical_name": "202주방",
+      "display_name": "202 주방",
+      "centroid": [
+        1517.0,
+        710.0
+      ],
+      "room_text_id": "text_012",
+      "attached_text_ids": [
+        "text_014"
+      ],
+      "map_role": "navigation_destination_landmark",
+      "centroid_map_m": [
+        55.623334,
+        32.596667
+      ]
+    },
+    {
+      "id": "nav_text_015",
+      "room_number": "204",
+      "facility_labels": [
+        "이약",
+        "운영심"
+      ],
+      "canonical_name": "204이약운영심",
+      "display_name": "204 이약 운영심",
+      "centroid": [
+        2366.0,
+        783.0
+      ],
+      "room_text_id": "text_015",
+      "attached_text_ids": [
+        "text_018",
+        "text_022"
+      ],
+      "map_role": "navigation_destination_landmark",
+      "centroid_map_m": [
+        86.753334,
+        29.92
+      ]
+    },
+    {
+      "id": "nav_text_019",
+      "room_number": "207",
+      "facility_labels": [
+        "3P",
+        "프린터실",
+        "프린터실"
+      ],
+      "canonical_name": "2073P프린터실프린터실",
+      "display_name": "207 3 P 프린 터실 프린터실",
+      "centroid": [
+        2595.0,
+        804.5
+      ],
+      "room_text_id": "text_019",
+      "attached_text_ids": [
+        "text_024",
+        "text_025",
+        "text_026"
+      ],
+      "map_role": "navigation_destination_landmark",
+      "centroid_map_m": [
+        95.150001,
+        29.131667
+      ]
+    },
+    {
+      "id": "nav_text_029",
+      "room_number": "209",
+      "facility_labels": [
+        "금과대화",
+        "칼의실"
+      ],
+      "canonical_name": "209금과대화칼의실",
+      "display_name": "209 금과대화 칼의실",
+      "centroid": [
+        2933.5,
+        963.0
+      ],
+      "room_text_id": "text_029",
+      "attached_text_ids": [
+        "text_031",
+        "text_035"
+      ],
+      "map_role": "navigation_destination_landmark",
+      "centroid_map_m": [
+        107.561668,
+        23.32
+      ]
+    },
+    {
+      "id": "nav_text_030",
+      "room_number": "210",
+      "facility_labels": [
+        "몰과대화",
+        "강의실"
+      ],
+      "canonical_name": "210몰과대화강의실",
+      "display_name": "210 몰과대화 강의실",
+      "centroid": [
+        3118.0,
+        964.0
+      ],
+      "room_text_id": "text_030",
+      "attached_text_ids": [
+        "text_032",
+        "text_038"
+      ],
+      "map_role": "navigation_destination_landmark",
+      "centroid_map_m": [
+        114.326668,
+        23.283334
+      ]
+    },
+    {
+      "id": "nav_text_033",
+      "room_number": "203",
+      "facility_labels": [
+        "학생",
+        "학생식당",
+        "식당",
+        "|"
+      ],
+      "canonical_name": "203학생학생식당식당|",
+      "display_name": "203 학생 학생식당 식당 |",
+      "centroid": [
+        1945.0,
+        1021.0
+      ],
+      "room_text_id": "text_033",
+      "attached_text_ids": [
+        "text_040",
+        "text_041",
+        "text_042",
+        "text_048"
+      ],
+      "map_role": "navigation_destination_landmark",
+      "centroid_map_m": [
+        71.316667,
+        21.193334
+      ]
+    },
+    {
+      "id": "nav_text_034",
+      "room_number": "206",
+      "facility_labels": [
+        "중입아십",
+        "공과대",
+        "곰과",
+        "전산실",
+        "["
+      ],
+      "canonical_name": "206중입아십공과대곰과전산실[",
+      "display_name": "206 중입아십 공과대 곰과 전산실 [",
+      "centroid": [
+        2574.5,
+        1045.0
+      ],
+      "room_text_id": "text_034",
+      "attached_text_ids": [
+        "text_037",
+        "text_043",
+        "text_045",
+        "text_047",
+        "text_050"
+      ],
+      "map_role": "navigation_destination_landmark",
+      "centroid_map_m": [
+        94.398334,
+        20.313334
+      ]
+    },
+    {
+      "id": "nav_text_036",
+      "room_number": "205",
+      "facility_labels": [
+        "이",
+        "공과대학",
+        "전산실습실"
+      ],
+      "canonical_name": "205이공과대학전산실습실",
+      "display_name": "205 이 공과대학 전산실습실",
+      "centroid": [
+        2394.5,
+        1045.0
+      ],
+      "room_text_id": "text_036",
+      "attached_text_ids": [
+        "text_039",
+        "text_044",
+        "text_046"
+      ],
+      "map_role": "navigation_destination_landmark",
+      "centroid_map_m": [
+        87.798334,
+        20.313334
+      ]
+    }
+  ],
+  "raw_room_number_detections": [
+    {
+      "id": "raw_ocr_room_006",
+      "room_number": "201",
+      "display_name": "201",
+      "centroid": [
+        1668.0,
+        460.0
+      ],
+      "bbox": [
+        1630,
+        436,
+        76,
+        48
+      ],
+      "polygon": [
+        [
+          1630,
+          436
+        ],
+        [
+          1706,
+          436
+        ],
+        [
+          1706,
+          484
+        ],
+        [
+          1630,
+          484
+        ]
+      ],
+      "confidence": 0.9872291088104248,
+      "ocr_engine": "paddleocr",
+      "ocr_pass": "base",
+      "source": "latest_semantic_landmarks.raw_ocr_detections_exact_room_label",
+      "centroid_map_m": [
+        61.160001,
+        41.763334
+      ],
+      "polygon_map_m": [
+        [
+          59.766667,
+          42.643334
+        ],
+        [
+          62.553334,
+          42.643334
+        ],
+        [
+          62.553334,
+          40.883334
+        ],
+        [
+          59.766667,
+          40.883334
+        ]
+      ]
+    },
+    {
+      "id": "raw_ocr_room_009",
+      "room_number": "208",
+      "display_name": "208",
+      "centroid": [
+        2708.0,
+        602.0
+      ],
+      "bbox": [
+        2664,
+        580,
+        88,
+        44
+      ],
+      "polygon": [
+        [
+          2664,
+          580
+        ],
+        [
+          2752,
+          580
+        ],
+        [
+          2752,
+          624
+        ],
+        [
+          2664,
+          624
+        ]
+      ],
+      "confidence": 0.9999682307243347,
+      "ocr_engine": "paddleocr",
+      "ocr_pass": "fine",
+      "source": "latest_semantic_landmarks.raw_ocr_detections_exact_room_label",
+      "centroid_map_m": [
+        99.293334,
+        36.556667
+      ],
+      "polygon_map_m": [
+        [
+          97.680001,
+          37.363334
+        ],
+        [
+          100.906668,
+          37.363334
+        ],
+        [
+          100.906668,
+          35.75
+        ],
+        [
+          97.680001,
+          35.75
+        ]
+      ]
+    },
+    {
+      "id": "raw_ocr_room_013",
+      "room_number": "202",
+      "display_name": "202",
+      "centroid": [
+        1517.0,
+        710.0
+      ],
+      "bbox": [
+        1472,
+        686,
+        90,
+        48
+      ],
+      "polygon": [
+        [
+          1472,
+          686
+        ],
+        [
+          1562,
+          686
+        ],
+        [
+          1562,
+          734
+        ],
+        [
+          1472,
+          734
+        ]
+      ],
+      "confidence": 0.9990218281745911,
+      "ocr_engine": "paddleocr",
+      "ocr_pass": "base",
+      "source": "latest_semantic_landmarks.raw_ocr_detections_exact_room_label",
+      "centroid_map_m": [
+        55.623334,
+        32.596667
+      ],
+      "polygon_map_m": [
+        [
+          53.973334,
+          33.476667
+        ],
+        [
+          57.273334,
+          33.476667
+        ],
+        [
+          57.273334,
+          31.716667
+        ],
+        [
+          53.973334,
+          31.716667
+        ]
+      ]
+    },
+    {
+      "id": "raw_ocr_room_016",
+      "room_number": "204",
+      "display_name": "204",
+      "centroid": [
+        2366.0,
+        783.0
+      ],
+      "bbox": [
+        2322,
+        760,
+        88,
+        46
+      ],
+      "polygon": [
+        [
+          2322,
+          760
+        ],
+        [
+          2410,
+          760
+        ],
+        [
+          2410,
+          806
+        ],
+        [
+          2322,
+          806
+        ]
+      ],
+      "confidence": 0.9999515414237976,
+      "ocr_engine": "paddleocr",
+      "ocr_pass": "base",
+      "source": "latest_semantic_landmarks.raw_ocr_detections_exact_room_label",
+      "centroid_map_m": [
+        86.753334,
+        29.92
+      ],
+      "polygon_map_m": [
+        [
+          85.140001,
+          30.763334
+        ],
+        [
+          88.366667,
+          30.763334
+        ],
+        [
+          88.366667,
+          29.076667
+        ],
+        [
+          85.140001,
+          29.076667
+        ]
+      ]
+    },
+    {
+      "id": "raw_ocr_room_020",
+      "room_number": "207",
+      "display_name": "207",
+      "centroid": [
+        2595.0,
+        804.5
+      ],
+      "bbox": [
+        2554,
+        782,
+        82,
+        45
+      ],
+      "polygon": [
+        [
+          2554,
+          782
+        ],
+        [
+          2636,
+          782
+        ],
+        [
+          2636,
+          827
+        ],
+        [
+          2554,
+          827
+        ]
+      ],
+      "confidence": 0.9998154640197754,
+      "ocr_engine": "paddleocr",
+      "ocr_pass": "base",
+      "source": "latest_semantic_landmarks.raw_ocr_detections_exact_room_label",
+      "centroid_map_m": [
+        95.150001,
+        29.131667
+      ],
+      "polygon_map_m": [
+        [
+          93.646668,
+          29.956667
+        ],
+        [
+          96.653334,
+          29.956667
+        ],
+        [
+          96.653334,
+          28.306667
+        ],
+        [
+          93.646668,
+          28.306667
+        ]
+      ]
+    },
+    {
+      "id": "raw_ocr_room_032",
+      "room_number": "209",
+      "display_name": "209",
+      "centroid": [
+        2933.5,
+        963.0
+      ],
+      "bbox": [
+        2889,
+        940,
+        89,
+        46
+      ],
+      "polygon": [
+        [
+          2889,
+          940
+        ],
+        [
+          2978,
+          940
+        ],
+        [
+          2978,
+          986
+        ],
+        [
+          2889,
+          986
+        ]
+      ],
+      "confidence": 0.9998766779899597,
+      "ocr_engine": "paddleocr",
+      "ocr_pass": "base",
+      "source": "latest_semantic_landmarks.raw_ocr_detections_exact_room_label",
+      "centroid_map_m": [
+        107.561668,
+        23.32
+      ],
+      "polygon_map_m": [
+        [
+          105.930001,
+          24.163334
+        ],
+        [
+          109.193334,
+          24.163334
+        ],
+        [
+          109.193334,
+          22.476667
+        ],
+        [
+          105.930001,
+          22.476667
+        ]
+      ]
+    },
+    {
+      "id": "raw_ocr_room_033",
+      "room_number": "210",
+      "display_name": "210",
+      "centroid": [
+        3118.0,
+        964.0
+      ],
+      "bbox": [
+        3078,
+        940,
+        80,
+        48
+      ],
+      "polygon": [
+        [
+          3078,
+          940
+        ],
+        [
+          3158,
+          940
+        ],
+        [
+          3158,
+          988
+        ],
+        [
+          3078,
+          988
+        ]
+      ],
+      "confidence": 0.9875063896179199,
+      "ocr_engine": "paddleocr",
+      "ocr_pass": "fine",
+      "source": "latest_semantic_landmarks.raw_ocr_detections_exact_room_label",
+      "centroid_map_m": [
+        114.326668,
+        23.283334
+      ],
+      "polygon_map_m": [
+        [
+          112.860001,
+          24.163334
+        ],
+        [
+          115.793334,
+          24.163334
+        ],
+        [
+          115.793334,
+          22.403334
+        ],
+        [
+          112.860001,
+          22.403334
+        ]
+      ]
+    },
+    {
+      "id": "raw_ocr_room_036",
+      "room_number": "203",
+      "display_name": "203",
+      "centroid": [
+        1945.0,
+        1021.0
+      ],
+      "bbox": [
+        1900,
+        996,
+        90,
+        50
+      ],
+      "polygon": [
+        [
+          1900,
+          998
+        ],
+        [
+          1990,
+          996
+        ],
+        [
+          1990,
+          1044
+        ],
+        [
+          1900,
+          1046
+        ]
+      ],
+      "confidence": 0.9999637603759766,
+      "ocr_engine": "paddleocr",
+      "ocr_pass": "base",
+      "source": "latest_semantic_landmarks.raw_ocr_detections_exact_room_label",
+      "centroid_map_m": [
+        71.316667,
+        21.193334
+      ],
+      "polygon_map_m": [
+        [
+          69.666667,
+          22.036667
+        ],
+        [
+          72.966667,
+          22.11
+        ],
+        [
+          72.966667,
+          20.35
+        ],
+        [
+          69.666667,
+          20.276667
+        ]
+      ]
+    },
+    {
+      "id": "raw_ocr_room_037",
+      "room_number": "206",
+      "display_name": "206",
+      "centroid": [
+        2574.5,
+        1045.0
+      ],
+      "bbox": [
+        2529,
+        1020,
+        91,
+        50
+      ],
+      "polygon": [
+        [
+          2530,
+          1020
+        ],
+        [
+          2620,
+          1022
+        ],
+        [
+          2620,
+          1070
+        ],
+        [
+          2529,
+          1068
+        ]
+      ],
+      "confidence": 0.9999479651451111,
+      "ocr_engine": "paddleocr",
+      "ocr_pass": "base",
+      "source": "latest_semantic_landmarks.raw_ocr_detections_exact_room_label",
+      "centroid_map_m": [
+        94.398334,
+        20.313334
+      ],
+      "polygon_map_m": [
+        [
+          92.766668,
+          21.23
+        ],
+        [
+          96.066668,
+          21.156667
+        ],
+        [
+          96.066668,
+          19.396667
+        ],
+        [
+          92.730001,
+          19.47
+        ]
+      ]
+    },
+    {
+      "id": "raw_ocr_room_039",
+      "room_number": "205",
+      "display_name": "205",
+      "centroid": [
+        2394.5,
+        1045.0
+      ],
+      "bbox": [
+        2351,
+        1023,
+        87,
+        44
+      ],
+      "polygon": [
+        [
+          2351,
+          1023
+        ],
+        [
+          2438,
+          1023
+        ],
+        [
+          2438,
+          1067
+        ],
+        [
+          2351,
+          1067
+        ]
+      ],
+      "confidence": 0.9999166131019592,
+      "ocr_engine": "paddleocr",
+      "ocr_pass": "fine",
+      "source": "latest_semantic_landmarks.raw_ocr_detections_exact_room_label",
+      "centroid_map_m": [
+        87.798334,
+        20.313334
+      ],
+      "polygon_map_m": [
+        [
+          86.203334,
+          21.12
+        ],
+        [
+          89.393334,
+          21.12
+        ],
+        [
+          89.393334,
+          19.506667
+        ],
+        [
+          86.203334,
+          19.506667
+        ]
+      ]
+    }
+  ],
+  "localization_text_entities": [
+    {
+      "id": "nav_text_006",
+      "room_number": "201",
+      "facility_labels": [
+        "교직원식당"
+      ],
+      "canonical_name": "201교직원식당",
+      "display_name": "201 교직원 식당",
+      "centroid": [
+        1668.0,
+        460.0
+      ],
+      "room_text_id": "text_006",
+      "attached_text_ids": [
+        "text_007"
+      ],
+      "map_role": "navigation_destination_landmark",
+      "centroid_map_m": [
+        61.160001,
+        41.763334
+      ]
+    },
+    {
+      "id": "nav_text_008",
+      "room_number": "208",
+      "facility_labels": [
+        "65편의점"
+      ],
+      "canonical_name": "20865편의점",
+      "display_name": "208 65편의점",
+      "centroid": [
+        2708.0,
+        602.0
+      ],
+      "room_text_id": "text_008",
+      "attached_text_ids": [
+        "text_011"
+      ],
+      "map_role": "navigation_destination_landmark",
+      "centroid_map_m": [
+        99.293334,
+        36.556667
+      ]
+    },
+    {
+      "id": "nav_text_012",
+      "room_number": "202",
+      "facility_labels": [
+        "주방"
+      ],
+      "canonical_name": "202주방",
+      "display_name": "202 주방",
+      "centroid": [
+        1517.0,
+        710.0
+      ],
+      "room_text_id": "text_012",
+      "attached_text_ids": [
+        "text_014"
+      ],
+      "map_role": "navigation_destination_landmark",
+      "centroid_map_m": [
+        55.623334,
+        32.596667
+      ]
+    },
+    {
+      "id": "nav_text_015",
+      "room_number": "204",
+      "facility_labels": [
+        "이약",
+        "운영심"
+      ],
+      "canonical_name": "204이약운영심",
+      "display_name": "204 이약 운영심",
+      "centroid": [
+        2366.0,
+        783.0
+      ],
+      "room_text_id": "text_015",
+      "attached_text_ids": [
+        "text_018",
+        "text_022"
+      ],
+      "map_role": "navigation_destination_landmark",
+      "centroid_map_m": [
+        86.753334,
+        29.92
+      ]
+    },
+    {
+      "id": "nav_text_019",
+      "room_number": "207",
+      "facility_labels": [
+        "3P",
+        "프린터실",
+        "프린터실"
+      ],
+      "canonical_name": "2073P프린터실프린터실",
+      "display_name": "207 3 P 프린 터실 프린터실",
+      "centroid": [
+        2595.0,
+        804.5
+      ],
+      "room_text_id": "text_019",
+      "attached_text_ids": [
+        "text_024",
+        "text_025",
+        "text_026"
+      ],
+      "map_role": "navigation_destination_landmark",
+      "centroid_map_m": [
+        95.150001,
+        29.131667
+      ]
+    },
+    {
+      "id": "nav_text_029",
+      "room_number": "209",
+      "facility_labels": [
+        "금과대화",
+        "칼의실"
+      ],
+      "canonical_name": "209금과대화칼의실",
+      "display_name": "209 금과대화 칼의실",
+      "centroid": [
+        2933.5,
+        963.0
+      ],
+      "room_text_id": "text_029",
+      "attached_text_ids": [
+        "text_031",
+        "text_035"
+      ],
+      "map_role": "navigation_destination_landmark",
+      "centroid_map_m": [
+        107.561668,
+        23.32
+      ]
+    },
+    {
+      "id": "nav_text_030",
+      "room_number": "210",
+      "facility_labels": [
+        "몰과대화",
+        "강의실"
+      ],
+      "canonical_name": "210몰과대화강의실",
+      "display_name": "210 몰과대화 강의실",
+      "centroid": [
+        3118.0,
+        964.0
+      ],
+      "room_text_id": "text_030",
+      "attached_text_ids": [
+        "text_032",
+        "text_038"
+      ],
+      "map_role": "navigation_destination_landmark",
+      "centroid_map_m": [
+        114.326668,
+        23.283334
+      ]
+    },
+    {
+      "id": "nav_text_033",
+      "room_number": "203",
+      "facility_labels": [
+        "학생",
+        "학생식당",
+        "식당",
+        "|"
+      ],
+      "canonical_name": "203학생학생식당식당|",
+      "display_name": "203 학생 학생식당 식당 |",
+      "centroid": [
+        1945.0,
+        1021.0
+      ],
+      "room_text_id": "text_033",
+      "attached_text_ids": [
+        "text_040",
+        "text_041",
+        "text_042",
+        "text_048"
+      ],
+      "map_role": "navigation_destination_landmark",
+      "centroid_map_m": [
+        71.316667,
+        21.193334
+      ]
+    },
+    {
+      "id": "nav_text_034",
+      "room_number": "206",
+      "facility_labels": [
+        "중입아십",
+        "공과대",
+        "곰과",
+        "전산실",
+        "["
+      ],
+      "canonical_name": "206중입아십공과대곰과전산실[",
+      "display_name": "206 중입아십 공과대 곰과 전산실 [",
+      "centroid": [
+        2574.5,
+        1045.0
+      ],
+      "room_text_id": "text_034",
+      "attached_text_ids": [
+        "text_037",
+        "text_043",
+        "text_045",
+        "text_047",
+        "text_050"
+      ],
+      "map_role": "navigation_destination_landmark",
+      "centroid_map_m": [
+        94.398334,
+        20.313334
+      ]
+    },
+    {
+      "id": "nav_text_036",
+      "room_number": "205",
+      "facility_labels": [
+        "이",
+        "공과대학",
+        "전산실습실"
+      ],
+      "canonical_name": "205이공과대학전산실습실",
+      "display_name": "205 이 공과대학 전산실습실",
+      "centroid": [
+        2394.5,
+        1045.0
+      ],
+      "room_text_id": "text_036",
+      "attached_text_ids": [
+        "text_039",
+        "text_044",
+        "text_046"
+      ],
+      "map_role": "navigation_destination_landmark",
+      "centroid_map_m": [
+        87.798334,
+        20.313334
+      ]
+    }
+  ],
+  "text_landmarks": [
+    {
+      "text": "회",
+      "normalized_text": "회",
+      "display_text": "회",
+      "confidence": 0.5227039456367493,
+      "bbox": [
+        1008,
+        383,
+        26,
+        41
+      ],
+      "polygon": [
+        [
+          1008,
+          383
+        ],
+        [
+          1034,
+          383
+        ],
+        [
+          1034,
+          424
+        ],
+        [
+          1008,
+          424
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "회",
+          "confidence": 0.5227039456367493,
+          "bbox": [
+            1008,
+            383,
+            26,
+            41
+          ],
+          "polygon": [
+            [
+              1008,
+              383
+            ],
+            [
+              1034,
+              383
+            ],
+            [
+              1034,
+              424
+            ],
+            [
+              1008,
+              424
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        0
+      ],
+      "id": "text_001",
+      "type": "room_name_or_label",
+      "centroid": [
+        1021.0,
+        403.5
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        37.436667,
+        43.835
+      ],
+      "polygon_map_m": [
+        [
+          36.96,
+          44.586667
+        ],
+        [
+          37.913334,
+          44.586667
+        ],
+        [
+          37.913334,
+          43.083334
+        ],
+        [
+          36.96,
+          43.083334
+        ]
+      ]
+    },
+    {
+      "text": "-",
+      "normalized_text": "-",
+      "display_text": "-",
+      "confidence": 0.9847636818885803,
+      "bbox": [
+        1019,
+        412,
+        2,
+        2
+      ],
+      "polygon": [
+        [
+          1019,
+          412
+        ],
+        [
+          1021,
+          412
+        ],
+        [
+          1021,
+          414
+        ],
+        [
+          1019,
+          414
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "-",
+          "confidence": 0.9847636818885803,
+          "bbox": [
+            1019,
+            412,
+            2,
+            2
+          ],
+          "polygon": [
+            [
+              1019,
+              412
+            ],
+            [
+              1021,
+              412
+            ],
+            [
+              1021,
+              414
+            ],
+            [
+              1019,
+              414
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        1
+      ],
+      "id": "text_002",
+      "type": "room_name_or_label",
+      "centroid": [
+        1020.0,
+        413.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        37.4,
+        43.486667
+      ],
+      "polygon_map_m": [
+        [
+          37.363334,
+          43.523334
+        ],
+        [
+          37.436667,
+          43.523334
+        ],
+        [
+          37.436667,
+          43.45
+        ],
+        [
+          37.363334,
+          43.45
+        ]
+      ]
+    },
+    {
+      "text": "식품고",
+      "normalized_text": "식품고",
+      "display_text": "식품고",
+      "confidence": 0.9597969651222229,
+      "bbox": [
+        1104,
+        414,
+        66,
+        32
+      ],
+      "polygon": [
+        [
+          1104,
+          414
+        ],
+        [
+          1170,
+          414
+        ],
+        [
+          1170,
+          446
+        ],
+        [
+          1104,
+          446
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "식품고",
+          "confidence": 0.9597969651222229,
+          "bbox": [
+            1104,
+            414,
+            66,
+            32
+          ],
+          "polygon": [
+            [
+              1106,
+              414
+            ],
+            [
+              1170,
+              416
+            ],
+            [
+              1170,
+              446
+            ],
+            [
+              1104,
+              444
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        2
+      ],
+      "id": "text_003",
+      "type": "room_name_or_label",
+      "centroid": [
+        1137.0,
+        430.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        41.69,
+        42.863334
+      ],
+      "polygon_map_m": [
+        [
+          40.48,
+          43.45
+        ],
+        [
+          42.9,
+          43.45
+        ],
+        [
+          42.9,
+          42.276667
+        ],
+        [
+          40.48,
+          42.276667
+        ]
+      ]
+    },
+    {
+      "text": "주",
+      "normalized_text": "주",
+      "display_text": "주",
+      "confidence": 0.4698941707611084,
+      "bbox": [
+        2419,
+        423,
+        37,
+        38
+      ],
+      "polygon": [
+        [
+          2419,
+          423
+        ],
+        [
+          2456,
+          423
+        ],
+        [
+          2456,
+          461
+        ],
+        [
+          2419,
+          461
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "주",
+          "confidence": 0.4698941707611084,
+          "bbox": [
+            2419,
+            423,
+            37,
+            38
+          ],
+          "polygon": [
+            [
+              2422,
+              423
+            ],
+            [
+              2456,
+              426
+            ],
+            [
+              2452,
+              461
+            ],
+            [
+              2419,
+              458
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        3
+      ],
+      "id": "text_004",
+      "type": "room_name_or_label",
+      "centroid": [
+        2437.5,
+        442.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        89.375001,
+        42.423334
+      ],
+      "polygon_map_m": [
+        [
+          88.696667,
+          43.12
+        ],
+        [
+          90.053334,
+          43.12
+        ],
+        [
+          90.053334,
+          41.726667
+        ],
+        [
+          88.696667,
+          41.726667
+        ]
+      ]
+    },
+    {
+      "text": "-",
+      "normalized_text": "-",
+      "display_text": "-",
+      "confidence": 0.8725584745407104,
+      "bbox": [
+        2343,
+        432,
+        17,
+        25
+      ],
+      "polygon": [
+        [
+          2343,
+          432
+        ],
+        [
+          2360,
+          432
+        ],
+        [
+          2360,
+          457
+        ],
+        [
+          2343,
+          457
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "-",
+          "confidence": 0.8725584745407104,
+          "bbox": [
+            2343,
+            432,
+            17,
+            25
+          ],
+          "polygon": [
+            [
+              2343,
+              432
+            ],
+            [
+              2360,
+              432
+            ],
+            [
+              2360,
+              457
+            ],
+            [
+              2343,
+              457
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        4
+      ],
+      "id": "text_005",
+      "type": "room_name_or_label",
+      "centroid": [
+        2351.5,
+        444.5
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        86.221667,
+        42.331667
+      ],
+      "polygon_map_m": [
+        [
+          85.910001,
+          42.79
+        ],
+        [
+          86.533334,
+          42.79
+        ],
+        [
+          86.533334,
+          41.873334
+        ],
+        [
+          85.910001,
+          41.873334
+        ]
+      ]
+    },
+    {
+      "text": "201",
+      "normalized_text": "201",
+      "display_text": "201",
+      "confidence": 0.9872291088104248,
+      "bbox": [
+        1630,
+        436,
+        76,
+        48
+      ],
+      "polygon": [
+        [
+          1630,
+          436
+        ],
+        [
+          1706,
+          436
+        ],
+        [
+          1706,
+          484
+        ],
+        [
+          1630,
+          484
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "201",
+          "confidence": 0.9872291088104248,
+          "bbox": [
+            1630,
+            436,
+            76,
+            48
+          ],
+          "polygon": [
+            [
+              1630,
+              436
+            ],
+            [
+              1706,
+              436
+            ],
+            [
+              1706,
+              484
+            ],
+            [
+              1630,
+              484
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        5
+      ],
+      "id": "text_006",
+      "type": "room_number_or_range",
+      "centroid": [
+        1668.0,
+        460.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        61.160001,
+        41.763334
+      ],
+      "polygon_map_m": [
+        [
+          59.766667,
+          42.643334
+        ],
+        [
+          62.553334,
+          42.643334
+        ],
+        [
+          62.553334,
+          40.883334
+        ],
+        [
+          59.766667,
+          40.883334
+        ]
+      ]
+    },
+    {
+      "text": "교직원식당",
+      "normalized_text": "교직원식당",
+      "display_text": "교직원 식당",
+      "confidence": 0.9968040839139554,
+      "bbox": [
+        1613,
+        489,
+        115,
+        32
+      ],
+      "polygon": [
+        [
+          1613,
+          489
+        ],
+        [
+          1728,
+          489
+        ],
+        [
+          1728,
+          521
+        ],
+        [
+          1613,
+          521
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "교직원",
+          "confidence": 0.9946670532226562,
+          "bbox": [
+            1613,
+            490,
+            65,
+            28
+          ],
+          "polygon": [
+            [
+              1613,
+              490
+            ],
+            [
+              1678,
+              490
+            ],
+            [
+              1678,
+              518
+            ],
+            [
+              1613,
+              518
+            ]
+          ]
+        },
+        {
+          "text": "식당",
+          "confidence": 0.9993362426757812,
+          "bbox": [
+            1680,
+            489,
+            48,
+            32
+          ],
+          "polygon": [
+            [
+              1680,
+              489
+            ],
+            [
+              1728,
+              489
+            ],
+            [
+              1728,
+              521
+            ],
+            [
+              1680,
+              521
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        7,
+        6
+      ],
+      "id": "text_007",
+      "type": "room_name_or_label",
+      "centroid": [
+        1670.5,
+        505.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        61.251667,
+        40.113334
+      ],
+      "polygon_map_m": [
+        [
+          59.143334,
+          40.7
+        ],
+        [
+          63.360001,
+          40.7
+        ],
+        [
+          63.360001,
+          39.526667
+        ],
+        [
+          59.143334,
+          39.526667
+        ]
+      ]
+    },
+    {
+      "text": "208",
+      "normalized_text": "208",
+      "display_text": "208",
+      "confidence": 0.9999682307243347,
+      "bbox": [
+        2664,
+        580,
+        88,
+        44
+      ],
+      "polygon": [
+        [
+          2664,
+          580
+        ],
+        [
+          2752,
+          580
+        ],
+        [
+          2752,
+          624
+        ],
+        [
+          2664,
+          624
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "208",
+          "confidence": 0.9999682307243347,
+          "bbox": [
+            2664,
+            580,
+            88,
+            44
+          ],
+          "polygon": [
+            [
+              2664,
+              580
+            ],
+            [
+              2752,
+              580
+            ],
+            [
+              2752,
+              624
+            ],
+            [
+              2664,
+              624
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        8
+      ],
+      "id": "text_008",
+      "type": "room_number_or_range",
+      "centroid": [
+        2708.0,
+        602.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        99.293334,
+        36.556667
+      ],
+      "polygon_map_m": [
+        [
+          97.680001,
+          37.363334
+        ],
+        [
+          100.906668,
+          37.363334
+        ],
+        [
+          100.906668,
+          35.75
+        ],
+        [
+          97.680001,
+          35.75
+        ]
+      ]
+    },
+    {
+      "text": "냉장고",
+      "normalized_text": "냉장고",
+      "display_text": "냉장고",
+      "confidence": 0.9588269591331482,
+      "bbox": [
+        1156,
+        586,
+        68,
+        32
+      ],
+      "polygon": [
+        [
+          1156,
+          586
+        ],
+        [
+          1224,
+          586
+        ],
+        [
+          1224,
+          618
+        ],
+        [
+          1156,
+          618
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "냉장고",
+          "confidence": 0.9588269591331482,
+          "bbox": [
+            1156,
+            586,
+            68,
+            32
+          ],
+          "polygon": [
+            [
+              1156,
+              586
+            ],
+            [
+              1224,
+              586
+            ],
+            [
+              1224,
+              618
+            ],
+            [
+              1156,
+              618
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        9
+      ],
+      "id": "text_009",
+      "type": "room_name_or_label",
+      "centroid": [
+        1190.0,
+        602.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        43.633334,
+        36.556667
+      ],
+      "polygon_map_m": [
+        [
+          42.386667,
+          37.143334
+        ],
+        [
+          44.88,
+          37.143334
+        ],
+        [
+          44.88,
+          35.97
+        ],
+        [
+          42.386667,
+          35.97
+        ]
+      ]
+    },
+    {
+      "text": "영양시실",
+      "normalized_text": "영양시실",
+      "display_text": "영양시실",
+      "confidence": 0.9207397699356079,
+      "bbox": [
+        964,
+        587,
+        70,
+        31
+      ],
+      "polygon": [
+        [
+          964,
+          587
+        ],
+        [
+          1034,
+          587
+        ],
+        [
+          1034,
+          618
+        ],
+        [
+          964,
+          618
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "영양시실",
+          "confidence": 0.9207397699356079,
+          "bbox": [
+            964,
+            587,
+            70,
+            31
+          ],
+          "polygon": [
+            [
+              964,
+              587
+            ],
+            [
+              1034,
+              587
+            ],
+            [
+              1034,
+              618
+            ],
+            [
+              964,
+              618
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        10
+      ],
+      "id": "text_010",
+      "type": "room_name_or_label",
+      "centroid": [
+        999.0,
+        602.5
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        36.63,
+        36.538334
+      ],
+      "polygon_map_m": [
+        [
+          35.346667,
+          37.106667
+        ],
+        [
+          37.913334,
+          37.106667
+        ],
+        [
+          37.913334,
+          35.97
+        ],
+        [
+          35.346667,
+          35.97
+        ]
+      ]
+    },
+    {
+      "text": "65편의점",
+      "normalized_text": "65편의점",
+      "display_text": "65편의점",
+      "confidence": 0.9822666049003601,
+      "bbox": [
+        2658,
+        624,
+        98,
+        32
+      ],
+      "polygon": [
+        [
+          2658,
+          624
+        ],
+        [
+          2756,
+          624
+        ],
+        [
+          2756,
+          656
+        ],
+        [
+          2658,
+          656
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "65편의점",
+          "confidence": 0.9822666049003601,
+          "bbox": [
+            2658,
+            624,
+            98,
+            32
+          ],
+          "polygon": [
+            [
+              2658,
+              624
+            ],
+            [
+              2756,
+              624
+            ],
+            [
+              2756,
+              656
+            ],
+            [
+              2658,
+              656
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        11
+      ],
+      "id": "text_011",
+      "type": "room_name_or_label",
+      "centroid": [
+        2707.0,
+        640.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        99.256668,
+        35.163334
+      ],
+      "polygon_map_m": [
+        [
+          97.460001,
+          35.75
+        ],
+        [
+          101.053334,
+          35.75
+        ],
+        [
+          101.053334,
+          34.576667
+        ],
+        [
+          97.460001,
+          34.576667
+        ]
+      ]
+    },
+    {
+      "text": "202",
+      "normalized_text": "202",
+      "display_text": "202",
+      "confidence": 0.9990218281745911,
+      "bbox": [
+        1472,
+        686,
+        90,
+        48
+      ],
+      "polygon": [
+        [
+          1472,
+          686
+        ],
+        [
+          1562,
+          686
+        ],
+        [
+          1562,
+          734
+        ],
+        [
+          1472,
+          734
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "202",
+          "confidence": 0.9990218281745911,
+          "bbox": [
+            1472,
+            686,
+            90,
+            48
+          ],
+          "polygon": [
+            [
+              1472,
+              686
+            ],
+            [
+              1562,
+              686
+            ],
+            [
+              1562,
+              734
+            ],
+            [
+              1472,
+              734
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        12
+      ],
+      "id": "text_012",
+      "type": "room_number_or_range",
+      "centroid": [
+        1517.0,
+        710.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        55.623334,
+        32.596667
+      ],
+      "polygon_map_m": [
+        [
+          53.973334,
+          33.476667
+        ],
+        [
+          57.273334,
+          33.476667
+        ],
+        [
+          57.273334,
+          31.716667
+        ],
+        [
+          53.973334,
+          31.716667
+        ]
+      ]
+    },
+    {
+      "text": "냉동고",
+      "normalized_text": "냉동고",
+      "display_text": "냉동고",
+      "confidence": 0.9822497367858887,
+      "bbox": [
+        1156,
+        698,
+        67,
+        30
+      ],
+      "polygon": [
+        [
+          1156,
+          698
+        ],
+        [
+          1223,
+          698
+        ],
+        [
+          1223,
+          728
+        ],
+        [
+          1156,
+          728
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "냉동고",
+          "confidence": 0.9822497367858887,
+          "bbox": [
+            1156,
+            698,
+            67,
+            30
+          ],
+          "polygon": [
+            [
+              1156,
+              698
+            ],
+            [
+              1223,
+              698
+            ],
+            [
+              1223,
+              728
+            ],
+            [
+              1156,
+              728
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        13
+      ],
+      "id": "text_013",
+      "type": "room_name_or_label",
+      "centroid": [
+        1189.5,
+        713.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        43.615,
+        32.486667
+      ],
+      "polygon_map_m": [
+        [
+          42.386667,
+          33.036667
+        ],
+        [
+          44.843334,
+          33.036667
+        ],
+        [
+          44.843334,
+          31.936667
+        ],
+        [
+          42.386667,
+          31.936667
+        ]
+      ]
+    },
+    {
+      "text": "주방",
+      "normalized_text": "주방",
+      "display_text": "주방",
+      "confidence": 0.9881603717803955,
+      "bbox": [
+        1490,
+        739,
+        54,
+        35
+      ],
+      "polygon": [
+        [
+          1490,
+          739
+        ],
+        [
+          1544,
+          739
+        ],
+        [
+          1544,
+          774
+        ],
+        [
+          1490,
+          774
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "주방",
+          "confidence": 0.9881603717803955,
+          "bbox": [
+            1490,
+            739,
+            54,
+            35
+          ],
+          "polygon": [
+            [
+              1490,
+              740
+            ],
+            [
+              1544,
+              739
+            ],
+            [
+              1544,
+              772
+            ],
+            [
+              1490,
+              774
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        14
+      ],
+      "id": "text_014",
+      "type": "room_name_or_label",
+      "centroid": [
+        1517.0,
+        756.5
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        55.623334,
+        30.891667
+      ],
+      "polygon_map_m": [
+        [
+          54.633334,
+          31.533334
+        ],
+        [
+          56.613334,
+          31.533334
+        ],
+        [
+          56.613334,
+          30.25
+        ],
+        [
+          54.633334,
+          30.25
+        ]
+      ]
+    },
+    {
+      "text": "204",
+      "normalized_text": "204",
+      "display_text": "204",
+      "confidence": 0.9999515414237976,
+      "bbox": [
+        2322,
+        760,
+        88,
+        46
+      ],
+      "polygon": [
+        [
+          2322,
+          760
+        ],
+        [
+          2410,
+          760
+        ],
+        [
+          2410,
+          806
+        ],
+        [
+          2322,
+          806
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "204",
+          "confidence": 0.9999515414237976,
+          "bbox": [
+            2322,
+            760,
+            88,
+            46
+          ],
+          "polygon": [
+            [
+              2322,
+              760
+            ],
+            [
+              2410,
+              760
+            ],
+            [
+              2410,
+              806
+            ],
+            [
+              2322,
+              806
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        15
+      ],
+      "id": "text_015",
+      "type": "room_number_or_range",
+      "centroid": [
+        2366.0,
+        783.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        86.753334,
+        29.92
+      ],
+      "polygon_map_m": [
+        [
+          85.140001,
+          30.763334
+        ],
+        [
+          88.366667,
+          30.763334
+        ],
+        [
+          88.366667,
+          29.076667
+        ],
+        [
+          85.140001,
+          29.076667
+        ]
+      ]
+    },
+    {
+      "text": "용원",
+      "normalized_text": "용원",
+      "display_text": "용원",
+      "confidence": 0.9535503387451172,
+      "bbox": [
+        1048,
+        762,
+        50,
+        34
+      ],
+      "polygon": [
+        [
+          1048,
+          762
+        ],
+        [
+          1098,
+          762
+        ],
+        [
+          1098,
+          796
+        ],
+        [
+          1048,
+          796
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "용원",
+          "confidence": 0.9535503387451172,
+          "bbox": [
+            1048,
+            762,
+            50,
+            34
+          ],
+          "polygon": [
+            [
+              1049,
+              762
+            ],
+            [
+              1098,
+              764
+            ],
+            [
+              1098,
+              796
+            ],
+            [
+              1048,
+              795
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        16
+      ],
+      "id": "text_016",
+      "type": "room_name_or_label",
+      "centroid": [
+        1073.0,
+        779.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        39.343334,
+        30.066667
+      ],
+      "polygon_map_m": [
+        [
+          38.426667,
+          30.69
+        ],
+        [
+          40.26,
+          30.69
+        ],
+        [
+          40.26,
+          29.443334
+        ],
+        [
+          38.426667,
+          29.443334
+        ]
+      ]
+    },
+    {
+      "text": "용원살",
+      "normalized_text": "용원살",
+      "display_text": "용원살",
+      "confidence": 0.838596761226654,
+      "bbox": [
+        1048,
+        764,
+        72,
+        30
+      ],
+      "polygon": [
+        [
+          1048,
+          764
+        ],
+        [
+          1120,
+          764
+        ],
+        [
+          1120,
+          794
+        ],
+        [
+          1048,
+          794
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "용원살",
+          "confidence": 0.838596761226654,
+          "bbox": [
+            1048,
+            764,
+            72,
+            30
+          ],
+          "polygon": [
+            [
+              1048,
+              764
+            ],
+            [
+              1120,
+              764
+            ],
+            [
+              1120,
+              794
+            ],
+            [
+              1048,
+              794
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        17
+      ],
+      "id": "text_017",
+      "type": "room_name_or_label",
+      "centroid": [
+        1084.0,
+        779.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        39.746667,
+        30.066667
+      ],
+      "polygon_map_m": [
+        [
+          38.426667,
+          30.616667
+        ],
+        [
+          41.066667,
+          30.616667
+        ],
+        [
+          41.066667,
+          29.516667
+        ],
+        [
+          38.426667,
+          29.516667
+        ]
+      ]
+    },
+    {
+      "text": "이약",
+      "normalized_text": "이약",
+      "display_text": "이약",
+      "confidence": 0.6573137044906616,
+      "bbox": [
+        2325,
+        782,
+        84,
+        21
+      ],
+      "polygon": [
+        [
+          2325,
+          782
+        ],
+        [
+          2409,
+          782
+        ],
+        [
+          2409,
+          803
+        ],
+        [
+          2325,
+          803
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "이약",
+          "confidence": 0.6573137044906616,
+          "bbox": [
+            2325,
+            782,
+            84,
+            21
+          ],
+          "polygon": [
+            [
+              2325,
+              782
+            ],
+            [
+              2409,
+              782
+            ],
+            [
+              2409,
+              803
+            ],
+            [
+              2325,
+              803
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        18
+      ],
+      "id": "text_018",
+      "type": "room_name_or_label",
+      "centroid": [
+        2367.0,
+        792.5
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        86.790001,
+        29.571667
+      ],
+      "polygon_map_m": [
+        [
+          85.250001,
+          29.956667
+        ],
+        [
+          88.330001,
+          29.956667
+        ],
+        [
+          88.330001,
+          29.186667
+        ],
+        [
+          85.250001,
+          29.186667
+        ]
+      ]
+    },
+    {
+      "text": "207",
+      "normalized_text": "207",
+      "display_text": "207",
+      "confidence": 0.9998154640197754,
+      "bbox": [
+        2554,
+        782,
+        82,
+        45
+      ],
+      "polygon": [
+        [
+          2554,
+          782
+        ],
+        [
+          2636,
+          782
+        ],
+        [
+          2636,
+          827
+        ],
+        [
+          2554,
+          827
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "207",
+          "confidence": 0.9998154640197754,
+          "bbox": [
+            2554,
+            782,
+            82,
+            45
+          ],
+          "polygon": [
+            [
+              2554,
+              782
+            ],
+            [
+              2636,
+              782
+            ],
+            [
+              2636,
+              827
+            ],
+            [
+              2554,
+              827
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        19
+      ],
+      "id": "text_019",
+      "type": "room_number_or_range",
+      "centroid": [
+        2595.0,
+        804.5
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        95.150001,
+        29.131667
+      ],
+      "polygon_map_m": [
+        [
+          93.646668,
+          29.956667
+        ],
+        [
+          96.653334,
+          29.956667
+        ],
+        [
+          96.653334,
+          28.306667
+        ],
+        [
+          93.646668,
+          28.306667
+        ]
+      ]
+    },
+    {
+      "text": "용원심여",
+      "normalized_text": "용원심여",
+      "display_text": "용원심여",
+      "confidence": 0.9947919845581055,
+      "bbox": [
+        1124,
+        793,
+        94,
+        29
+      ],
+      "polygon": [
+        [
+          1124,
+          793
+        ],
+        [
+          1218,
+          793
+        ],
+        [
+          1218,
+          822
+        ],
+        [
+          1124,
+          822
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "용원심여",
+          "confidence": 0.9947919845581055,
+          "bbox": [
+            1124,
+            793,
+            94,
+            29
+          ],
+          "polygon": [
+            [
+              1124,
+              793
+            ],
+            [
+              1218,
+              793
+            ],
+            [
+              1218,
+              822
+            ],
+            [
+              1124,
+              822
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        20
+      ],
+      "id": "text_020",
+      "type": "room_name_or_label",
+      "centroid": [
+        1171.0,
+        807.5
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        42.936667,
+        29.021667
+      ],
+      "polygon_map_m": [
+        [
+          41.213334,
+          29.553334
+        ],
+        [
+          44.66,
+          29.553334
+        ],
+        [
+          44.66,
+          28.49
+        ],
+        [
+          41.213334,
+          28.49
+        ]
+      ]
+    },
+    {
+      "text": "남",
+      "normalized_text": "남",
+      "display_text": "남",
+      "confidence": 0.9724075794219971,
+      "bbox": [
+        1065,
+        796,
+        29,
+        27
+      ],
+      "polygon": [
+        [
+          1065,
+          796
+        ],
+        [
+          1094,
+          796
+        ],
+        [
+          1094,
+          823
+        ],
+        [
+          1065,
+          823
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "남",
+          "confidence": 0.9724075794219971,
+          "bbox": [
+            1065,
+            796,
+            29,
+            27
+          ],
+          "polygon": [
+            [
+              1065,
+              796
+            ],
+            [
+              1094,
+              796
+            ],
+            [
+              1094,
+              823
+            ],
+            [
+              1065,
+              823
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        21
+      ],
+      "id": "text_021",
+      "type": "room_name_or_label",
+      "centroid": [
+        1079.5,
+        809.5
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        39.581667,
+        28.948334
+      ],
+      "polygon_map_m": [
+        [
+          39.05,
+          29.443334
+        ],
+        [
+          40.113334,
+          29.443334
+        ],
+        [
+          40.113334,
+          28.453334
+        ],
+        [
+          39.05,
+          28.453334
+        ]
+      ]
+    },
+    {
+      "text": "운영심",
+      "normalized_text": "운영심",
+      "display_text": "운영심",
+      "confidence": 0.9761605262756348,
+      "bbox": [
+        2332,
+        807,
+        67,
+        32
+      ],
+      "polygon": [
+        [
+          2332,
+          807
+        ],
+        [
+          2399,
+          807
+        ],
+        [
+          2399,
+          839
+        ],
+        [
+          2332,
+          839
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "운영심",
+          "confidence": 0.9761605262756348,
+          "bbox": [
+            2332,
+            807,
+            67,
+            32
+          ],
+          "polygon": [
+            [
+              2332,
+              807
+            ],
+            [
+              2399,
+              807
+            ],
+            [
+              2399,
+              839
+            ],
+            [
+              2332,
+              839
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        22
+      ],
+      "id": "text_022",
+      "type": "room_name_or_label",
+      "centroid": [
+        2365.5,
+        823.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        86.735001,
+        28.453334
+      ],
+      "polygon_map_m": [
+        [
+          85.506667,
+          29.04
+        ],
+        [
+          87.963334,
+          29.04
+        ],
+        [
+          87.963334,
+          27.866667
+        ],
+        [
+          85.506667,
+          27.866667
+        ]
+      ]
+    },
+    {
+      "text": "3",
+      "normalized_text": "3",
+      "display_text": "3",
+      "confidence": 0.9568563103675842,
+      "bbox": [
+        2577,
+        836,
+        36,
+        28
+      ],
+      "polygon": [
+        [
+          2577,
+          836
+        ],
+        [
+          2613,
+          836
+        ],
+        [
+          2613,
+          864
+        ],
+        [
+          2577,
+          864
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "3",
+          "confidence": 0.9568563103675842,
+          "bbox": [
+            2577,
+            836,
+            36,
+            28
+          ],
+          "polygon": [
+            [
+              2577,
+              836
+            ],
+            [
+              2613,
+              836
+            ],
+            [
+              2613,
+              864
+            ],
+            [
+              2577,
+              864
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        23
+      ],
+      "id": "text_023",
+      "type": "room_name_or_label",
+      "centroid": [
+        2595.0,
+        850.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        95.150001,
+        27.463334
+      ],
+      "polygon_map_m": [
+        [
+          94.490001,
+          27.976667
+        ],
+        [
+          95.810001,
+          27.976667
+        ],
+        [
+          95.810001,
+          26.95
+        ],
+        [
+          94.490001,
+          26.95
+        ]
+      ]
+    },
+    {
+      "text": "3P",
+      "normalized_text": "3P",
+      "display_text": "3 P",
+      "confidence": 0.5161331904938661,
+      "bbox": [
+        2582,
+        836,
+        46,
+        28
+      ],
+      "polygon": [
+        [
+          2582,
+          836
+        ],
+        [
+          2628,
+          836
+        ],
+        [
+          2628,
+          864
+        ],
+        [
+          2582,
+          864
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "3",
+          "confidence": 0.9999547004699707,
+          "bbox": [
+            2582,
+            840,
+            13,
+            19
+          ],
+          "polygon": [
+            [
+              2582,
+              840
+            ],
+            [
+              2595,
+              840
+            ],
+            [
+              2595,
+              859
+            ],
+            [
+              2582,
+              859
+            ]
+          ]
+        },
+        {
+          "text": "P",
+          "confidence": 0.3906038701534271,
+          "bbox": [
+            2594,
+            836,
+            34,
+            28
+          ],
+          "polygon": [
+            [
+              2594,
+              836
+            ],
+            [
+              2628,
+              836
+            ],
+            [
+              2628,
+              864
+            ],
+            [
+              2594,
+              864
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        25,
+        24
+      ],
+      "id": "text_024",
+      "type": "room_name_or_label",
+      "centroid": [
+        2605.0,
+        850.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        95.516668,
+        27.463334
+      ],
+      "polygon_map_m": [
+        [
+          94.673334,
+          27.976667
+        ],
+        [
+          96.360001,
+          27.976667
+        ],
+        [
+          96.360001,
+          26.95
+        ],
+        [
+          94.673334,
+          26.95
+        ]
+      ]
+    },
+    {
+      "text": "프린터실",
+      "normalized_text": "프린터실",
+      "display_text": "프린 터실",
+      "confidence": 0.9603828211982331,
+      "bbox": [
+        2551,
+        863,
+        89,
+        33
+      ],
+      "polygon": [
+        [
+          2551,
+          863
+        ],
+        [
+          2640,
+          863
+        ],
+        [
+          2640,
+          896
+        ],
+        [
+          2551,
+          896
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "프린",
+          "confidence": 0.9241575002670288,
+          "bbox": [
+            2551,
+            864,
+            48,
+            31
+          ],
+          "polygon": [
+            [
+              2551,
+              864
+            ],
+            [
+              2599,
+              864
+            ],
+            [
+              2599,
+              895
+            ],
+            [
+              2551,
+              895
+            ]
+          ]
+        },
+        {
+          "text": "터실",
+          "confidence": 0.9958922266960144,
+          "bbox": [
+            2594,
+            863,
+            46,
+            33
+          ],
+          "polygon": [
+            [
+              2594,
+              863
+            ],
+            [
+              2640,
+              863
+            ],
+            [
+              2640,
+              896
+            ],
+            [
+              2594,
+              896
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        28,
+        26
+      ],
+      "id": "text_025",
+      "type": "room_name_or_label",
+      "centroid": [
+        2595.5,
+        879.5
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        95.168334,
+        26.381667
+      ],
+      "polygon_map_m": [
+        [
+          93.536668,
+          26.986667
+        ],
+        [
+          96.800001,
+          26.986667
+        ],
+        [
+          96.800001,
+          25.776667
+        ],
+        [
+          93.536668,
+          25.776667
+        ]
+      ]
+    },
+    {
+      "text": "프린터실",
+      "normalized_text": "프린터실",
+      "display_text": "프린터실",
+      "confidence": 0.9979627728462219,
+      "bbox": [
+        2550,
+        864,
+        89,
+        32
+      ],
+      "polygon": [
+        [
+          2550,
+          864
+        ],
+        [
+          2639,
+          864
+        ],
+        [
+          2639,
+          896
+        ],
+        [
+          2550,
+          896
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "프린터실",
+          "confidence": 0.9979627728462219,
+          "bbox": [
+            2550,
+            864,
+            89,
+            32
+          ],
+          "polygon": [
+            [
+              2550,
+              864
+            ],
+            [
+              2639,
+              864
+            ],
+            [
+              2639,
+              896
+            ],
+            [
+              2550,
+              896
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        27
+      ],
+      "id": "text_026",
+      "type": "room_name_or_label",
+      "centroid": [
+        2594.5,
+        880.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        95.131668,
+        26.363334
+      ],
+      "polygon_map_m": [
+        [
+          93.500001,
+          26.95
+        ],
+        [
+          96.763334,
+          26.95
+        ],
+        [
+          96.763334,
+          25.776667
+        ],
+        [
+          93.500001,
+          25.776667
+        ]
+      ]
+    },
+    {
+      "text": "휴게실",
+      "normalized_text": "휴게실",
+      "display_text": "휴게실",
+      "confidence": 0.9983493685722351,
+      "bbox": [
+        2704,
+        894,
+        66,
+        30
+      ],
+      "polygon": [
+        [
+          2704,
+          894
+        ],
+        [
+          2770,
+          894
+        ],
+        [
+          2770,
+          924
+        ],
+        [
+          2704,
+          924
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "휴게실",
+          "confidence": 0.9983493685722351,
+          "bbox": [
+            2704,
+            894,
+            66,
+            30
+          ],
+          "polygon": [
+            [
+              2704,
+              894
+            ],
+            [
+              2770,
+              894
+            ],
+            [
+              2770,
+              924
+            ],
+            [
+              2704,
+              924
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        29
+      ],
+      "id": "text_027",
+      "type": "room_name_or_label",
+      "centroid": [
+        2737.0,
+        909.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        100.356668,
+        25.3
+      ],
+      "polygon_map_m": [
+        [
+          99.146668,
+          25.85
+        ],
+        [
+          101.566668,
+          25.85
+        ],
+        [
+          101.566668,
+          24.75
+        ],
+        [
+          99.146668,
+          24.75
+        ]
+      ]
+    },
+    {
+      "text": "스뒷셔",
+      "normalized_text": "스뒷셔",
+      "display_text": "스뒷셔",
+      "confidence": 0.43168866634368896,
+      "bbox": [
+        2710,
+        895,
+        57,
+        14
+      ],
+      "polygon": [
+        [
+          2710,
+          895
+        ],
+        [
+          2767,
+          895
+        ],
+        [
+          2767,
+          909
+        ],
+        [
+          2710,
+          909
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "스뒷셔",
+          "confidence": 0.43168866634368896,
+          "bbox": [
+            2710,
+            895,
+            57,
+            14
+          ],
+          "polygon": [
+            [
+              2710,
+              895
+            ],
+            [
+              2767,
+              896
+            ],
+            [
+              2767,
+              909
+            ],
+            [
+              2710,
+              908
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        30
+      ],
+      "id": "text_028",
+      "type": "room_name_or_label",
+      "centroid": [
+        2738.5,
+        902.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        100.411668,
+        25.556667
+      ],
+      "polygon_map_m": [
+        [
+          99.366668,
+          25.813334
+        ],
+        [
+          101.456668,
+          25.813334
+        ],
+        [
+          101.456668,
+          25.3
+        ],
+        [
+          99.366668,
+          25.3
+        ]
+      ]
+    },
+    {
+      "text": "209",
+      "normalized_text": "209",
+      "display_text": "209",
+      "confidence": 0.9998766779899597,
+      "bbox": [
+        2889,
+        940,
+        89,
+        46
+      ],
+      "polygon": [
+        [
+          2889,
+          940
+        ],
+        [
+          2978,
+          940
+        ],
+        [
+          2978,
+          986
+        ],
+        [
+          2889,
+          986
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "209",
+          "confidence": 0.9998766779899597,
+          "bbox": [
+            2889,
+            940,
+            89,
+            46
+          ],
+          "polygon": [
+            [
+              2889,
+              940
+            ],
+            [
+              2978,
+              940
+            ],
+            [
+              2978,
+              986
+            ],
+            [
+              2889,
+              986
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        31
+      ],
+      "id": "text_029",
+      "type": "room_number_or_range",
+      "centroid": [
+        2933.5,
+        963.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        107.561668,
+        23.32
+      ],
+      "polygon_map_m": [
+        [
+          105.930001,
+          24.163334
+        ],
+        [
+          109.193334,
+          24.163334
+        ],
+        [
+          109.193334,
+          22.476667
+        ],
+        [
+          105.930001,
+          22.476667
+        ]
+      ]
+    },
+    {
+      "text": "210",
+      "normalized_text": "210",
+      "display_text": "210",
+      "confidence": 0.9875063896179199,
+      "bbox": [
+        3078,
+        940,
+        80,
+        48
+      ],
+      "polygon": [
+        [
+          3078,
+          940
+        ],
+        [
+          3158,
+          940
+        ],
+        [
+          3158,
+          988
+        ],
+        [
+          3078,
+          988
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "210",
+          "confidence": 0.9875063896179199,
+          "bbox": [
+            3078,
+            940,
+            80,
+            48
+          ],
+          "polygon": [
+            [
+              3078,
+              940
+            ],
+            [
+              3158,
+              940
+            ],
+            [
+              3158,
+              988
+            ],
+            [
+              3078,
+              988
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        32
+      ],
+      "id": "text_030",
+      "type": "room_number_or_range",
+      "centroid": [
+        3118.0,
+        964.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        114.326668,
+        23.283334
+      ],
+      "polygon_map_m": [
+        [
+          112.860001,
+          24.163334
+        ],
+        [
+          115.793334,
+          24.163334
+        ],
+        [
+          115.793334,
+          22.403334
+        ],
+        [
+          112.860001,
+          22.403334
+        ]
+      ]
+    },
+    {
+      "text": "금과대화",
+      "normalized_text": "금과대화",
+      "display_text": "금과대화",
+      "confidence": 0.9169078469276428,
+      "bbox": [
+        2890,
+        992,
+        90,
+        33
+      ],
+      "polygon": [
+        [
+          2890,
+          992
+        ],
+        [
+          2980,
+          992
+        ],
+        [
+          2980,
+          1025
+        ],
+        [
+          2890,
+          1025
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "금과대화",
+          "confidence": 0.9169078469276428,
+          "bbox": [
+            2890,
+            992,
+            90,
+            33
+          ],
+          "polygon": [
+            [
+              2890,
+              994
+            ],
+            [
+              2980,
+              992
+            ],
+            [
+              2980,
+              1023
+            ],
+            [
+              2890,
+              1025
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        33
+      ],
+      "id": "text_031",
+      "type": "room_name_or_label",
+      "centroid": [
+        2935.0,
+        1008.5
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        107.616668,
+        21.651667
+      ],
+      "polygon_map_m": [
+        [
+          105.966668,
+          22.256667
+        ],
+        [
+          109.266668,
+          22.256667
+        ],
+        [
+          109.266668,
+          21.046667
+        ],
+        [
+          105.966668,
+          21.046667
+        ]
+      ]
+    },
+    {
+      "text": "몰과대화",
+      "normalized_text": "몰과대화",
+      "display_text": "몰과대화",
+      "confidence": 0.9231238961219788,
+      "bbox": [
+        3073,
+        993,
+        91,
+        33
+      ],
+      "polygon": [
+        [
+          3073,
+          993
+        ],
+        [
+          3164,
+          993
+        ],
+        [
+          3164,
+          1026
+        ],
+        [
+          3073,
+          1026
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "몰과대화",
+          "confidence": 0.9231238961219788,
+          "bbox": [
+            3073,
+            993,
+            91,
+            33
+          ],
+          "polygon": [
+            [
+              3073,
+              995
+            ],
+            [
+              3163,
+              993
+            ],
+            [
+              3164,
+              1024
+            ],
+            [
+              3074,
+              1026
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        34
+      ],
+      "id": "text_032",
+      "type": "room_name_or_label",
+      "centroid": [
+        3118.5,
+        1009.5
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        114.345001,
+        21.615
+      ],
+      "polygon_map_m": [
+        [
+          112.676668,
+          22.22
+        ],
+        [
+          116.013334,
+          22.22
+        ],
+        [
+          116.013334,
+          21.01
+        ],
+        [
+          112.676668,
+          21.01
+        ]
+      ]
+    },
+    {
+      "text": "203",
+      "normalized_text": "203",
+      "display_text": "203",
+      "confidence": 0.9999637603759766,
+      "bbox": [
+        1900,
+        996,
+        90,
+        50
+      ],
+      "polygon": [
+        [
+          1900,
+          996
+        ],
+        [
+          1990,
+          996
+        ],
+        [
+          1990,
+          1046
+        ],
+        [
+          1900,
+          1046
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "203",
+          "confidence": 0.9999637603759766,
+          "bbox": [
+            1900,
+            996,
+            90,
+            50
+          ],
+          "polygon": [
+            [
+              1900,
+              998
+            ],
+            [
+              1990,
+              996
+            ],
+            [
+              1990,
+              1044
+            ],
+            [
+              1900,
+              1046
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        35
+      ],
+      "id": "text_033",
+      "type": "room_number_or_range",
+      "centroid": [
+        1945.0,
+        1021.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        71.316667,
+        21.193334
+      ],
+      "polygon_map_m": [
+        [
+          69.666667,
+          22.11
+        ],
+        [
+          72.966667,
+          22.11
+        ],
+        [
+          72.966667,
+          20.276667
+        ],
+        [
+          69.666667,
+          20.276667
+        ]
+      ]
+    },
+    {
+      "text": "206",
+      "normalized_text": "206",
+      "display_text": "206",
+      "confidence": 0.9999479651451111,
+      "bbox": [
+        2529,
+        1020,
+        91,
+        50
+      ],
+      "polygon": [
+        [
+          2529,
+          1020
+        ],
+        [
+          2620,
+          1020
+        ],
+        [
+          2620,
+          1070
+        ],
+        [
+          2529,
+          1070
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "206",
+          "confidence": 0.9999479651451111,
+          "bbox": [
+            2529,
+            1020,
+            91,
+            50
+          ],
+          "polygon": [
+            [
+              2530,
+              1020
+            ],
+            [
+              2620,
+              1022
+            ],
+            [
+              2620,
+              1070
+            ],
+            [
+              2529,
+              1068
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        36
+      ],
+      "id": "text_034",
+      "type": "room_number_or_range",
+      "centroid": [
+        2574.5,
+        1045.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        94.398334,
+        20.313334
+      ],
+      "polygon_map_m": [
+        [
+          92.730001,
+          21.23
+        ],
+        [
+          96.066668,
+          21.23
+        ],
+        [
+          96.066668,
+          19.396667
+        ],
+        [
+          92.730001,
+          19.396667
+        ]
+      ]
+    },
+    {
+      "text": "칼의실",
+      "normalized_text": "칼의실",
+      "display_text": "칼의실",
+      "confidence": 0.980855405330658,
+      "bbox": [
+        2901,
+        1022,
+        66,
+        33
+      ],
+      "polygon": [
+        [
+          2901,
+          1022
+        ],
+        [
+          2967,
+          1022
+        ],
+        [
+          2967,
+          1055
+        ],
+        [
+          2901,
+          1055
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "칼의실",
+          "confidence": 0.980855405330658,
+          "bbox": [
+            2901,
+            1022,
+            66,
+            33
+          ],
+          "polygon": [
+            [
+              2901,
+              1022
+            ],
+            [
+              2967,
+              1022
+            ],
+            [
+              2967,
+              1055
+            ],
+            [
+              2901,
+              1055
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        37
+      ],
+      "id": "text_035",
+      "type": "room_name_or_label",
+      "centroid": [
+        2934.0,
+        1038.5
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        107.580001,
+        20.551667
+      ],
+      "polygon_map_m": [
+        [
+          106.370001,
+          21.156667
+        ],
+        [
+          108.790001,
+          21.156667
+        ],
+        [
+          108.790001,
+          19.946667
+        ],
+        [
+          106.370001,
+          19.946667
+        ]
+      ]
+    },
+    {
+      "text": "205",
+      "normalized_text": "205",
+      "display_text": "205",
+      "confidence": 0.9999166131019592,
+      "bbox": [
+        2351,
+        1023,
+        87,
+        44
+      ],
+      "polygon": [
+        [
+          2351,
+          1023
+        ],
+        [
+          2438,
+          1023
+        ],
+        [
+          2438,
+          1067
+        ],
+        [
+          2351,
+          1067
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "205",
+          "confidence": 0.9999166131019592,
+          "bbox": [
+            2351,
+            1023,
+            87,
+            44
+          ],
+          "polygon": [
+            [
+              2351,
+              1023
+            ],
+            [
+              2438,
+              1023
+            ],
+            [
+              2438,
+              1067
+            ],
+            [
+              2351,
+              1067
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        38
+      ],
+      "id": "text_036",
+      "type": "room_number_or_range",
+      "centroid": [
+        2394.5,
+        1045.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        87.798334,
+        20.313334
+      ],
+      "polygon_map_m": [
+        [
+          86.203334,
+          21.12
+        ],
+        [
+          89.393334,
+          21.12
+        ],
+        [
+          89.393334,
+          19.506667
+        ],
+        [
+          86.203334,
+          19.506667
+        ]
+      ]
+    },
+    {
+      "text": "중입아십",
+      "normalized_text": "중입아십",
+      "display_text": "중입아십",
+      "confidence": 0.541459858417511,
+      "bbox": [
+        2593,
+        1024,
+        37,
+        113
+      ],
+      "polygon": [
+        [
+          2593,
+          1024
+        ],
+        [
+          2630,
+          1024
+        ],
+        [
+          2630,
+          1137
+        ],
+        [
+          2593,
+          1137
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "중입아십",
+          "confidence": 0.541459858417511,
+          "bbox": [
+            2593,
+            1024,
+            37,
+            113
+          ],
+          "polygon": [
+            [
+              2593,
+              1026
+            ],
+            [
+              2622,
+              1024
+            ],
+            [
+              2630,
+              1135
+            ],
+            [
+              2597,
+              1137
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        39
+      ],
+      "id": "text_037",
+      "type": "room_name_or_label",
+      "centroid": [
+        2611.5,
+        1080.5
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        95.755001,
+        19.011667
+      ],
+      "polygon_map_m": [
+        [
+          95.076668,
+          21.083334
+        ],
+        [
+          96.433334,
+          21.083334
+        ],
+        [
+          96.433334,
+          16.94
+        ],
+        [
+          95.076668,
+          16.94
+        ]
+      ]
+    },
+    {
+      "text": "강의실",
+      "normalized_text": "강의실",
+      "display_text": "강의실",
+      "confidence": 0.952054500579834,
+      "bbox": [
+        3083,
+        1024,
+        68,
+        32
+      ],
+      "polygon": [
+        [
+          3083,
+          1024
+        ],
+        [
+          3151,
+          1024
+        ],
+        [
+          3151,
+          1056
+        ],
+        [
+          3083,
+          1056
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "강의실",
+          "confidence": 0.952054500579834,
+          "bbox": [
+            3083,
+            1024,
+            68,
+            32
+          ],
+          "polygon": [
+            [
+              3083,
+              1024
+            ],
+            [
+              3151,
+              1024
+            ],
+            [
+              3151,
+              1056
+            ],
+            [
+              3083,
+              1056
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        40
+      ],
+      "id": "text_038",
+      "type": "room_name_or_label",
+      "centroid": [
+        3117.0,
+        1040.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        114.290001,
+        20.496667
+      ],
+      "polygon_map_m": [
+        [
+          113.043334,
+          21.083334
+        ],
+        [
+          115.536668,
+          21.083334
+        ],
+        [
+          115.536668,
+          19.91
+        ],
+        [
+          113.043334,
+          19.91
+        ]
+      ]
+    },
+    {
+      "text": "이",
+      "normalized_text": "이",
+      "display_text": "이",
+      "confidence": 0.6491374373435974,
+      "bbox": [
+        2353,
+        1041,
+        85,
+        25
+      ],
+      "polygon": [
+        [
+          2353,
+          1041
+        ],
+        [
+          2438,
+          1041
+        ],
+        [
+          2438,
+          1066
+        ],
+        [
+          2353,
+          1066
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "이",
+          "confidence": 0.6491374373435974,
+          "bbox": [
+            2353,
+            1041,
+            85,
+            25
+          ],
+          "polygon": [
+            [
+              2353,
+              1041
+            ],
+            [
+              2438,
+              1041
+            ],
+            [
+              2438,
+              1066
+            ],
+            [
+              2353,
+              1066
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        41
+      ],
+      "id": "text_039",
+      "type": "room_name_or_label",
+      "centroid": [
+        2395.5,
+        1053.5
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        87.835001,
+        20.001667
+      ],
+      "polygon_map_m": [
+        [
+          86.276667,
+          20.46
+        ],
+        [
+          89.393334,
+          20.46
+        ],
+        [
+          89.393334,
+          19.543334
+        ],
+        [
+          86.276667,
+          19.543334
+        ]
+      ]
+    },
+    {
+      "text": "학생",
+      "normalized_text": "학생",
+      "display_text": "학생",
+      "confidence": 0.8864309787750244,
+      "bbox": [
+        1895,
+        1048,
+        50,
+        36
+      ],
+      "polygon": [
+        [
+          1895,
+          1048
+        ],
+        [
+          1945,
+          1048
+        ],
+        [
+          1945,
+          1084
+        ],
+        [
+          1895,
+          1084
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "학생",
+          "confidence": 0.8864309787750244,
+          "bbox": [
+            1895,
+            1048,
+            50,
+            36
+          ],
+          "polygon": [
+            [
+              1896,
+              1048
+            ],
+            [
+              1945,
+              1051
+            ],
+            [
+              1944,
+              1084
+            ],
+            [
+              1895,
+              1082
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        42
+      ],
+      "id": "text_040",
+      "type": "room_name_or_label",
+      "centroid": [
+        1920.0,
+        1066.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        70.400001,
+        19.543334
+      ],
+      "polygon_map_m": [
+        [
+          69.483334,
+          20.203334
+        ],
+        [
+          71.316667,
+          20.203334
+        ],
+        [
+          71.316667,
+          18.883334
+        ],
+        [
+          69.483334,
+          18.883334
+        ]
+      ]
+    },
+    {
+      "text": "학생식당",
+      "normalized_text": "학생식당",
+      "display_text": "학생식당",
+      "confidence": 0.9893152117729187,
+      "bbox": [
+        1897,
+        1049,
+        95,
+        35
+      ],
+      "polygon": [
+        [
+          1897,
+          1049
+        ],
+        [
+          1992,
+          1049
+        ],
+        [
+          1992,
+          1084
+        ],
+        [
+          1897,
+          1084
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "학생식당",
+          "confidence": 0.9893152117729187,
+          "bbox": [
+            1897,
+            1049,
+            95,
+            35
+          ],
+          "polygon": [
+            [
+              1897,
+              1049
+            ],
+            [
+              1992,
+              1049
+            ],
+            [
+              1992,
+              1084
+            ],
+            [
+              1897,
+              1084
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        43
+      ],
+      "id": "text_041",
+      "type": "room_name_or_label",
+      "centroid": [
+        1944.5,
+        1066.5
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        71.298334,
+        19.525
+      ],
+      "polygon_map_m": [
+        [
+          69.556667,
+          20.166667
+        ],
+        [
+          73.040001,
+          20.166667
+        ],
+        [
+          73.040001,
+          18.883334
+        ],
+        [
+          69.556667,
+          18.883334
+        ]
+      ]
+    },
+    {
+      "text": "식당",
+      "normalized_text": "식당",
+      "display_text": "식당",
+      "confidence": 0.8779215812683105,
+      "bbox": [
+        1944,
+        1049,
+        48,
+        35
+      ],
+      "polygon": [
+        [
+          1944,
+          1049
+        ],
+        [
+          1992,
+          1049
+        ],
+        [
+          1992,
+          1084
+        ],
+        [
+          1944,
+          1084
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "식당",
+          "confidence": 0.8779215812683105,
+          "bbox": [
+            1944,
+            1049,
+            48,
+            35
+          ],
+          "polygon": [
+            [
+              1944,
+              1049
+            ],
+            [
+              1992,
+              1049
+            ],
+            [
+              1992,
+              1084
+            ],
+            [
+              1944,
+              1084
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        44
+      ],
+      "id": "text_042",
+      "type": "room_name_or_label",
+      "centroid": [
+        1968.0,
+        1066.5
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        72.160001,
+        19.525
+      ],
+      "polygon_map_m": [
+        [
+          71.280001,
+          20.166667
+        ],
+        [
+          73.040001,
+          20.166667
+        ],
+        [
+          73.040001,
+          18.883334
+        ],
+        [
+          71.280001,
+          18.883334
+        ]
+      ]
+    },
+    {
+      "text": "공과대",
+      "normalized_text": "공과대",
+      "display_text": "공과대",
+      "confidence": 0.9805169701576233,
+      "bbox": [
+        2529,
+        1074,
+        69,
+        33
+      ],
+      "polygon": [
+        [
+          2529,
+          1074
+        ],
+        [
+          2598,
+          1074
+        ],
+        [
+          2598,
+          1107
+        ],
+        [
+          2529,
+          1107
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "공과대",
+          "confidence": 0.9805169701576233,
+          "bbox": [
+            2529,
+            1074,
+            69,
+            33
+          ],
+          "polygon": [
+            [
+              2529,
+              1074
+            ],
+            [
+              2598,
+              1074
+            ],
+            [
+              2598,
+              1107
+            ],
+            [
+              2529,
+              1107
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        45
+      ],
+      "id": "text_043",
+      "type": "room_name_or_label",
+      "centroid": [
+        2563.5,
+        1090.5
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        93.995001,
+        18.645
+      ],
+      "polygon_map_m": [
+        [
+          92.730001,
+          19.25
+        ],
+        [
+          95.260001,
+          19.25
+        ],
+        [
+          95.260001,
+          18.04
+        ],
+        [
+          92.730001,
+          18.04
+        ]
+      ]
+    },
+    {
+      "text": "공과대학",
+      "normalized_text": "공과대학",
+      "display_text": "공과대학",
+      "confidence": 0.9853969216346741,
+      "bbox": [
+        2350,
+        1079,
+        88,
+        27
+      ],
+      "polygon": [
+        [
+          2350,
+          1079
+        ],
+        [
+          2438,
+          1079
+        ],
+        [
+          2438,
+          1106
+        ],
+        [
+          2350,
+          1106
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "공과대학",
+          "confidence": 0.9853969216346741,
+          "bbox": [
+            2350,
+            1079,
+            88,
+            27
+          ],
+          "polygon": [
+            [
+              2350,
+              1079
+            ],
+            [
+              2438,
+              1079
+            ],
+            [
+              2438,
+              1106
+            ],
+            [
+              2350,
+              1106
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        46
+      ],
+      "id": "text_044",
+      "type": "room_name_or_label",
+      "centroid": [
+        2394.0,
+        1092.5
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        87.780001,
+        18.571667
+      ],
+      "polygon_map_m": [
+        [
+          86.166667,
+          19.066667
+        ],
+        [
+          89.393334,
+          19.066667
+        ],
+        [
+          89.393334,
+          18.076667
+        ],
+        [
+          86.166667,
+          18.076667
+        ]
+      ]
+    },
+    {
+      "text": "곰과",
+      "normalized_text": "곰과",
+      "display_text": "곰과",
+      "confidence": 0.5186709761619568,
+      "bbox": [
+        2532,
+        1082,
+        50,
+        20
+      ],
+      "polygon": [
+        [
+          2532,
+          1082
+        ],
+        [
+          2582,
+          1082
+        ],
+        [
+          2582,
+          1102
+        ],
+        [
+          2532,
+          1102
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "곰과",
+          "confidence": 0.5186709761619568,
+          "bbox": [
+            2532,
+            1082,
+            50,
+            20
+          ],
+          "polygon": [
+            [
+              2532,
+              1082
+            ],
+            [
+              2582,
+              1082
+            ],
+            [
+              2582,
+              1102
+            ],
+            [
+              2532,
+              1102
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        47
+      ],
+      "id": "text_045",
+      "type": "room_name_or_label",
+      "centroid": [
+        2557.0,
+        1092.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        93.756668,
+        18.59
+      ],
+      "polygon_map_m": [
+        [
+          92.840001,
+          18.956667
+        ],
+        [
+          94.673334,
+          18.956667
+        ],
+        [
+          94.673334,
+          18.223333
+        ],
+        [
+          92.840001,
+          18.223333
+        ]
+      ]
+    },
+    {
+      "text": "전산실습실",
+      "normalized_text": "전산실습실",
+      "display_text": "전산실습실",
+      "confidence": 0.9845159649848938,
+      "bbox": [
+        2340,
+        1104,
+        108,
+        32
+      ],
+      "polygon": [
+        [
+          2340,
+          1104
+        ],
+        [
+          2448,
+          1104
+        ],
+        [
+          2448,
+          1136
+        ],
+        [
+          2340,
+          1136
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "전산실습실",
+          "confidence": 0.9845159649848938,
+          "bbox": [
+            2340,
+            1104,
+            108,
+            32
+          ],
+          "polygon": [
+            [
+              2340,
+              1104
+            ],
+            [
+              2448,
+              1105
+            ],
+            [
+              2447,
+              1136
+            ],
+            [
+              2340,
+              1134
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        48
+      ],
+      "id": "text_046",
+      "type": "room_name_or_label",
+      "centroid": [
+        2394.0,
+        1120.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        87.780001,
+        17.563333
+      ],
+      "polygon_map_m": [
+        [
+          85.800001,
+          18.15
+        ],
+        [
+          89.760001,
+          18.15
+        ],
+        [
+          89.760001,
+          16.976667
+        ],
+        [
+          85.800001,
+          16.976667
+        ]
+      ]
+    },
+    {
+      "text": "전산실",
+      "normalized_text": "전산실",
+      "display_text": "전산실",
+      "confidence": 0.9852238297462463,
+      "bbox": [
+        2521,
+        1104,
+        76,
+        31
+      ],
+      "polygon": [
+        [
+          2521,
+          1104
+        ],
+        [
+          2597,
+          1104
+        ],
+        [
+          2597,
+          1135
+        ],
+        [
+          2521,
+          1135
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "전산실",
+          "confidence": 0.9852238297462463,
+          "bbox": [
+            2521,
+            1104,
+            76,
+            31
+          ],
+          "polygon": [
+            [
+              2521,
+              1104
+            ],
+            [
+              2597,
+              1104
+            ],
+            [
+              2597,
+              1135
+            ],
+            [
+              2521,
+              1135
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        49
+      ],
+      "id": "text_047",
+      "type": "room_name_or_label",
+      "centroid": [
+        2559.0,
+        1119.5
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        93.830001,
+        17.581667
+      ],
+      "polygon_map_m": [
+        [
+          92.436668,
+          18.15
+        ],
+        [
+          95.223334,
+          18.15
+        ],
+        [
+          95.223334,
+          17.013333
+        ],
+        [
+          92.436668,
+          17.013333
+        ]
+      ]
+    },
+    {
+      "text": "|",
+      "normalized_text": "|",
+      "display_text": "|",
+      "confidence": 0.8570127487182617,
+      "bbox": [
+        1910,
+        1119,
+        18,
+        25
+      ],
+      "polygon": [
+        [
+          1910,
+          1119
+        ],
+        [
+          1928,
+          1119
+        ],
+        [
+          1928,
+          1144
+        ],
+        [
+          1910,
+          1144
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "|",
+          "confidence": 0.8570127487182617,
+          "bbox": [
+            1910,
+            1119,
+            18,
+            25
+          ],
+          "polygon": [
+            [
+              1910,
+              1119
+            ],
+            [
+              1928,
+              1119
+            ],
+            [
+              1928,
+              1144
+            ],
+            [
+              1910,
+              1144
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        50
+      ],
+      "id": "text_048",
+      "type": "room_name_or_label",
+      "centroid": [
+        1919.0,
+        1131.5
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        70.363334,
+        17.141667
+      ],
+      "polygon_map_m": [
+        [
+          70.033334,
+          17.6
+        ],
+        [
+          70.693334,
+          17.6
+        ],
+        [
+          70.693334,
+          16.683333
+        ],
+        [
+          70.033334,
+          16.683333
+        ]
+      ]
+    },
+    {
+      "text": "2",
+      "normalized_text": "2",
+      "display_text": "2",
+      "confidence": 0.9988885521888733,
+      "bbox": [
+        2566,
+        1136,
+        19,
+        28
+      ],
+      "polygon": [
+        [
+          2566,
+          1136
+        ],
+        [
+          2585,
+          1136
+        ],
+        [
+          2585,
+          1164
+        ],
+        [
+          2566,
+          1164
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "2",
+          "confidence": 0.9988885521888733,
+          "bbox": [
+            2566,
+            1136,
+            19,
+            28
+          ],
+          "polygon": [
+            [
+              2566,
+              1136
+            ],
+            [
+              2585,
+              1136
+            ],
+            [
+              2585,
+              1164
+            ],
+            [
+              2566,
+              1164
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        51
+      ],
+      "id": "text_049",
+      "type": "room_name_or_label",
+      "centroid": [
+        2575.5,
+        1150.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        94.435001,
+        16.463333
+      ],
+      "polygon_map_m": [
+        [
+          94.086668,
+          16.976667
+        ],
+        [
+          94.783334,
+          16.976667
+        ],
+        [
+          94.783334,
+          15.95
+        ],
+        [
+          94.086668,
+          15.95
+        ]
+      ]
+    },
+    {
+      "text": "[",
+      "normalized_text": "[",
+      "display_text": "[",
+      "confidence": 0.8651326298713684,
+      "bbox": [
+        2568,
+        1137,
+        14,
+        22
+      ],
+      "polygon": [
+        [
+          2568,
+          1137
+        ],
+        [
+          2582,
+          1137
+        ],
+        [
+          2582,
+          1159
+        ],
+        [
+          2568,
+          1159
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "[",
+          "confidence": 0.8651326298713684,
+          "bbox": [
+            2568,
+            1137,
+            14,
+            22
+          ],
+          "polygon": [
+            [
+              2568,
+              1138
+            ],
+            [
+              2580,
+              1137
+            ],
+            [
+              2582,
+              1158
+            ],
+            [
+              2570,
+              1159
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        52
+      ],
+      "id": "text_050",
+      "type": "room_name_or_label",
+      "centroid": [
+        2575.0,
+        1148.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        94.416668,
+        16.536667
+      ],
+      "polygon_map_m": [
+        [
+          94.160001,
+          16.94
+        ],
+        [
+          94.673334,
+          16.94
+        ],
+        [
+          94.673334,
+          16.133333
+        ],
+        [
+          94.160001,
+          16.133333
+        ]
+      ]
+    },
+    {
+      "text": "1",
+      "normalized_text": "1",
+      "display_text": "1",
+      "confidence": 0.9986869692802429,
+      "bbox": [
+        2388,
+        1139,
+        14,
+        20
+      ],
+      "polygon": [
+        [
+          2388,
+          1139
+        ],
+        [
+          2402,
+          1139
+        ],
+        [
+          2402,
+          1159
+        ],
+        [
+          2388,
+          1159
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "1",
+          "confidence": 0.9986869692802429,
+          "bbox": [
+            2388,
+            1139,
+            14,
+            20
+          ],
+          "polygon": [
+            [
+              2388,
+              1139
+            ],
+            [
+              2402,
+              1139
+            ],
+            [
+              2402,
+              1159
+            ],
+            [
+              2388,
+              1159
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        53
+      ],
+      "id": "text_051",
+      "type": "room_name_or_label",
+      "centroid": [
+        2395.0,
+        1149.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        87.816667,
+        16.5
+      ],
+      "polygon_map_m": [
+        [
+          87.560001,
+          16.866667
+        ],
+        [
+          88.073334,
+          16.866667
+        ],
+        [
+          88.073334,
+          16.133333
+        ],
+        [
+          87.560001,
+          16.133333
+        ]
+      ]
+    },
+    {
+      "text": "구",
+      "normalized_text": "구",
+      "display_text": "구",
+      "confidence": 0.9137421250343323,
+      "bbox": [
+        3257,
+        1349,
+        21,
+        17
+      ],
+      "polygon": [
+        [
+          3257,
+          1349
+        ],
+        [
+          3278,
+          1349
+        ],
+        [
+          3278,
+          1366
+        ],
+        [
+          3257,
+          1366
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "구",
+          "confidence": 0.9137421250343323,
+          "bbox": [
+            3257,
+            1349,
+            21,
+            17
+          ],
+          "polygon": [
+            [
+              3257,
+              1349
+            ],
+            [
+              3278,
+              1349
+            ],
+            [
+              3278,
+              1366
+            ],
+            [
+              3257,
+              1366
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        54
+      ],
+      "id": "text_052",
+      "type": "room_name_or_label",
+      "centroid": [
+        3267.5,
+        1357.5
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        119.808334,
+        8.855
+      ],
+      "polygon_map_m": [
+        [
+          119.423334,
+          9.166667
+        ],
+        [
+          120.193334,
+          9.166667
+        ],
+        [
+          120.193334,
+          8.543333
+        ],
+        [
+          119.423334,
+          8.543333
+        ]
+      ]
+    },
+    {
+      "text": "T0i!",
+      "normalized_text": "T0i!",
+      "display_text": "T0i!",
+      "confidence": 0.5498307347297668,
+      "bbox": [
+        2678,
+        1364,
+        74,
+        22
+      ],
+      "polygon": [
+        [
+          2678,
+          1364
+        ],
+        [
+          2752,
+          1364
+        ],
+        [
+          2752,
+          1386
+        ],
+        [
+          2678,
+          1386
+        ]
+      ],
+      "source_parts": [
+        {
+          "text": "T0i!",
+          "confidence": 0.5498307347297668,
+          "bbox": [
+            2678,
+            1364,
+            74,
+            22
+          ],
+          "polygon": [
+            [
+              2678,
+              1364
+            ],
+            [
+              2752,
+              1364
+            ],
+            [
+              2752,
+              1386
+            ],
+            [
+              2678,
+              1386
+            ]
+          ]
+        }
+      ],
+      "source_detection_indices": [
+        55
+      ],
+      "id": "text_053",
+      "type": "room_name_or_label",
+      "centroid": [
+        2715.0,
+        1375.0
+      ],
+      "map_role": "localization_landmark_removed_from_wall_map",
+      "centroid_map_m": [
+        99.550001,
+        8.213333
+      ],
+      "polygon_map_m": [
+        [
+          98.193334,
+          8.616667
+        ],
+        [
+          100.906668,
+          8.616667
+        ],
+        [
+          100.906668,
+          7.81
+        ],
+        [
+          98.193334,
+          7.81
+        ]
+      ]
+    }
+  ],
+  "symbol_landmarks": [
+    {
+      "id": "symbol_candidate_001",
+      "type": "symbol_candidate",
+      "bbox": [
+        2327,
+        417,
+        45,
+        49
+      ],
+      "centroid": [
+        2349.4367154811716,
+        440.6365062761506
+      ],
+      "area_px": 1912,
+      "confidence": 0.35,
+      "source": "connected_component",
+      "centroid_map_m": [
+        86.146014,
+        42.473328
+      ]
+    },
+    {
+      "id": "symbol_candidate_002",
+      "type": "symbol_candidate",
+      "bbox": [
+        1645,
+        532,
+        49,
+        50
+      ],
+      "centroid": [
+        1669.0902094912356,
+        556.2496793501497
+      ],
+      "area_px": 2339,
+      "confidence": 0.35,
+      "source": "connected_component",
+      "centroid_map_m": [
+        61.199975,
+        38.234179
+      ]
+    },
+    {
+      "id": "symbol_candidate_003",
+      "type": "symbol_candidate",
+      "bbox": [
+        1064,
+        617,
+        34,
+        39
+      ],
+      "centroid": [
+        1079.9652406417113,
+        635.951871657754
+      ],
+      "area_px": 1122,
+      "confidence": 0.35,
+      "source": "connected_component",
+      "centroid_map_m": [
+        39.598726,
+        35.311765
+      ]
+    },
+    {
+      "id": "symbol_candidate_004",
+      "type": "symbol_candidate",
+      "bbox": [
+        1063,
+        692,
+        35,
+        39
+      ],
+      "centroid": [
+        1079.6275805119735,
+        711.2568125516102
+      ],
+      "area_px": 1211,
+      "confidence": 0.35,
+      "source": "connected_component",
+      "centroid_map_m": [
+        39.586345,
+        32.550584
+      ]
+    },
+    {
+      "id": "symbol_candidate_005",
+      "type": "symbol_candidate",
+      "bbox": [
+        1891,
+        1101,
+        49,
+        51
+      ],
+      "centroid": [
+        1915.354254422915,
+        1126.5682392586352
+      ],
+      "area_px": 2374,
+      "confidence": 0.35,
+      "source": "connected_component",
+      "centroid_map_m": [
+        70.229657,
+        17.322498
+      ]
+    }
+  ],
+  "semantic_objects": [
+    {
+      "id": "nav_text_006",
+      "type": "room_label",
+      "value": "201",
+      "display_name": "201 교직원 식당",
+      "px": [
+        1668.0,
+        460.0
+      ],
+      "map_m": [
+        61.160001,
+        41.763334
+      ],
+      "confidence": null,
+      "source": "latest_semantic_landmarks.navigation_text_entities"
+    },
+    {
+      "id": "nav_text_008",
+      "type": "room_label",
+      "value": "208",
+      "display_name": "208 65편의점",
+      "px": [
+        2708.0,
+        602.0
+      ],
+      "map_m": [
+        99.293334,
+        36.556667
+      ],
+      "confidence": null,
+      "source": "latest_semantic_landmarks.navigation_text_entities"
+    },
+    {
+      "id": "nav_text_012",
+      "type": "room_label",
+      "value": "202",
+      "display_name": "202 주방",
+      "px": [
+        1517.0,
+        710.0
+      ],
+      "map_m": [
+        55.623334,
+        32.596667
+      ],
+      "confidence": null,
+      "source": "latest_semantic_landmarks.navigation_text_entities"
+    },
+    {
+      "id": "nav_text_015",
+      "type": "room_label",
+      "value": "204",
+      "display_name": "204 이약 운영심",
+      "px": [
+        2366.0,
+        783.0
+      ],
+      "map_m": [
+        86.753334,
+        29.92
+      ],
+      "confidence": null,
+      "source": "latest_semantic_landmarks.navigation_text_entities"
+    },
+    {
+      "id": "nav_text_019",
+      "type": "room_label",
+      "value": "207",
+      "display_name": "207 3 P 프린 터실 프린터실",
+      "px": [
+        2595.0,
+        804.5
+      ],
+      "map_m": [
+        95.150001,
+        29.131667
+      ],
+      "confidence": null,
+      "source": "latest_semantic_landmarks.navigation_text_entities"
+    },
+    {
+      "id": "nav_text_029",
+      "type": "room_label",
+      "value": "209",
+      "display_name": "209 금과대화 칼의실",
+      "px": [
+        2933.5,
+        963.0
+      ],
+      "map_m": [
+        107.561668,
+        23.32
+      ],
+      "confidence": null,
+      "source": "latest_semantic_landmarks.navigation_text_entities"
+    },
+    {
+      "id": "nav_text_030",
+      "type": "room_label",
+      "value": "210",
+      "display_name": "210 몰과대화 강의실",
+      "px": [
+        3118.0,
+        964.0
+      ],
+      "map_m": [
+        114.326668,
+        23.283334
+      ],
+      "confidence": null,
+      "source": "latest_semantic_landmarks.navigation_text_entities"
+    },
+    {
+      "id": "nav_text_033",
+      "type": "room_label",
+      "value": "203",
+      "display_name": "203 학생 학생식당 식당 |",
+      "px": [
+        1945.0,
+        1021.0
+      ],
+      "map_m": [
+        71.316667,
+        21.193334
+      ],
+      "confidence": null,
+      "source": "latest_semantic_landmarks.navigation_text_entities"
+    },
+    {
+      "id": "nav_text_034",
+      "type": "room_label",
+      "value": "206",
+      "display_name": "206 중입아십 공과대 곰과 전산실 [",
+      "px": [
+        2574.5,
+        1045.0
+      ],
+      "map_m": [
+        94.398334,
+        20.313334
+      ],
+      "confidence": null,
+      "source": "latest_semantic_landmarks.navigation_text_entities"
+    },
+    {
+      "id": "nav_text_036",
+      "type": "room_label",
+      "value": "205",
+      "display_name": "205 이 공과대학 전산실습실",
+      "px": [
+        2394.5,
+        1045.0
+      ],
+      "map_m": [
+        87.798334,
+        20.313334
+      ],
+      "confidence": null,
+      "source": "latest_semantic_landmarks.navigation_text_entities"
+    },
+    {
+      "id": "symbol_candidate_001",
+      "type": "symbol_candidate",
+      "px": [
+        2349.4367154811716,
+        440.6365062761506
+      ],
+      "map_m": [
+        86.146014,
+        42.473328
+      ],
+      "bbox_px": [
+        2327,
+        417,
+        45,
+        49
+      ],
+      "confidence": 0.35,
+      "source": "latest_semantic_landmarks.symbols"
+    },
+    {
+      "id": "symbol_candidate_002",
+      "type": "symbol_candidate",
+      "px": [
+        1669.0902094912356,
+        556.2496793501497
+      ],
+      "map_m": [
+        61.199975,
+        38.234179
+      ],
+      "bbox_px": [
+        1645,
+        532,
+        49,
+        50
+      ],
+      "confidence": 0.35,
+      "source": "latest_semantic_landmarks.symbols"
+    },
+    {
+      "id": "symbol_candidate_003",
+      "type": "symbol_candidate",
+      "px": [
+        1079.9652406417113,
+        635.951871657754
+      ],
+      "map_m": [
+        39.598726,
+        35.311765
+      ],
+      "bbox_px": [
+        1064,
+        617,
+        34,
+        39
+      ],
+      "confidence": 0.35,
+      "source": "latest_semantic_landmarks.symbols"
+    },
+    {
+      "id": "symbol_candidate_004",
+      "type": "symbol_candidate",
+      "px": [
+        1079.6275805119735,
+        711.2568125516102
+      ],
+      "map_m": [
+        39.586345,
+        32.550584
+      ],
+      "bbox_px": [
+        1063,
+        692,
+        35,
+        39
+      ],
+      "confidence": 0.35,
+      "source": "latest_semantic_landmarks.symbols"
+    },
+    {
+      "id": "symbol_candidate_005",
+      "type": "symbol_candidate",
+      "px": [
+        1915.354254422915,
+        1126.5682392586352
+      ],
+      "map_m": [
+        70.229657,
+        17.322498
+      ],
+      "bbox_px": [
+        1891,
+        1101,
+        49,
+        51
+      ],
+      "confidence": 0.35,
+      "source": "latest_semantic_landmarks.symbols"
+    }
+  ],
+  "semantic_landmarks_source": {
+    "path": "output/reconstructed_2F/semantic_landmarks.json",
+    "sha256": "d06a576eef5b4b2ce51f8e25886f6caf4ba19c574943b19a9ac282e64690d93a",
+    "room_entity_matches": 10
+  },
+  "packaging_qa": {
+    "room_facility_overlap_px": 0,
+    "room_corridor_overlap_px": 0,
+    "facility_corridor_overlap_px": 0,
+    "semantic_pixels_outside_navigation_free_px": 0,
+    "empty_space_ids": [],
+    "empty_corridor_ids": [],
+    "invalid_navigation_seed_ids": [],
+    "exclusive_layers_pass": true
+  }
+}
