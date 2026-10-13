@@ -9,13 +9,13 @@
     python3 scripts/e3_node.py --tasks 4F_T1,S1F_T4 --workers 8        # 계산
     python3 scripts/e3_node.py --score                                  # 채점
 """
-import argparse, csv, json, math, sys, time
+import argparse, csv, json, math, os, sys, time
 from pathlib import Path
 import numpy as np
 sys.path.insert(0, str(Path(__file__).parent))
 
-OUT = Path("/data2/e3_node_20261011"); G = Path("reports/_01_E2_초기위치/_작업자료"); TS = (15, 30, 45, 60)
-RES = Path("reports/_03_E3_걸으며좁히기/_작업자료/노드")
+OUT = Path(os.environ.get("E3_NODE_OUT", "/data2/e3_node_20261011")); G = Path("reports/_01_E2_초기위치/_작업자료"); TS = (15, 30, 45, 60)
+RES = Path(os.environ.get("E3_NODE_RES", "reports/_03_E3_걸으며좁히기/_작업자료/노드"))
 NMAP = {"kci": 9, "gong": 7, "sw": 8}
 
 
@@ -27,7 +27,7 @@ def job(arg):
     if not todo:
         return tid, m, "있음"
     import e2_dense as ED
-    sys.path.insert(0, "/data/kci_work/floor_id_pkg/floor_id")
+    sys.path.insert(0, os.environ.get("KCI_FLOORID_PKG", "/data/kci_work/floor_id_pkg/floor_id"))   # 2026-10-12: 지도 수정판 패키지
     import floor_id as FI
     cfg = FI.load_cfg(); b = FI.setup_env(cfg, building)
     import rt_localizer as RT, run_floor_id as R, twoway as TW, metric_fit_v2 as V, metric_fit_negev as MN

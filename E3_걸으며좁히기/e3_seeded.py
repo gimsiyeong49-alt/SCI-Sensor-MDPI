@@ -21,9 +21,9 @@ from pathlib import Path
 import numpy as np
 sys.path.insert(0, str(Path(__file__).parent))
 
-NODE = Path("/data2/e3_node_20261011")
+NODE = Path(os.environ.get("E3_NODE_DIR", "/data2/e3_node_20261011"))
 OUT = Path("/data2/e3_seeded_v3_20261011"); G = Path("reports/_01_E2_초기위치/_작업자료"); TS = (15, 30, 45, 60)
-SEED = G / "E2_dense_T0_nospace_정밀검증" / "E2_top100_candidates.csv"
+SEED = Path(os.environ.get("E3_SEED", str(G / "E2_dense_T0_nospace_정밀검증" / "E2_top100_candidates.csv")))
 RES = Path("reports/_03_E3_걸으며좁히기/_작업자료/연결판")
 BETA_DEG = 228.0
 # 재탐색 합치기(2026-10-12, E3_ADD_NODE=1): 노드(floor_id)가 그 시점 창에서 새로 찾은 층별 후보를 연결판 후보에 더하고 이후 계속 이어받는다.
@@ -33,6 +33,7 @@ NODE_EVERY = int(os.environ.get("E3_NODE_EVERY", "15"))   # 재탐색 간격(초
 NMAP = {"kci": 9, "gong": 7, "sw": 8}
 if ADD_NODE:
     OUT = Path("/data2/e3_merged_20261012"); RES = Path("reports/_03_E3_걸으며좁히기/_작업자료/연결판_재탐색")
+OUT = Path(os.environ.get("E3_OUT", str(OUT))); RES = Path(os.environ.get("E3_RES", str(RES)))   # 2026-10-12: 지도 수정판 재실행용
 
 
 def seeds():
@@ -49,7 +50,7 @@ def job(arg):
     if f.exists():
         return tid, m, "있음"
     import e2_dense as ED
-    sys.path.insert(0, "/data/kci_work/floor_id_pkg/floor_id")
+    sys.path.insert(0, os.environ.get("KCI_FLOORID_PKG", "/data/kci_work/floor_id_pkg/floor_id"))   # 2026-10-12: 지도 수정판 패키지
     import floor_id as FI
     cfg = FI.load_cfg(); FI.setup_env(cfg, building)
     import rt_localizer as RT, run_floor_id as R, twoway as TW, metric_fit_negev as MN

@@ -19,6 +19,12 @@ import e2_visual_ko as EV  # noqa: E402
 PKG = Path("reports/_03_E3_걸으며좁히기"); W = PKG / "_작업자료"; G = EV.G
 NODE = Path("/data2/e3_node_20261011"); TS = (15, 30, 45, 60); NMAP = {"kci": 9, "gong": 7, "sw": 8}
 FOLDER = {"node": "2_비교/1_노드그대로_로봇방식", "seeded": "2_비교/2_연결판_E2후보만", "merged": "1_최종_합치기"}
+# 2026-10-13: 지도 8차 결과로 다시 그리기(E3_FIG_VAR=v8). 기본값은 그대로
+V8 = __import__("os").environ.get("E3_FIG_VAR") == "v8"
+MERGED_DIR = W / ("연결판_재탐색_지도v8" if V8 else "연결판_재탐색")
+E2_DIR = G / ("E2_dense_T0_nospace_지도v8_정밀검증" if V8 else "E2_dense_T0_nospace_정밀검증")
+if V8:
+    FOLDER["merged"] = "1_최종_합치기_지도v8"
 wrap = lambda a: (a + 180) % 360 - 180
 
 
@@ -37,9 +43,9 @@ def walked(k, T):
 def scan(a, k, T, m, px, py, hd, s, b, m_true, pg, ppm_gt, gt, gx, ts, title, beta=228.0):
     """후보 자세로 쌓인 라이다를 그 층 지도에 얹기. 테두리: 초록 = 정답(정답 층·3 m 안), 주황 = 정답 층이지만 먼 자리, 빨강 = 다른 층."""
     import e3_accum_registered as AR
-    P, pos, nf, npt, _ = AR.registered(k, T, px, py, hd, s, beta_deg=beta)
-    a.imshow(EV.mapimg(b, m), cmap="gray", vmin=0, vmax=255)
-    a.scatter(P[:, 0], P[:, 1], s=1.4, color=EV.ORANGE, alpha=0.55, linewidths=0, zorder=3)
+    P, pos, nf, npt, _ = AR.registered(k, T, px, py, hd, s, beta_deg=beta, full=True)   # 3초 간격 스캔의 점 전부
+    a.imshow(EV.mapimg(b, m), cmap="gray", vmin=-170, vmax=255)          # 2026-10-13: 벽을 옅은 회색으로(점이 묻히지 않게)
+    a.scatter(P[:, 0], P[:, 1], s=0.8, color="#E8590C", alpha=0.6, linewidths=0, zorder=3)
     a.plot(pos[:, 0], pos[:, 1], color=EV.INK, lw=1.8, zorder=4); a.scatter(*pos[-1], marker="o", s=120, color=EV.BLUE, edgecolor=EV.SURF, zorder=6)
     same = m == m_true; d = float(np.hypot(*(pos[-1] - pg)) / ppm_gt) if same else None
     if same:
@@ -90,7 +96,7 @@ def draw_node(k, T, od):
     fig.text(0.01, 0.905, f"판정 {top['map']}층 · 정답 {m_true}층(층 순위 {fr}위) · " + ("1위 위치 맞음" if ok1 else "1위 위치 틀림") +
              (f" · 층을 안다면 위치 {'맞음' if (d2 <= 3.0 and yaw_ok) else '틀림'}({d2:.1f} m)" if tf else "") + f" · 걸은 거리 {walked(k, T):.0f} m",
              fontsize=13, fontweight="bold", va="top", color=EV.GREEN if ok1 else EV.INK)
-    sd, name = subpath(k); (od / sd).mkdir(parents=True, exist_ok=True); fig.savefig(od / sd / name, dpi=100, bbox_inches="tight"); plt.close(fig)
+    sd, name = subpath(k); (od / sd).mkdir(parents=True, exist_ok=True); fig.savefig(od / sd / name, dpi=140, bbox_inches="tight"); plt.close(fig)
 
 
 def draw_seeded(k, T, od, C, E2c, E2r, head="E3 연결판", how="E2 정지 Top-100 을 이어받아 노드와 같은 부품으로 다시 매김"):
@@ -99,9 +105,9 @@ def draw_seeded(k, T, od, C, E2c, E2r, head="E3 연결판", how="E2 정지 Top-1
     cs = sorted(C.get((k, T), []), key=lambda r: int(r["rank"])); top = cs[0]
     okp = lambda c: int(c["floor_id"]) == m_true and math.hypot(float(c["x_px"]) - pg[0], float(c["y_px"]) - pg[1]) / ppm_gt <= 3.0 and abs(wrap(float(c["heading_deg"]) - hd_gt)) <= 30
     tr = next((int(c["rank"]) for c in cs if okp(c)), None)
-    fig = plt.figure(figsize=(25, 7.6)); gs = fig.add_gridspec(1, 3, width_ratios=[1, 1.3, 0.55], wspace=0.1, top=0.76, bottom=0.03)
+    fig = plt.figure(figsize=(26, 8.4)); gs = fig.add_gridspec(1, 3, width_ratios=[1.35, 1.1, 0.45], wspace=0.08, top=0.8, bottom=0.03)
     scan(fig.add_subplot(gs[0]), k, T, int(top["floor_id"]), float(top["x_px"]), float(top["y_px"]), float(top["heading_deg"]), float(top["ppm"]), b, m_true, pg, ppm_gt, gt, gx, ts,
-         "① 1위 후보 자세로 쌓인 라이다")
+         "① 1위 후보 자세로 쌓인 라이다 (3초 간격 스캔, 점 전부)")
     a = fig.add_subplot(gs[1]); im = EV.mapimg(b, m_true); a.imshow(im, cmap="gray", vmin=0, vmax=255)
     on = [c for c in cs if int(c["floor_id"]) == m_true]
     for c in sorted(on, key=lambda c: -int(c["rank"])):
@@ -131,7 +137,7 @@ def draw_seeded(k, T, od, C, E2c, E2r, head="E3 연결판", how="E2 정지 Top-1
              fontsize=15, fontweight="bold", va="top")
     fig.text(0.01, 0.905, f"정답 순위 정지(E2) {f_(r0)} → {T}초 {f_(tr)} · 남은 후보 {len(cs)}개 · 걸은 거리 {walked(k, T):.0f} m",
              fontsize=13, fontweight="bold", va="top", color=EV.GREEN if tr == 1 else EV.INK)
-    sd, name = subpath(k); (od / sd).mkdir(parents=True, exist_ok=True); fig.savefig(od / sd / name, dpi=100, bbox_inches="tight"); plt.close(fig)
+    sd, name = subpath(k); (od / sd).mkdir(parents=True, exist_ok=True); fig.savefig(od / sd / name, dpi=140, bbox_inches="tight"); plt.close(fig)
 
 
 def _setup():
@@ -143,15 +149,15 @@ def _job(arg):
     cases, modes = arg; _setup(); C = {}; E2c = {}; E2r = {}
     CM = {}
     if "merged" in modes:                                   # 2026-10-12 합치기(E2 후보 + 15초마다 노드 재탐색)
-        for r in csv.DictReader(open(W / "연결판_재탐색" / "연결판_남은후보.csv")):
+        for r in csv.DictReader(open(MERGED_DIR / "연결판_남은후보.csv")):
             CM.setdefault((r["trial_id"], int(r["T"])), []).append(r)
     if "seeded" in modes or "merged" in modes:
         if "seeded" in modes:
             for r in csv.DictReader(open(W / "연결판" / "연결판_남은후보.csv")):
                 C.setdefault((r["trial_id"], int(r["T"])), []).append(r)
-        for r in csv.DictReader(open(G / "E2_dense_T0_nospace_정밀검증" / "E2_top100_candidates.csv")):
+        for r in csv.DictReader(open(E2_DIR / "E2_top100_candidates.csv")):
             E2c.setdefault(r["trial_id"], []).append(r)
-        for r in csv.DictReader(open(G / "E2_dense_T0_nospace_정밀검증" / "E2_top100_per_trial.csv")):
+        for r in csv.DictReader(open(E2_DIR / "E2_top100_per_trial.csv")):
             E2r[r["trial_id"]] = int(r["true_rank"]) if str(r["true_rank"]).isdigit() and int(r["true_rank"]) <= 100 else None
     for k in cases:
         for T in TS:

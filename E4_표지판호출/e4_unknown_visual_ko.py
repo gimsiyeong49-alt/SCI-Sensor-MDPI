@@ -29,8 +29,9 @@ import e4_unknown_gate as UG  # noqa: E402
 import e4_unknown_informative as UI  # noqa: E402
 
 R = Path("reports/_00_SIGN_PIPELINE_20260920/31_벽구간이벤트"); RUN = R / "70_층모름E4"; J = R / "25_판정"
-W = Path("/data2/e4_unknown_20261011"); GATE = W / "gate_merged_d0.2"
-OUT = Path("reports/_02_E4_표지판호출/1_본결과_층모름/시각자료")
+SFX = {"merged": "_merged", "v8": "_v8"}.get(os.environ["E4_VAR"], "")
+W = Path("/data2/e4_unknown_20261011"); GATE = W / f"gate{SFX}_d0.2"
+OUT = Path("reports/_02_E4_표지판호출/1_본결과_층모름/시각자료" + ("_지도v8" if SFX == "_v8" else ""))
 D = Path("/data/kci_work/maps_perfloor_20261001")
 FL = "1F 2F 3F 4F 5F 6F 7F 8F 9F G1F G2F S1F S6F".split()
 NAME = {"G1F": "공학관 1층", "G2F": "공학관 2층", "S1F": "소융대 1층", "S6F": "소융대 6층"}
@@ -38,8 +39,8 @@ BLD = {"kci": "정보관", "gong": "공학관", "sw": "소융대"}
 BLUE, ORANGE, GREEN, YELLOW, RED, GRAY = "#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e34948", "#9aa3b0"
 INK, INK2, SURF = "#14171c", "#5b6370", "#ffffff"
 STC = {"GEOMETRIC_CONFIDENT": GREEN, "GEOMETRIC_AMBIGUITY": BLUE, "GEOMETRIC_INSUFFICIENT": ORANGE, "SENSOR_UNRELIABLE": YELLOW}
-STK = {"GEOMETRIC_CONFIDENT": "확실(위치 확정)", "GEOMETRIC_AMBIGUITY": "헷갈림(층 간·층 내)", "GEOMETRIC_INSUFFICIENT": "헷갈림 + 긴 직선 복도", "SENSOR_UNRELIABLE": "센서 이상"}
-POLS = [("P_ALL", "표지판 보이면 다 멈춤", RUN / "P_ALL"), ("P_AMBIGUITY", "헷갈릴 때만 멈춤", RUN / "P_AMBIGUITY_gate_merged_d0.2"), ("P_INFORMATIVE", "헷갈림 + 읽으면 갈릴 때만", None)]
+STK = {"GEOMETRIC_CONFIDENT": "확정 선언(위치 확정)", "GEOMETRIC_AMBIGUITY": "헷갈림(층 간·층 내)", "GEOMETRIC_INSUFFICIENT": "헷갈림 + 긴 직선 복도", "SENSOR_UNRELIABLE": "센서 이상"}
+POLS = [("P_ALL", "표지판 보이면 다 멈춤", RUN / "P_ALL"), ("P_AMBIGUITY", "헷갈릴 때만 멈춤", RUN / f"P_AMBIGUITY_gate{SFX}_d0.2"), ("P_INFORMATIVE", "헷갈림 + 읽으면 갈릴 때만", None)]
 plt.rcParams.update({"font.family": "Noto Sans CJK JP", "font.size": 11, "figure.facecolor": SURF, "axes.facecolor": SURF, "savefig.facecolor": SURF})
 
 
@@ -84,9 +85,9 @@ class Data:
         self.segs = {s["task_id"]: s for s in csv.DictReader(open(W / "segments.csv"))}
         self.task = {t["task_id"]: t for t in csv.DictReader(open(EV.G / "tasks/E2_tasks.csv"))}
         self.gtt = {r["task_id"]: r for r in csv.DictReader(open(EV.G / "tasks/tasks_gt_EVAL_ONLY.csv"))}
-        self.sc = {(r["trial_id"], r["policy"]): r for r in csv.DictReader(open(RUN / "채점_merged" / "출발점별_정책별.csv"))}
+        self.sc = {(r["trial_id"], r["policy"]): r for r in csv.DictReader(open(RUN / f"채점{SFX}" / "출발점별_정책별.csv"))}
         self.st = {}
-        for r in csv.DictReader(open(RUN / "채점_merged" / "매초상태4종_d0.2.csv")):
+        for r in csv.DictReader(open(RUN / f"채점{SFX}" / "매초상태4종_d0.2.csv")):
             self.st.setdefault(r["trial_id"], {})[float(r["scene_sec"])] = r["state"]
         self.M = json.load(open(J / "판정목록.json")); Dj = json.load(open(J / "판정결과.json")); X = json.load(open(J / "층모름합치기_판정기록.json"))
         self.yes = {F: set(Dj.get(F, {}).get("plaque", [])) | set(Dj.get(F, {}).get("sign", [])) | set(X["맞음"].get(F, [])) for F in FL}
@@ -100,7 +101,7 @@ class Data:
 
     def stops(self, pol, k):
         if pol == "P_INFORMATIVE":
-            keep = {round(x["t"], 3) for x in json.load(open(RUN / "P_INFORMATIVE_merged_d0.2" / f"{k}.json")) if x["informative"] and x["kind"] == "번호판"}
+            keep = {round(x["t"], 3) for x in json.load(open(RUN / f"P_INFORMATIVE{SFX}_d0.2" / f"{k}.json")) if x["informative"] and x["kind"] == "번호판"}
             return [e for e in self.stops("P_AMBIGUITY", k) if round(float(e["t"]), 3) in keep]
         base = dict((p, b) for p, _, b in POLS)[pol]
         return json.load(open(base / k / "run/events_live_replay.json"))
@@ -125,7 +126,7 @@ def u1(Dt):
         F = sg["floor"]; s_inf = Dt.sc.get((k, "P_INFORMATIVE"), {})
         if s_inf.get("oracle_ok_60") != "1" or s_inf.get("top1_ok_60") == "1":
             continue
-        inf = {round(x["t"], 3): x for x in json.load(open(RUN / "P_INFORMATIVE_merged_d0.2" / f"{k}.json")) if x["kind"] == "번호판" and x["informative"]}
+        inf = {round(x["t"], 3): x for x in json.load(open(RUN / f"P_INFORMATIVE{SFX}_d0.2" / f"{k}.json")) if x["kind"] == "번호판" and x["informative"]}
         for e in Dt.stops("P_AMBIGUITY", k):
             x = inf.get(round(float(e["t"]), 3))
             if x and Dt.label(F, e) and e.get("xyz"):
@@ -233,6 +234,29 @@ def path_states(a, Dt, k, lw=3):
             a.plot(xy[i0:i1, 0], xy[i0:i1, 1], color=STC[s], lw=lw, solid_capstyle="round", zorder=2)
 
 
+COK, CFL, CNO = "#1B7F5B", "#E5B000", "#C0392B"
+
+
+def path_correct(a, k, lw=3):
+    """2026-10-12: 경로를 '그 시점 1위가 맞았나'로 칠한다(웹 화면처럼). 초록 = 1위가 정답(층 + 3 m + 30°), 노랑 = 1위 층만 맞음, 빨강 = 1위 층부터 틀림. 3초 계산마다 그 앞 3초 구간."""
+    sg = DtG.segs[k]; F = sg["floor"]; tt, xy = gt(F); lo = float(sg["start_sec"])
+    sel = (tt >= lo) & (tt <= lo + 60); a.plot(xy[sel, 0], xy[sel, 1], color="#c3c8d0", lw=lw * 0.8, zorder=1, solid_capstyle="round")
+    for r in sorted((r for r in ACC if r["출발점"] == k), key=lambda r: float(r["시점초"])):
+        T = float(r["시점초"]); i0 = int(np.searchsorted(tt, lo + T - 3)); i1 = min(int(np.searchsorted(tt, lo + T)) + 1, len(tt))
+        c = COK if r["1위맞음"] == "1" else (CFL if r["1위층맞음"] == "1" else CNO)
+        if i1 - i0 >= 2:
+            a.plot(xy[i0:i1, 0], xy[i0:i1, 1], color=c, lw=lw, solid_capstyle="round", zorder=2)
+
+
+def stop_marks2(a, Dt, k, pol, s=80):
+    sg = Dt.segs[k]; F = sg["floor"]; off = float(sg["off"]); n = [0, 0]
+    for e in Dt.stops(pol, k):
+        lab = Dt.label(F, e); p = gt_at(F, float(e["t"]) - off)
+        a.scatter(*p, marker="v", s=s, facecolor=INK if lab else "white", edgecolor=INK, linewidth=1.0, zorder=4)
+        n[0] += 1; n[1] += bool(lab)
+    return n
+
+
 def full_path(a, F):
     """녹화 전체 경로를 옅은 회색으로(출발점 구간 밖 포함). 1초 넘게 빈 곳은 잇지 않는다."""
     tt, xy = gt(F)
@@ -256,22 +280,40 @@ def legend_u3(ax, **kw):
     return ax.legend(h, [STK[k] for k in ("GEOMETRIC_CONFIDENT", "GEOMETRIC_AMBIGUITY", "GEOMETRIC_INSUFFICIENT")] + ["출발점 구간 밖 주행(실험에 안 씀)", "멈춘 곳: 사람 판정 표지판", "멈춘 곳: 표지판 아님"], frameon=False, **kw)
 
 
+ACC = list(csv.DictReader(open(RUN / f"E4_상태판단{SFX}" / "계산별_상태.csv"))) if (RUN / f"E4_상태판단{SFX}" / "계산별_상태.csv").exists() else []
+
+
+DtG = None
+
+
 def u3(Dt):
-    fig, ax = plt.subplots(7, 2, figsize=(16, 22)); ax = ax.ravel()
+    global DtG
+    DtG = Dt
+    # 2026-10-13: 칸 높이를 층 지도 모양(세로/가로)에 맞춰 빈 공간을 줄임. 두 층씩 한 줄, 줄 높이 = 그 줄 두 층 중 큰 세로 비율
+    pad = 80; box = {}
+    for F in FL:
+        xy = gt(F)[1]; box[F] = (xy[:, 0].min() - pad, xy[:, 0].max() + pad, xy[:, 1].min() - pad, xy[:, 1].max() + pad)
+    asp = [(box[F][3] - box[F][2]) / (box[F][1] - box[F][0]) for F in FL] + [0.5]
+    hr = [max(asp[i], asp[i + 1]) for i in range(0, len(asp), 2)]
+    H = 8 * sum(hr) + 0.75 * len(hr) + 1.0                    # 줄마다 두 줄 제목 자리 0.75 in, 맨 위 큰 제목 1 in
+    fig = plt.figure(figsize=(16, H)); gs = fig.add_gridspec(len(hr), 2, height_ratios=hr, hspace=0.75 * len(hr) / (8 * sum(hr)), wspace=0.06, top=1 - 1.0 / H, bottom=0.005, left=0.01, right=0.99)
+    ax = [fig.add_subplot(gs[i // 2, i % 2]) for i in range(len(FL) + 1)]
     for i, F in enumerate(FL):
         a = ax[i]; a.imshow(basemap(F), cmap="gray", vmin=0, vmax=255); a.axis("off")
         ks = [k for k, s in Dt.segs.items() if s["floor"] == F]; n = [0, 0]; pts = full_path(a, F)
         for k in ks:
-            path_states(a, Dt, k, lw=2.6); m_ = stop_marks(a, Dt, k, "P_INFORMATIVE", s=70); n[0] += m_[0]; n[1] += m_[1]
-        pad = 80
-        a.set_xlim(pts[:, 0].min() - pad, pts[:, 0].max() + pad); a.set_ylim(pts[:, 1].max() + pad, pts[:, 1].min() - pad)
+            path_correct(a, k, lw=2.6); m_ = stop_marks2(a, Dt, k, "P_INFORMATIVE", s=70); n[0] += m_[0]; n[1] += m_[1]
+        a.set_xlim(box[F][0], box[F][1]); a.set_ylim(box[F][3], box[F][2]); a.set_anchor("W")
         st = [s for k in ks for s in Dt.st.get(k, {}).values()]; conf = 100 * st.count("GEOMETRIC_CONFIDENT") / max(len(st), 1)
+        acc = 100 * np.mean([r["1위맞음"] == "1" for r in ACC if r["층"] == F]) if ACC else float("nan")   # 2026-10-12: 확정 선언과 1위 정답을 같이
         w0 = sum(Dt.sc[(k, "P_INFORMATIVE")]["top1_ok_60"] == "1" for k in ks); w1 = sum(Dt.sc[(k, "P_INFORMATIVE")]["oracle_ok_60"] == "1" for k in ks)
-        a.set_title(f"{fl(F)}  멈춤 {n[0]}번(표지판 {n[1]}) · 확실 {conf:.0f}% · 60초 위치 맞음 {w0}/5 → 읽으면 {w1}/5", loc="left", fontsize=12, fontweight="bold")
-    ax[13].axis("off"); legend_u3(ax[13], loc="center", fontsize=14)
-    ax[13].text(0.5, 0.0, "층마다 출발점 5곳에서 각각 막 켠 상태로 60초씩 걸은 구간만 실험에 씀(색 칠한 부분)\n멈춤 = '헷갈림 + 읽으면 갈릴 때만' 방식", ha="center", fontsize=11, color=INK2, transform=ax[13].transAxes)
-    fig.suptitle("13개 층 전부(층 모름): 출발점 구간 경로를 상태로 칠하고, 멈춘 곳을 사람 판정 색으로 찍음", x=0.01, ha="left", fontsize=18, fontweight="bold", y=1.0)
-    fig.tight_layout(); save(fig, "3_전층지도")
+        a.set_title(f"{fl(F)}  멈춤 {n[0]}번(표지판 {n[1]})\n확정 선언 {conf:.0f}% · 1위 정답 {acc:.0f}% · 60초 위치 맞음 {w0}/5 → 읽으면 {w1}/5", loc="left", fontsize=12, fontweight="bold")
+    ax[len(FL)].axis("off")
+    h = [Line2D([], [], color=c, lw=5) for c in (COK, CFL, CNO)] + [Line2D([], [], color="#d9dde3", lw=5), Line2D([], [], marker="v", ls="", markerfacecolor=INK, markeredgecolor=INK, ms=10), Line2D([], [], marker="v", ls="", markerfacecolor="white", markeredgecolor=INK, ms=10)]
+    ax[len(FL)].legend(h, ["1위가 정답(층 + 3 m + 30°)", "1위 층만 맞음(위치 틀림)", "1위 층부터 틀림", "출발점 구간 밖 주행(실험에 안 씀)", "멈춘 곳: 사람 판정 표지판", "멈춘 곳: 표지판 아님"], frameon=False, loc="upper left", fontsize=13)
+    ax[len(FL)].text(0.02, 0.02, "층마다 출발점 5곳에서 각각 막 켠 상태로 60초씩 걸은 구간만 실험에 씀(색 칠한 부분)\n멈춤 = '헷갈림 + 읽으면 갈릴 때만' 방식", ha="left", va="bottom", fontsize=11, color=INK2, transform=ax[len(FL)].transAxes)
+    fig.suptitle("13개 층 전부(층 모름): 출발점 구간 경로를 그 시점 1위가 맞았는지로 칠하고(초록 = 층·위치까지 정답), 멈춘 곳을 사람 판정으로 찍음", x=0.01, ha="left", fontsize=18, fontweight="bold", y=0.995)
+    save(fig, "3_전층지도")
 
 
 def u4(Dt):
@@ -307,7 +349,7 @@ def u5(Dt):
     a.grid(axis="x", color="#eceef1"); a.set_axisbelow(True)
     h = [Line2D([], [], marker="o", ls="", color="#8e96a3", ms=10), Line2D([], [], marker="o", ls="", color=BLUE, ms=12),
          Line2D([], [], marker="o", ls="", markerfacecolor="none", markeredgecolor=GREEN, ms=13)]
-    a.legend(h, ["걷기만 (E3 합치기)", "첫 진짜 번호판 번호를 읽었다면", "층을 처음부터 안다면(상한)"], loc="lower left", bbox_to_anchor=(0, 1.0), ncol=3, frameon=False, fontsize=11)
+    a.legend(h, ["걷기만 (합치기, 3초 갱신)", "첫 진짜 번호판 번호를 읽었다면", "층을 처음부터 안다면(상한)"], loc="lower left", bbox_to_anchor=(0, 1.0), ncol=3, frameon=False, fontsize=11)
     tot = np.array(list(rows.values())).sum(0)
     a.set_title(f"층 모름: 층마다 번호판 하나 읽으면 60초 위치가 얼마나 맞나 (65곳 합 {tot[0]} → {tot[1]}, 상한 {tot[2]})", loc="left", fontsize=15, fontweight="bold", pad=34)
     save(fig, "5_층별효과")

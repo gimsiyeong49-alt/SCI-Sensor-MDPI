@@ -22,7 +22,7 @@ from multiprocessing import Pool
 from pathlib import Path
 import numpy as np
 
-PKG = Path("/data/kci_work/floor_id_pkg/floor_id")
+PKG = Path(os.environ.get("KCI_FLOORID_PKG", "/data/kci_work/floor_id_pkg/floor_id"))   # 2026-10-12: 지도 수정판 패키지로 바꿀 때
 sys.path.insert(0, str(PKG)); sys.path.insert(0, str(PKG / "localizer")); sys.path.insert(0, str(Path(__file__).parent))
 G = Path("reports/_01_E2_초기위치/_작업자료"); GTDIR = Path("reports/_00_SIGN_PIPELINE_20260920/31_벽구간이벤트/36_채점용정답")
 OUT = Path("/data2/e2_dense_20261009")

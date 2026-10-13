@@ -17,8 +17,8 @@ from pathlib import Path
 import numpy as np
 
 VAR = os.environ.get("E4_VAR", "")              # "merged" = E3 합치기(E2 후보 + 노드 재탐색) 3초 후보(2026-10-12)
-SEEDED = Path("/data2/e3_merged_3s_20261012") if VAR == "merged" else Path("/data2/e3_seeded_3s_20261011")
-SFX = "_merged" if VAR == "merged" else ""
+SEEDED = {"merged": Path("/data2/e3_merged_3s_20261012"), "v8": Path("/data2/e3_merged_3s_v8_20261012")}.get(VAR, Path("/data2/e3_seeded_3s_20261011"))   # v8 = 지도 8차(2026-10-12)
+SFX = {"merged": "_merged", "v8": "_v8"}.get(VAR, "")
 E2TOP = Path("reports/_01_E2_초기위치/_작업자료/E2_dense_T0_nospace_정밀검증/E2_top100_candidates.csv")
 SENSOR_MAX_SPEED, SENSOR_MAX_YAW_RATE = 2.0, 120.0
 wrap = lambda a: (a + 180) % 360 - 180
@@ -69,7 +69,7 @@ def main():
             sys.exit(f"{f} 이 이미 있다(덮어쓰지 않음)")
         need = {int(r["floor_id"]) for r in e2top[k]}
         files = {int(p.stem): p for p in (SEEDED / k).glob("*.json")}
-        assert (set(files) >= need) if VAR == "merged" else (set(files) == need), f"{k}: 연결판 층 지도 결과 {sorted(files)} / E2 후보 층 {sorted(need)}"
+        assert (set(files) >= need) if VAR in ("merged", "v8") else (set(files) == need), f"{k}: 연결판 층 지도 결과 {sorted(files)} / E2 후보 층 {sorted(need)}"
         J = [json.load(open(p)) for p in files.values()]
         if F not in odom_cache:
             rows_o = list(csv.DictReader(open(data_dir(F) / "odom_link.csv")))

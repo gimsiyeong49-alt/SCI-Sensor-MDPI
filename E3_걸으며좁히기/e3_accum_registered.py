@@ -17,7 +17,7 @@ def _loc(task):
     t = EV.TASK[task]; EV.obs(task); return ED._ST["cache"][(t["floor"], 1)]
 
 
-def registered(task, T, px, py, hd_deg, ppm, beta_deg=228.0):
+def registered(task, T, px, py, hd_deg, ppm, beta_deg=228.0, full=False):   # full=True: 그림용, 장마다 400점으로 줄이지 않고 전부(2026-10-13)
     from rt_localizer import _A
     Z = _loc(task); L = Z.L; t = EV.TASK[task]; ts = float(t["start_sec"])
     buf = Z.window_scans(L.T[0] + ts + T, T, 3.0) if T > 0 else Z.window_scans(L.T[0] + ts + 3.0, 3.0, 3.0)[:1]   # 0초 = 출발 관측 한 장(E2 와 같은 프레임)
@@ -26,7 +26,7 @@ def registered(task, T, px, py, hd_deg, ppm, beta_deg=228.0):
     P, pos, n = [], [], 0
     for fr in buf:
         pts = np.asarray(fr["pts"], float); n += len(pts)
-        if len(pts) > 400:
+        if len(pts) > 400 and not full:
             rs = np.random.RandomState(int(fr.get("sample_seed_t", fr.get("t", 0))) % 97); pts = pts[rs.choice(len(pts), 400, replace=False)]
         pts = pts * [1, mirror]
         off = ppm * (_A(phi) @ (np.asarray(fr["xy"], float) - anchor)); p = np.array([px, py]) + off

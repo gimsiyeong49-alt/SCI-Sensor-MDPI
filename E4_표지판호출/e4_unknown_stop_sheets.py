@@ -16,9 +16,11 @@ import make_label_sheet as LS  # noqa: E402
 import matplotlib.pyplot as plt  # noqa: E402
 
 R = Path("reports/_00_SIGN_PIPELINE_20260920/31_벽구간이벤트"); RUN = R / "70_층모름E4"; J = R / "25_판정"
-OUT = Path("reports/_02_E4_표지판호출/1_본결과_층모름/멈춤사진_합치기")
-POL = {"다 멈춤": RUN / "P_ALL", "애매할 때": RUN / "P_AMBIGUITY_gate_merged_d0.2"}
-INF = RUN / "P_INFORMATIVE_merged_d0.2"
+import os
+SFX = {"merged": "_merged", "v8": "_v8"}.get(os.environ.get("E4_VAR", "merged"), "")
+OUT = Path("reports/_02_E4_표지판호출/1_본결과_층모름/멈춤사진_" + ("지도v8" if SFX == "_v8" else "합치기"))
+POL = {"다 멈춤": RUN / "P_ALL", "애매할 때": RUN / f"P_AMBIGUITY_gate{SFX}_d0.2"}
+INF = RUN / f"P_INFORMATIVE{SFX}_d0.2"
 
 
 def iou(a, b):
@@ -30,7 +32,7 @@ def main():
     M = json.load(open(J / "판정목록.json")); D = json.load(open(J / "판정결과.json")); X = json.load(open(J / "층모름합치기_판정기록.json"))
     TT = {t["task_id"]: t for t in csv.DictReader(open(EV.G / "tasks/E2_tasks.csv"))}
     segs = {s["task_id"]: s for s in csv.DictReader(open("/data2/e4_unknown_20261011/segments.csv"))}
-    sc = {(r["trial_id"], r["policy"]): r for r in csv.DictReader(open(RUN / "채점_merged" / "출발점별_정책별.csv"))}
+    sc = {(r["trial_id"], r["policy"]): r for r in csv.DictReader(open(RUN / f"채점{SFX}" / "출발점별_정책별.csv"))}
     tot = {"다 멈춤": [0, 0], "애매할 때": [0, 0], "갈릴 때": [0, 0]}
     for k, sg in segs.items():
         F = sg["floor"]; lo = float(sg["seg_lo"]); d = D.get(F, {})

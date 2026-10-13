@@ -20,6 +20,9 @@ COND = [  # (폴더, 채점 폴더 접미사, 이름) — 2026-10-10 새 구성:
     ("3_정밀검증", "_nospace_정밀검증", "A 라이다 · 축척 탐색 · + 정밀 검증"),
     ("참고_정답축척_정밀검증", "_oracle_nospace_정밀검증", "참고: A 라이다 · 정답 축척 · + 정밀 검증"),
 ]
+if __import__("os").environ.get("E2_CASE_VAR") == "v8":   # 2026-10-13: 지도 8차 정밀 검증만 다시 그리기. 기본값은 그대로
+    OUT = EV.PKG / "2_출발점별_Top100_지도v8"
+    COND = [("3_정밀검증", "_nospace_지도v8_정밀검증", "A 라이다 · 축척 탐색 · + 정밀 검증 (8차 지도)")]
 rk = lambda v: int(v) if str(v).isdigit() else None
 NMAP = {"kci": 9, "gong": 7, "sw": 8}
 

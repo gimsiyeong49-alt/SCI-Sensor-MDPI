@@ -14,7 +14,7 @@ import e2_visual_ko as EV  # noqa: E402  (글꼴·색)
 import e4_state_eval as SE  # noqa: E402
 import matplotlib.pyplot as plt  # noqa: E402
 
-OUTD = Path("reports/_02_E4_표지판호출/2_본결과_상태판단/출발점별그림" + ("_합치기" if SE.UG.SFX else ""))
+OUTD = Path("reports/_02_E4_표지판호출/2_본결과_상태판단/출발점별그림" + {"_merged": "_합치기", "_v8": "_지도v8"}.get(SE.UG.SFX, ""))
 SCOL = {"위치 확정": EV.GREEN, "층 간 모호": EV.ORANGE, "층 내 모호": EV.YELLOW, "관측 부족": EV.GRAY, "센서 이상": EV.RED}
 D = 0.2
 
